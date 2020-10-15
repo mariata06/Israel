@@ -1,3 +1,104 @@
 .page-header {
-  background-color: green;
+  background-color: brown;
+  background-image: url("../img/intro-bg-desktop@1x.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  min-height: 906px;
+  padding-left: 110px;
+  padding-right: 114px;
+  padding-top: 32px;
+
+  @media (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
+    min-height: 600px;
+    background-image: url("../img/intro-bg-desktop@1x.jpg");
+    background-position: center center;
+  }
+
+  @media (max-width: $max-mobile-width) {
+    background-image: url("../img/intro-bg-mobile@1x.jpg");
+    min-height: 636px;
+    padding-left: 16px;
+    padding-right: 7px;
+    padding-top: 20px;
+  }
+
+  p {
+    text-align: center;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    width: 343px;
+    margin: 0 auto;
+    margin-top: 458px;
+
+    @media (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
+      margin-top: 300px;
+    }
+  }
+}
+
+.page-header__callback-link {
+  color: black;
+  //text-decoration: underline;
+  //text-decoration-style: dashed;
+  //text-decoration-color: black;
+  border-bottom: 1px dashed black;
+  display: inline;
+
+  @media (max-width: $max-mobile-width) {
+    width: auto;
+    //margin-left: auto;
+    //margin-top: -20px;
+  }
+}
+
+.page-header__site-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+
+  @media (max-width: $max-mobile-width) {
+    flex-wrap: wrap;
+    align-items: end;
+  }
+}
+
+.page-header__logo {
+  margin: 0 auto;
+  height: 48px;
+  margin-top: -40px;
+
+  @media (max-width: $max-mobile-width) {
+    order: -1;
+    width: 50%;
+    margin-top: 0;
+  }
+
+  img {
+    @media (max-width: $max-mobile-width) {
+      width: 120px;
+      height: 42px;
+    }
+  }
+}
+
+.page-header__phone-links {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+
+  a {
+    color: black;
+
+    @media (max-width: $max-mobile-width) {
+      margin-left: auto;
+    }
+  }
+
+  @media (max-width: $max-mobile-width) {
+    width: 50%;
+    flex-wrap: wrap;
+  }
 }

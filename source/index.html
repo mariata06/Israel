@@ -10,142 +10,215 @@
   <link rel="preload" href="fonts/firasans-medium.woff2" as="font" type="font/woff2" crossorigin="">
   <link rel="preload" href="fonts/firasans-bold.woff2" as="font" type="font/woff2" crossorigin="">
   <link rel="preload" href="fonts/firasans-semibold.woff2" as="font" type="font/woff2" crossorigin="">
-  <link rel="preload" href="js/main.js" as="script">
+  <!--<link rel="preload" href="js/main.js" as="script">-->
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body>
   <div class="page-wrapper">
     <header class="page-header">
-      <a href="tel:+97226216581">+(972)2 - 621 - 6581</a>
-      <div class="page-header__logo">
-        <picture>
-          <source srcset="img/logo-mobile.svg" media="(max-width: 767px)">
-          <img src="img/logo-desktop.svg" width="" height="" alt="Логотип сайта компания Израиль">
-        </picture>
-      </div>
-      <a href="#callback">
-        <button>заказать звонок</button>
-      </a>
+      <nav class="page-header__site-nav">
+        <div class="page-header__phone-links">
+          <a href="tel:+97226216581">+(972)2 - 621 - 6581</a>
+          <a class="page-header__callback-link" href="#callback">заказать звонок</a>
+        </div>
+        <div class="page-header__logo">
+          <img src="img/logo.png" width="137" height="48" alt="Логотип сайта компания Израиль">
+        </div>
+      </nav>
+      <p>Учеба, путешествие и карьера для еврейской молодёжи</p>
     </header>
     <main>
-    <section class="intro">
-      <h1>Израиль</h1>
-      <p>Учеба, путешествие и карьера для еврейской молодёжи</p>
-    </section>
-    <section class="request">
-      <h2>Хочу поехать!</h2>
-      <p>Оставьте свой телефон и мы свяжемся с вами, подберём куратора и ответим на все вопросы!</p>
-      <form action="https://echo.htmlacademy.ru" method="post" class="request__form form">
-        <div>
-          <label for="phone">
-            <input tabindex="0" class="form__field" id="phone" type="tel" name="user-phonenumber" value="" required="" placeholder="телефон" pattern="[0-9]{11}">
-          </label>
-          <a href="#callback">
-            <button>презвоните мне</button>
-          </a>
-      </div></form>
-    </section>
-    <section class="faq">
-      <div id="accordion" class="faq__accordion accordion">
-        <div class="accordion__item show">
-          <div class="accordion__item-title">
-            Кто организатор? Какие сроки у программы?
+      <section class="request">
+        <h2>Хочу поехать!</h2>
+        <p>Оставьте свой телефон и мы свяжемся с вами, подберём куратора и ответим на все вопросы!</p>
+        <form action="https://echo.htmlacademy.ru" method="post" class="request__form form">
+          <div>
+            <label for="phone">
+              <input tabindex="0" class="form__field" id="phone" type="tel" name="user-phonenumber" value="" required="" placeholder="телефон" pattern="[0-9]{11}">
+            </label>
+            <a href="#callback">
+              <button>презвоните мне</button>
+            </a>
           </div>
-          <div class="accordion__item-content">
-            Контент 1...
+        </form>
+      </section>
+      <section class="faq">
+        <div id="accordion" class="faq__accordion accordion">
+          <div class="accordion__item show">
+            <div class="accordion__item-title">
+              Кто организатор? Какие сроки у программы?
+            </div>
+            <div class="accordion__item-content">
+              Контент 1...
+            </div>
+          </div>
+          <div class="accordion__tem">
+            <div class="accordion__item-title">
+              Что такое грант на обучение?
+            </div>
+            <div class="accordion__item-content">
+              Контент 2...
+            </div>
+          </div>
+          <div class="accordion__tem">
+            <div class="accordion__item-title">
+              Как определяется стоимость программы?
+            </div>
+            <div class="accordion__item-content">
+              Полная стоимость определяется организаторами в зависимости от направления. В большинетсве случаев грант
+              "Маса" не поркывает полную стоимость программы, и поэтому предусматривается определённая доля личного
+              участия.
+            </div>
+          </div>
+          <div class="accordion__tem">
+            <div class="accordion__item-title">
+              Что такое грант на обучение?
+            </div>
+            <div class="accordion__item-content">
+              Полная стоимость определяется организаторами в зависимости от направления. В большинетсве случаев грант
+              "Маса" не поркывает полную стоимость программы, и поэтому предусматривается определённая доля личного
+              участия.
+            </div>
+          </div>
+          <div class="accordion__tem">
+            <div class="accordion__item-title">
+              Признавётся ли учёба в рамках проекта для дальнейшего обучения?
+            </div>
+            <div class="accordion__item-content">
+              Полная стоимость определяется организаторами в зависимости от направления. В большинетсве случаев грант
+              "Маса" не поркывает полную стоимость программы, и поэтому предусматривается определённая доля личного
+              участия.
+            </div>
           </div>
         </div>
-        <div class="accordion__tem">
-          <div class="accordion__item-title">
-            Что такое грант на обучение?
-          </div>
-          <div class="accordion__item-content">
-            Контент 2...
-          </div>
+      </section>
+      <section class="review">
+        <h2>Отзывы</h2>
+        <div class="review__item">
+          <h3 class="review__author">Ольга Михайлова</h3>
+          <p><span>Программа:</span>Арт-Тель, февраль-сентябрь 2017</p>
+          <p class="review__text">Долго выбирая программу</p>
+          <p class="review__text">С первой же встречи</p>
+          <a href="#">Читать подробнее</a>
         </div>
-        <div class="accordion__tem">
-          <div class="accordion__item-title">
-            Как определяется стоимость программы?
-          </div>
-          <div class="accordion__item-content">
-            Полная стоимость определяется организаторами в зависимости от направления. В большинетсве случаев грант "Маса" не поркывает полную стоимость программы, и поэтому предусматривается определённая доля личного участия.
-          </div>
+        <ul class="review__social-list social-list">
+          <li>
+            <a href="https://facebook.com/" aria-label="facebook" class="social-list__link">
+              <svg width="10" height="20">
+                <use xlink:href="img/sprite.svg#icon-fb"></use>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://twitter.com/" aria-label="twitter" class="social-list__link">
+              <svg width="22" height="18">
+                <use xlink:href="img/sprite.svg#icon-twitter"></use>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://instagram.com/" aria-label="instagram" class="social-list__link">
+              <svg width="19" height="19">
+                <use xlink:href="img/sprite.svg#icon-instagram"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </section>
+      <section class="internship">
+        <h2>Жизнь в Израиле</h2>
+        <p>Помимо учёбы, в рамках программе у вас будет возможность путешествовать по стране и познакомиться с богатой культурно-исторической жизнью Израиля и его жителей.</p>
+        <div class="internship__picture-wrapper">
+          <figure>
+            <picture>
+              <!-- 1х: 288px; 2x: 576px -->
+              <source type="image/webp" media="(max-width: 1023px)" srcset="img/excursion-mobile@1x.webp 1x, img/excursion-mobile@2x.webp 2x">
+              <!-- 1х: 482px; 2x: 964px -->
+              <img data-src="img/excursion-desktop@1x.png" srcset="img/excursion-desktop@2x.png 2x" alt="Экскурсии по Израилю" width="482" height="732">
+            </picture>
+            <figcaption>Экскурсии по Израилю и знакомство с его историей</figcaption>
+          </figure>
+
+          <figure>
+            <picture>
+              <!-- 1х: 288px; 2x: 576px -->
+              <source type="image/webp" media="(max-width: 1023px)" srcset="img/learning-hebrew-mobile@1x.webp 1x, img/learning-hebrew-mobile@2x.webp 2x">
+              <!-- 1х: 211px; 2x: 422px -->
+              <img data-src="img/learning-hebrew-desktop@1x.png" srcset="img/learning-hebrew-desktop@2x.png 2x" alt="Изучение иврита" width="211" height="318">
+            </picture>
+            <figcaption>Изучение иврита</figcaption>
+          </figure>
+
+          <figure>
+            <picture>
+              <!-- 1х: 288px; 2x: 576px -->
+              <source type="image/webp" media="(max-width: 1023px)" srcset="img/skills-mobile@1x.webp 1x, img/skills-mobile@2x.webp 2x">
+              <!-- 1х: 411px; 2x: 822px -->
+              <img data-src="img/skills-desktop@1x.png" srcset="img/skills-desktop@2x.png 2x" alt="Современные навыки" width="411" height="318">
+            </picture>
+            <figcaption>Обучение современным навыкам и профессиям</figcaption>
+          </figure>
+
+          <figure>
+            <picture>
+              <!-- 1х: 288px; 2x: 576px -->
+              <source type="image/webp" media="(max-width: 1023px)" srcset="img/creative-youth-mobile@1x.webp 1x, img/creative-youth-mobile@2x.webp 2x">
+              <!-- 1х: 411px; 2x: 822px -->
+              <img data-src="img/creative-youth-desktop@1x.png" srcset="img/creative-youth-desktop@2x.png 2x" alt="Креативная молодежь" width="411" height="318">
+            </picture>
+            <figcaption>Обучение современным навыкам и профессиям</figcaption>
+          </figure>
+
+          <figure>
+            <picture>
+              <!-- 1х: 288px; 2x: 576px -->
+              <source type="image/webp" media="(max-width: 1023px)" srcset="img/leadership-mobile@1x.webp 1x, img/leadership-mobile@2x.webp 2x">
+              <!-- 1х: 211px; 2x: 422px -->
+              <img data-src="img/leadership-desktop@1x.png" srcset="img/leadership-desktop@2x.png 2x" alt="Развитие лидерства" width="211" height="318">
+            </picture>
+            <figcaption>Развитие лидерства</figcaption>
+          </figure>
         </div>
-        <div class="accordion__tem">
-          <div class="accordion__item-title">
-            Что такое грант на обучение?
-          </div>
-          <div class="accordion__item-content">
-            Полная стоимость определяется организаторами в зависимости от направления. В большинетсве случаев грант "Маса" не поркывает полную стоимость программы, и поэтому предусматривается определённая доля личного участия.
-          </div>
-        </div>
-        <div class="accordion__tem">
-          <div class="accordion__item-title">
-            Признавётся ли учёба в рамках проекта для дальнейшего обучения?
-          </div>
-          <div class="accordion__item-content">
-            Полная стоимость определяется организаторами в зависимости от направления. В большинетсве случаев грант "Маса" не поркывает полную стоимость программы, и поэтому предусматривается определённая доля личного участия.
-          </div>
-        </div>
+
+      </section>
+      <section class="program">
+        <h2>#Masairael</h2>
+        <p>Познакомьтесь с программой</p>
+        <a href="#">Смотреть фото</a>
+      </section>
+
+    </main>
+    <footer class="page-footer">
+      <div class="page-footer__logo">
+        <img src="img/logo-footer.png" width="85" height="27" alt="Логотип сайта компания Израиль">
       </div>
-    </section>
-    <section class="review">
-      <h2>Отзывы</h2>
-      <div class="review__item">
-        <h3 class="review__author">Ольга Михайлова</h3>
-        <p><span>Программа:</span>Арт-Тель, февраль-сентябрь 2017</p>
-        <p class="review__text">Долго выбирая программу</p>
-        <p class="review__text">С первой же встречи</p>
-        <a href="#">Читать подробнее</a>
-      </div>
+      <p>Copyright someDesignCompany &copy;2019</p>
       <ul class="review__social-list social-list">
         <li>
           <a href="https://facebook.com/" aria-label="facebook" class="social-list__link">
-            <svg width="11" height="20">
+            <svg width="10" height="20">
               <use xlink:href="img/sprite.svg#icon-fb"></use>
             </svg>
           </a>
         </li>
         <li>
-                <a href="https://twitter.com/" aria-label="twitter" class="social-list__link">
-                  <svg width="20" height="16">
-                    <use xlink:href="img/sprite.svg#icon-twitter"></use>
-                  </svg>
-                </a>
-              </li>
-              <li>
-                <a href="https://instagram.com/" aria-label="instagram" class="social-list__link">
-                  <svg width="20" height="20">
-                    <use xlink:href="img/sprite.svg#icon-instagram"></use>
-                  </svg>
-                </a>
-              </li>
-        </ul>
-    </section>
-    <section class="internship">
-        <h2>Жизнь в Израиле</h2>
-        <p>Помимо учёбы</p>
-        <figure>
-            <img src="img/learning-hebrew.jpg" alt="Изучение иврита">
-            <figcaption>Изучение иврита</figcaption>
-        </figure>
-        <figure>
-            <img src="img/modern-skills.jpg" alt="Обучение современным навыкам и профессиям">
-            <figcaption>Обучение современным навыкам и профессиям</figcaption>
-        </figure>
-    </section>
-    <section class="program">
-        <h2>#Masairael</h2>
-        <p>Познакомьтесь с программой</p>
-        <a href="#">Смотреть фото</a>
-    </section>
-
-
-    </main>
-    <footer>
-
+          <a href="https://twitter.com/" aria-label="twitter" class="social-list__link">
+            <svg width="22" height="18">
+              <use xlink:href="img/sprite.svg#icon-twitter"></use>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="https://instagram.com/" aria-label="instagram" class="social-list__link">
+            <svg width="19" height="19">
+              <use xlink:href="img/sprite.svg#icon-instagram"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
     </footer>
   </div>
 </body>
+
 </html>
