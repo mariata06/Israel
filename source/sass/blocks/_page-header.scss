@@ -2,25 +2,29 @@
   background-color: brown;
   background-image: url("../img/intro-bg-desktop@1x.jpg");
   background-repeat: no-repeat;
-  background-size: cover;
+  //background-size: cover;
+  background-size: 100%;
   position: relative;
-  min-height: 906px;
+  height: 906px;
   padding-left: 110px;
   padding-right: 114px;
   padding-top: 32px;
 
   @media (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
-    min-height: 600px;
+    height: 600px;
     background-image: url("../img/intro-bg-desktop@1x.jpg");
     background-position: center center;
+    background-size: 120%;
   }
 
   @media (max-width: $max-mobile-width) {
     background-image: url("../img/intro-bg-mobile@1x.jpg");
-    min-height: 636px;
+    height: 616px;
     padding-left: 16px;
     padding-right: 7px;
-    padding-top: 20px;
+    //padding-top: 20px;
+    background-size: 100%;
+    background-position: top bottom;
   }
 
   p {
@@ -33,6 +37,11 @@
     margin-top: 458px;
 
     @media (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
+      margin-top: 300px;
+    }
+
+    @media (max-width: $max-mobile-width) {
+      width: 100%;
       margin-top: 300px;
     }
   }
