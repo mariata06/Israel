@@ -42,6 +42,11 @@
     box-shadow: 0 4px 4px rgba(00, 00, 00, 0.25);
     margin-bottom: 24px;
     margin-top: 16px;
+
+    &:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
   }
 
   label {

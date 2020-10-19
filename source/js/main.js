@@ -80,12 +80,20 @@ callbackForm.addEventListener("submit", function (evt) {
 window.addEventListener("keydown", function (evt) {
   if (evt.keyCode === 27) {
     evt.preventDefault();
-    if (popupSuccess.classList.contains("popup--success--show")) {
-      popupSuccess.classList.remove("popup--success--show");
-      form.classList.remove("popup__form--show");
+    if (overlayForm.classList.contains("overlay__form--show")) {
+      overlayForm.classList.remove("overlay__form--show");
+    } else if (overlayOk.classList.contains("overlay__ok--show")) {
+        overlayOk.classList.remove("overlay__ok--show");
     }
   }
 });
+
+document.onclick = function (evt) {
+  if (evt.target.className.toString().includes("overlay")) {
+    overlayForm.classList.remove("overlay__form--show");
+    overlayOk.classList.remove("overlay__ok--show");
+  };
+};
 
 formButton.toggleAttribute("disabled");
 formCheckbox.addEventListener("change", function () {
