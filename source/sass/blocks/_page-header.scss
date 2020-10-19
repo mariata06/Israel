@@ -3,12 +3,15 @@
   background-image: url("../img/intro-bg-desktop@1x.jpg");
   background-repeat: no-repeat;
   //background-size: cover;
-  background-size: 100%;
+  background-size: 110%;
+  background-position: top center;
   position: relative;
-  height: 906px;
+  min-height: 906px;
   padding-left: 110px;
   padding-right: 114px;
   padding-top: 32px;
+  max-width: 1366px;
+  margin: 0 auto;
 
   @media (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
     height: 600px;

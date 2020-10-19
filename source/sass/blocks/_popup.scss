@@ -63,9 +63,13 @@
   }
 
   &--callback {
-    display: block;
+    display: none;
     //display: none;
     z-index: 110;
+
+    &--show {
+      display: block;
+    }
 
     p {
       padding-right: 40px;
@@ -90,6 +94,10 @@
   &--success {
     display: none;
     //display: block;
+
+    &--show {
+      display: block;
+    }
 
     img {
       display: block;

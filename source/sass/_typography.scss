@@ -30,3 +30,11 @@
   font-style: normal;
   font-display: swap;
 }
+
+@font-face {
+  font-family: "montserrat";
+  src: local("montserrat bold"), local("montserrat-bold"), url("../fonts/montserrat-bold.woff2") format("woff2"), url("../fonts/montserrat-bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}

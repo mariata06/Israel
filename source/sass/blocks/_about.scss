@@ -1,0 +1,96 @@
+.about {
+  background-image: url("../img/watercolor-bg-desktop@1x.png");
+  background-repeat: no-repeat;
+  //background-size: cover;
+  background-size: 100%;
+  //padding-left: 248px;
+  //padding-right: 248px;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/watercolor-bg-desktop@2x.png");
+  }
+
+  @media (max-width: $max-mobile-width) {
+    background-image: url("../img/watercolor-bg-mobile@1x.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center 170px;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/watercolor-bg-mobile@2x.png");
+    }
+
+    img {
+      height: 224px;
+    }
+  }
+
+  h2,
+  p {
+    @include reset;
+    text-align: center;
+  }
+
+  h2 {
+    font-family: "montserrat", "Arial", sans-serif;
+    font-size: 40px;
+    line-height: 49px;
+    font-weight: 700;
+    color: $blue;
+    letter-spacing: -2px;
+    text-transform: uppercase;
+
+    @media (max-width: $max-mobile-width) {
+      font-size: 32px;
+      line-height: 39px;
+    }
+  }
+
+  p {
+    font-size: 17px;
+    line-height: 29px;
+    //padding-left: 95px;
+    //padding-right: 95px;
+    width: 720px;
+    margin: 0 auto;
+    display: block;
+
+    @media (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+    @media (max-width: $max-mobile-width) {
+      width: 100%;
+      font-size: 16px;
+      line-height: 26px;
+      text-align: left;
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+  }
+}
+
+.about__video {
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+  position: relative;
+
+  button {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    @media (max-width: $max-mobile-width) {
+      svg {
+        transform: scale(0.8);
+      }
+    }
+  }
+}

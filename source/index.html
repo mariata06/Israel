@@ -29,6 +29,79 @@
       <p>Учеба, путешествие и карьера для еврейской молодёжи</p>
     </header>
     <main>
+      <section class="about">
+        <h2>О программе</h2>
+        <p>«Маса» — совместный проект правительства Израиля и Еврейского агентства Сохнут. Более 250 учебных программ (60 на русском) и возможность стажировки в Израиле. В&nbsp;течение освоения программ предусмотрен грант от 4200 до 8400$.</p>
+        <div class="about__video">
+          <picture>
+            <!-- 1х: 320px; 2x: 640px -->
+            <source type="image/webp" media="(max-width: 767px)" srcset="img/program-mobile@1x.webp 1x, img/program-mobile@2x.webp 2x">
+            <!-- 1х: 870px; 2x: 1740px -->
+            <img data-src="img/program-desktop@1x.png" srcset="img/program-desktop@2x.png 2x" alt="О программе" width="870" height="460">
+          </picture>
+          <button>
+            <svg width="96" height="96">
+              <use xlink:href="img/sprite.svg#icon-play"></use>
+            </svg>
+          </button>
+        </div>
+      </section>
+      <section class="program">
+        <h2>
+          Программы
+        </h2>
+        <div class="program__container">
+          <div class="program__choice" id="program__choice">
+            <button type="button" class="program__choice-item program__choice-item--general" data-tab-name="general">Общие</button>
+            <button type="button" class="program__choice-item program__choice-item--academic program__choice-item--active" data-tab-name="academic">Академические</button>
+            <button type="button" class="program__choice-item program__choice-item--internship" data-tab-name="internship">Стажировки</button>
+            <button type="button" class="program__choice-item program__choice-item--volunteering" data-tab-name="volunteering">Волонтерство</button>
+            <button type="button" class="program__choice-item program__choice-item--religious" data-tab-name="religious">Религиозные</button>
+          </div>
+
+          <div class="program__item program__item--general">
+            <h3>
+              Общие
+            </h3>
+            <p>Провести семестр или год за рубежом, знакомясь с различными культурами и идеями, традициями и стилем жизни — вот что такое учеба за границей! Израиль — это не только центр религиозного мира, это  также академический центр, живая лаборатория идей и творческого исследования.</p>
+            <p>Может быть, Вы заинтересованы в изучении социологии, мира, юриспруденции, биологии, сравнительной религии, законодательногои делового администрирования или искусства? Здесь, в Израиле, Вы сможете изучить все это в удивительной университетской среде.</p>
+          </div>
+
+          <div class="program__item program__item--academic program__item--active">
+            <h3>
+              Академические
+            </h3>
+            <p>Провести семестр или год за рубежом, знакомясь с различными культурами и идеями, традициями и стилем жизни — вот что такое учеба за границей! Израиль — это не только центр религиозного мира, это  также академический центр, живая лаборатория идей и творческого исследования.</p>
+            <p>Может быть, Вы заинтересованы в изучении социологии, мира, юриспруденции, биологии, сравнительной религии, законодательногои делового администрирования или искусства? Здесь, в Израиле, Вы сможете изучить все это в удивительной университетской среде.</p>
+          </div>
+
+          <div class="program__item program__item--internship">
+            <h3>
+              Стажировки
+            </h3>
+            <p>Провести семестр или год за рубежом, знакомясь с различными культурами и идеями, традициями и стилем жизни — вот что такое учеба за границей! Израиль — это не только центр религиозного мира, это  также академический центр, живая лаборатория идей и творческого исследования.</p>
+            <p>Может быть, Вы заинтересованы в изучении социологии, мира, юриспруденции, биологии, сравнительной религии, законодательногои делового администрирования или искусства? Здесь, в Израиле, Вы сможете изучить все это в удивительной университетской среде.</p>
+          </div>
+
+          <div class="program__item program__item--volunteering">
+            <h3>
+              Волонтерство
+            </h3>
+            <p>Провести семестр или год за рубежом, знакомясь с различными культурами и идеями, традициями и стилем жизни — вот что такое учеба за границей! Израиль — это не только центр религиозного мира, это  также академический центр, живая лаборатория идей и творческого исследования.</p>
+            <p>Может быть, Вы заинтересованы в изучении социологии, мира, юриспруденции, биологии, сравнительной религии, законодательногои делового администрирования или искусства? Здесь, в Израиле, Вы сможете изучить все это в удивительной университетской среде.</p>
+          </div>
+
+          <div class="program__item program__item--religious">
+            <h3>
+              Религиозные
+            </h3>
+            <p>Провести семестр или год за рубежом, знакомясь с различными культурами и идеями, традициями и стилем жизни — вот что такое учеба за границей! Израиль — это не только центр религиозного мира, это  также академический центр, живая лаборатория идей и творческого исследования.</p>
+            <p>Может быть, Вы заинтересованы в изучении социологии, мира, юриспруденции, биологии, сравнительной религии, законодательногои делового администрирования или искусства? Здесь, в Израиле, Вы сможете изучить все это в удивительной университетской среде.</p>
+          </div>
+
+        </div>
+
+      </section>
       <section class="request">
         <h2>Хочу поехать!</h2>
         <p>Оставьте свой телефон и мы свяжемся с вами, подберём куратора и ответим на все вопросы!</p>
@@ -188,29 +261,31 @@
         <a href="#">Смотреть фото</a>
       </section>
 
-      <div class="popup popup--callback">
-        <button type="button" class="popup__close" aria-label="закрыть"><span class="visually-hidden">Закрыть</span></button>
-        <h3>
-          Заказать звонок
-        </h3>
-        <p>
-          Оставьте ваши контактные данные, мы&nbsp;свяжемся с&nbsp;вами в течение рабочего дня и обязательно поможем найти ответ на ваш вопрос!
-        </p>
-        <form action="https://echo.htmlacademy.ru" class="popup__form callback-form">
-          <div>
-            <label for="name">
-              <input tabindex="0" class="callback-form__field" id="name" type="text" name="user-name" value="" placeholder="имя" required=""></label>
-          </div>
-          <div>
-            <label for="phone">
-              <input tabindex="0" class="callback-form__field" id="phone" type="tel" name="user-phonenumber" value="" required="" placeholder="телефон" pattern="[0-9]{11}"></label>
-          </div>
-          <button type="submit" class="callback-form__button button" aria-label="перезвоните мне">перезвоните мне</button>
-          <div tabindex="0">
-            <input class="callback-form__checkbox visually-hidden" type="checkbox" id="personal-data" name="personal-data">
-            <label class="callback-form__checkbox-label" for="personal-data">Нажимая на кнопку, вы даёте согласие на обработку персональных данных</label>
-          </div>
-        </form>
+      <div class="overlay">
+        <div class="overlay__popup popup popup--callback">
+          <button type="button" class="popup__close" aria-label="закрыть"><span class="visually-hidden">Закрыть</span></button>
+          <h3>
+            Заказать звонок
+          </h3>
+          <p>
+            Оставьте ваши контактные данные, мы&nbsp;свяжемся с&nbsp;вами в течение рабочего дня и обязательно поможем найти ответ на ваш вопрос!
+          </p>
+          <form action="https://echo.htmlacademy.ru" class="popup__form callback-form">
+            <div>
+              <label for="name">
+                <input tabindex="0" class="callback-form__field" id="name" type="text" name="user-name" value="" placeholder="имя" required=""></label>
+            </div>
+            <div>
+              <label for="phone">
+                <input tabindex="0" class="callback-form__field" id="phone" type="tel" name="user-phonenumber" value="" required="" placeholder="телефон" pattern="[0-9]{11}"></label>
+            </div>
+            <button type="submit" class="callback-form__button button" aria-label="перезвоните мне">перезвоните мне</button>
+            <div tabindex="0">
+              <input class="callback-form__checkbox visually-hidden" type="checkbox" id="personal-data" name="personal-data">
+              <label class="callback-form__checkbox-label" for="personal-data">Нажимая на кнопку, вы даёте согласие на обработку персональных данных</label>
+            </div>
+          </form>
+        </div>
       </div>
 
       <div class="overlay">
@@ -258,6 +333,9 @@
       </ul>
     </footer>
   </div>
+
+  <script src="js/main.js"></script>
+  <script src="js/tabs.js"></script>
 </body>
 
 </html>
