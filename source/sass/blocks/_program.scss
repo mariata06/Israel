@@ -10,12 +10,24 @@
   background-position: top right;
   //padding-left: 248px;
   //padding-right: 248px;
+  max-width: 1366px;
+  margin: 0 auto;
 
   flex-direction: row;
   flex-wrap: nowrap;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     background-image: url("../img/sketch-bg-desktop@2x.png");
+  }
+
+  @media (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  @media (max-width: $max-mobile-width) {
+    padding: 0;
+    width: 100%;
   }
 
   h2 {
@@ -31,6 +43,7 @@
     @media (max-width: $max-mobile-width) {
       font-size: 32px;
       line-height: 39px;
+      text-align: center;
     }
   }
 
@@ -42,6 +55,11 @@
     font-weight: 700;
     color: $blue;
     letter-spacing: -2px;
+
+    @media (max-width: $max-mobile-width) {
+      font-size: 24px;
+      line-height: 29px;
+    }
   }
 
   p {
@@ -52,6 +70,10 @@
 
 .program__container {
   display: flex;
+
+  @media (max-width: $max-mobile-width) {
+    flex-direction: column;
+  }
 }
 
 .program__item {
@@ -60,6 +82,11 @@
   &--active {
     display: block;
   }
+
+  @media (max-width: $max-mobile-width) {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
 }
 
 .program__choice {
@@ -67,6 +94,10 @@
   flex-direction: column;
   width: 300px;
   margin-right: 50px;
+
+  @media (max-width: $max-mobile-width) {
+    flex-direction: row;
+  }
 }
 
 .program__choice-item {
@@ -84,9 +115,19 @@
   //text-align: right;
   padding-left: 50px;
 
+  @media (max-width: $max-mobile-width) {
+    font-size: 15px;
+    line-height: 18px;
+    opacity: 0.5;
+  }
+
   &--active {
     background: linear-gradient(to right, #ffc341 0%, #ffd701 100%);
     color: white;
+
+    @media (max-width: $max-mobile-width) {
+      border-radius: 100px;
+    }
 
     &:hover {
       color: white;
@@ -94,6 +135,7 @@
 
     &::after {
       content: "";
+      display: block;
       height: 0;
       width: 0;
       position: absolute;
@@ -102,6 +144,10 @@
       border-left: 26px solid #ffd701;
       border-top: 34px solid transparent;
       border-bottom: 34px solid transparent;
+
+      @media (max-width: $max-mobile-width) {
+        display: none;
+      }
     }
   }
 

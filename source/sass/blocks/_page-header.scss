@@ -6,7 +6,7 @@
   background-size: 110%;
   background-position: top center;
   position: relative;
-  min-height: 906px;
+  height: 906px;
   padding-left: 110px;
   padding-right: 114px;
   padding-top: 32px;
@@ -46,6 +46,21 @@
     @media (max-width: $max-mobile-width) {
       width: 100%;
       margin-top: 300px;
+    }
+  }
+
+  button {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    position: absolute;
+    bottom: 120px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    svg {
+      fill: transparent;
     }
   }
 }

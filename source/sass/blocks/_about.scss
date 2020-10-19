@@ -5,6 +5,8 @@
   background-size: 100%;
   //padding-left: 248px;
   //padding-right: 248px;
+  max-width: 1366px;
+  margin: 0 auto;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     background-image: url("../img/watercolor-bg-desktop@2x.png");
