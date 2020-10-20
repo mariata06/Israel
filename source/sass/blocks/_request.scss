@@ -1,4 +1,116 @@
 .request {
   max-width: 1366px;
   margin: 0 auto;
+  padding-top: 209px;
+  padding-left: 210px;
+  padding-bottom: 210px;
+  background-image: url("../img/girl-flag-bg-desktop@1x.jpg"), url("../img/backpack-desktop@1x.png");
+  background-repeat: no-repeat;
+  background-size: 60%, 10%;
+  background-position: top right, center left;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/girl-flag-bg-desktop@2x.png"), url("../img/backpack-desktop@2x.png");
+  }
+
+  @media (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
+    padding: 100px;
+    padding-top: 0;
+  }
+
+  @media (max-width: $max-mobile-width) {
+    background-image: url("../img/girl-flag-bg-mobile@1x.jpg"), url("../img/backpack-mobile@1x.png");
+    background-repeat: no-repeat, no-repeat;
+    background-size: 100%, 10%;
+    background-position: bottom center, center left;
+    padding: 0;
+    width: 100%;
+    padding-left: 17px;
+    padding-right: 16px;
+    padding-top: 50px;
+    padding-bottom: 300px;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/girl-flag-bg-mobile@2x.jpg"), url("../img/backpack-mobile@2x.png");
+    }
+  }
+
+  h2 {
+    @include reset;
+    font-family: "montserrat", "Arial", sans-serif;
+    font-size: 40px;
+    line-height: 49px;
+    font-weight: 700;
+    color: $blue;
+    letter-spacing: -2px;
+    text-transform: uppercase;
+
+    @media (max-width: $max-mobile-width) {
+      font-size: 32px;
+      line-height: 39px;
+      text-align: center;
+    }
+  }
+
+  p {
+    font-size: 15px;
+    line-height: 25px;
+    width: 400px;
+    margin-bottom: 64px;
+
+    @media (max-width: $max-mobile-width) {
+      width: 100%;
+    }
+  }
+}
+
+.request__form {
+  display: flex;
+  position: relative;
+
+  @media (max-width: $max-mobile-width) {
+    flex-wrap: wrap;
+  }
+
+  label,
+  a {
+    @media (max-width: $max-mobile-width) {
+      width: 100%;
+    }
+  }
+
+  .form__field {
+    padding: 19px 0 20px 40px;
+    border-radius: 100px;
+    border: 1px solid $light-grey;
+    width: 360px;
+    font-family: "firasans", "Arial", sans-serif;
+    font-size: 17px;
+    line-height: 20px;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+
+    @media (max-width: $max-mobile-width) {
+      width: 100%;
+    }
+
+    &::placeholder {
+      color: $black;
+    }
+  }
+
+  .button {
+    margin: 0;
+    position: absolute;
+    left: 280px;
+
+    @media (max-width: $max-mobile-width) {
+      position: relative;
+      left: unset;
+      display: block;
+      width: 264px;
+      margin: 0 auto;
+    }
+  }
 }

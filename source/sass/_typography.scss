@@ -38,3 +38,11 @@
   font-style: normal;
   font-display: swap;
 }
+
+@font-face {
+  font-family: "raleway";
+  src: local("raleway extrabold"), local("raleway-extrabold"), url("../fonts/raleway-extrabold.woff2") format("woff2"), url("../fonts/raleway-extrabold.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
