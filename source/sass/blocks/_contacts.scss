@@ -1,12 +1,14 @@
-.page-footer {
+.contacts {
   max-width: 1366px;
   margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  padding: 90px 0 96px 110px;
 
   ul {
     @include list-reset;
     display: flex;
+  }
+
+  svg {
+    fill: red;
   }
 }

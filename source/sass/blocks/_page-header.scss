@@ -13,11 +13,20 @@
   max-width: 1366px;
   margin: 0 auto;
 
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/intro-bg-desktop@2x.jpg");
+  }
+
   @media (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
     height: 600px;
     background-image: url("../img/intro-bg-desktop@1x.jpg");
     background-position: center center;
     background-size: 120%;
+    //background-size: auto;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/intro-bg-desktop@2x.jpg");
+    }
   }
 
   @media (max-width: $max-mobile-width) {
@@ -28,6 +37,10 @@
     //padding-top: 20px;
     background-size: 100%;
     background-position: top bottom;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/intro-bg-mobile@2x.jpg");
+    }
   }
 
   p {

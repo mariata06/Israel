@@ -42,7 +42,7 @@
             <!-- 1х: 320px; 2x: 640px -->
             <source type="image/webp" media="(max-width: 767px)" srcset="img/program-mobile@1x.webp 1x, img/program-mobile@2x.webp 2x">
             <!-- 1х: 870px; 2x: 1740px -->
-            <img data-src="img/program-desktop@1x.png" srcset="img/program-desktop@2x.png 2x" alt="О программе" width="870" height="460">
+            <img data-src="img/program-desktop@1x.png" src="img/program-desktop@1x.png" srcset="img/program-desktop@2x.png 2x" alt="О программе" width="870" height="460">
           </picture>
           <button>
             <svg width="96" height="96">
@@ -56,7 +56,7 @@
           Программы
         </h2>
         <div class="program__container">
-          <div class="program__choice" id="program__choice" ontouchmove="swipe(event)">
+          <div class="program__choice" id="program__choice">
             <button type="button" class="program__choice-item program__choice-item--general" data-tab-name="general">Общие</button>
             <button type="button" class="program__choice-item program__choice-item--academic program__choice-item--active" data-tab-name="academic">Академические</button>
             <button type="button" class="program__choice-item program__choice-item--internship" data-tab-name="internship">Стажировки</button>
@@ -111,18 +111,17 @@
         <h2>Хочу поехать!</h2>
         <p>Оставьте свой телефон и мы свяжемся с вами, подберём куратора и ответим на все вопросы!</p>
         <form action="https://echo.htmlacademy.ru" method="post" class="request__form form">
-            <label for="phone">
-              <input tabindex="0" class="form__field" id="phone" type="tel" name="user-phonenumber" value="" required="" placeholder="телефон" pattern="[0-9]{11}">
+            <label for="tel">
+              <input tabindex="0" class="form__field" id="tel" type="tel" name="user-phonenumber" value="" required="" placeholder="телефон" pattern="[0-9]{11}">
             </label>
-            <a href="#callback">
-              <button class="form__button button">презвоните мне</button>
-            </a>
+            <button class="form__button button">презвоните мне</button>
         </form>
       </section>
+
       <section class="howto">
         <h2>Как поехать</h2>
         <p>Чтобы узнать подробнее о программе, свяжитесь с координатором в вашем городе. Вы получите актуальные сведения о доступных программах и городах, в которых можете пройти программу.</p>
-        <p class="howto__condition">Чтобы иметь возможность получить грант на обучение  от 4200 до 8400$, вы должны:</p>
+        <p class="howto__condition">Чтобы иметь возможность получить грант на обучение от 4200 до 8400$, вы должны:</p>
         <ul>
           <li><span>1</span>Быть в возрасте от 16 до 30 лет</li>
           <li><span>2</span>Иметь оконченное среднее образование</li>
@@ -131,6 +130,7 @@
         </ul>
         <p class="howto__note">Если вы не подходите по этим правилам, вы всё равно можете принять участие в программе «Маса», оплатив её полную стоимость.</p>
       </section>
+
       <section class="internship">
         <h2>Жизнь в Израиле</h2>
         <p>Помимо учёбы, в рамках программы у вас будет возможность путешествовать по стране и познакомиться с богатой культурно-исторической жизнью Израиля и его жителей.</p>
@@ -140,7 +140,7 @@
               <!-- 1х: 288px; 2x: 576px -->
               <source type="image/webp" media="(max-width: 1023px)" srcset="img/excursion-mobile@1x.webp 1x, img/excursion-mobile@2x.webp 2x">
               <!-- 1х: 482px; 2x: 964px -->
-              <img data-src="img/excursion-desktop@1x.png" srcset="img/excursion-desktop@2x.png 2x" alt="Экскурсии по Израилю" width="482" height="732">
+              <img data-src="img/excursion-desktop@1x.png" src="img/excursion-desktop@1x.png" srcset="img/excursion-desktop@2x.png 2x" alt="Экскурсии по Израилю" width="482" height="732">
             </picture>
             <figcaption>Экскурсии по Израилю и знакомство с его историей</figcaption>
           </figure>
@@ -150,7 +150,7 @@
               <!-- 1х: 288px; 2x: 576px -->
               <source type="image/webp" media="(max-width: 1023px)" srcset="img/learning-hebrew-mobile@1x.webp 1x, img/learning-hebrew-mobile@2x.webp 2x">
               <!-- 1х: 211px; 2x: 422px -->
-              <img data-src="img/learning-hebrew-desktop@1x.png" srcset="img/learning-hebrew-desktop@2x.png 2x" alt="Изучение иврита" width="211" height="318">
+              <img data-src="img/learning-hebrew-desktop@1x.png" src="img/learning-hebrew-desktop@1x.png" srcset="img/learning-hebrew-desktop@2x.png 2x" alt="Изучение иврита" width="211" height="318">
             </picture>
             <figcaption>Изучение иврита</figcaption>
           </figure>
@@ -160,7 +160,7 @@
               <!-- 1х: 288px; 2x: 576px -->
               <source type="image/webp" media="(max-width: 1023px)" srcset="img/skills-mobile@1x.webp 1x, img/skills-mobile@2x.webp 2x">
               <!-- 1х: 411px; 2x: 822px -->
-              <img data-src="img/skills-desktop@1x.png" srcset="img/skills-desktop@2x.png 2x" alt="Современные навыки" width="411" height="318">
+              <img data-src="img/skills-desktop@1x.png" src="img/skills-desktop@1x.png" srcset="img/skills-desktop@2x.png 2x" alt="Современные навыки" width="411" height="318">
             </picture>
             <figcaption>Обучение современным навыкам и профессиям</figcaption>
           </figure>
@@ -170,7 +170,7 @@
               <!-- 1х: 288px; 2x: 576px -->
               <source type="image/webp" media="(max-width: 1023px)" srcset="img/creative-youth-mobile@1x.webp 1x, img/creative-youth-mobile@2x.webp 2x">
               <!-- 1х: 411px; 2x: 822px -->
-              <img data-src="img/creative-youth-desktop@1x.png" srcset="img/creative-youth-desktop@2x.png 2x" alt="Креативная молодежь" width="411" height="318">
+              <img data-src="img/creative-youth-desktop@1x.png" src="img/creative-youth-desktop@1x.png" srcset="img/creative-youth-desktop@2x.png 2x" alt="Креативная молодежь" width="411" height="318">
             </picture>
             <figcaption>Совместные творческие проекты с израильской молодёжью</figcaption>
           </figure>
@@ -180,101 +180,291 @@
               <!-- 1х: 288px; 2x: 576px -->
               <source type="image/webp" media="(max-width: 1023px)" srcset="img/leadership-mobile@1x.webp 1x, img/leadership-mobile@2x.webp 2x">
               <!-- 1х: 211px; 2x: 422px -->
-              <img data-src="img/leadership-desktop@1x.png" srcset="img/leadership-desktop@2x.png 2x" alt="Развитие лидерства" width="211" height="318">
+              <img data-src="img/leadership-desktop@1x.png" src="img/leadership-desktop@1x.png" srcset="img/leadership-desktop@2x.png 2x" alt="Развитие лидерства" width="211" height="318">
             </picture>
             <figcaption>Развитие лидерства</figcaption>
           </figure>
         </div>
 
       </section>
+
+      <section class="masaisrael">
+        <h2>#Masaisrael</h2>
+        <p>Познакомьтесь с программой  от первого лица! Многие участники ведут блоги и фотодневникио жизни, учёбе и путешествиях в Израиле.</p>
+        <button class="masaisrael__button button">
+          <svg width="19" height="19">
+            <use xlink:href="img/sprite.svg#icon-instagram"></use>
+          </svg>
+          <a href="#">Смотреть фото</a>
+        </button>
+      </section>
+
       <section class="faq">
+        <h2>частые вопросы</h2>
         <div id="accordion" class="faq__accordion accordion">
-          <div class="accordion__item show">
-            <div class="accordion__item-title">
-              Кто организатор? Какие сроки у программы?
+          <div class="accordion__item">
+            <div class="accordion__item-trigger">
+              <span>1</span>
+              Кто организатор? Какие сроки у&nbsp;программы?
+              <svg class="accordion__item-svg" width="15" height="8">
+                <use xlink:href="img/sprite.svg#icon-arrow-down"></use>
+              </svg>
             </div>
             <div class="accordion__item-content">
-              Контент 1...
+              Полная стоимость определяется организаторами в зависимости от направления. В большинстве случаев грант «Маса» не покрывает полную стоимость программы, и поэтому предусматривается определённая доля личного участия.
             </div>
           </div>
-          <div class="accordion__tem">
-            <div class="accordion__item-title">
+          <div class="accordion__item">
+            <div class="accordion__item-trigger">
+              <span>2</span>
               Что такое грант на обучение?
+              <svg class="accordion__item-svg" width="15" height="8">
+                <use xlink:href="img/sprite.svg#icon-arrow-down"></use>
+              </svg>
             </div>
             <div class="accordion__item-content">
-              Контент 2...
+              Полная стоимость определяется организаторами в зависимости от направления. В большинстве случаев грант «Маса» не покрывает полную стоимость программы, и поэтому предусматривается определённая доля личного участия.
             </div>
           </div>
-          <div class="accordion__tem">
-            <div class="accordion__item-title">
+          <div class="accordion__item accordion__item--active">
+            <div class="accordion__item-trigger">
+              <span>3</span>
               Как определяется стоимость программы?
+              <svg class="accordion__item-svg" width="15" height="8">
+                <use xlink:href="img/sprite.svg#icon-arrow-down"></use>
+              </svg>
             </div>
             <div class="accordion__item-content">
-              Полная стоимость определяется организаторами в зависимости от направления. В большинетсве случаев грант
-              "Маса" не поркывает полную стоимость программы, и поэтому предусматривается определённая доля личного
-              участия.
+              Полная стоимость определяется организаторами в зависимости от направления. В большинстве случаев грант «Маса» не покрывает полную стоимость программы, и поэтому предусматривается определённая доля личного участия.
             </div>
           </div>
-          <div class="accordion__tem">
-            <div class="accordion__item-title">
-              Что такое грант на обучение?
+          <div class="accordion__item">
+            <div class="accordion__item-trigger"><span>4</span>Что такое грант на обучение?
+              <svg class="accordion__item-svg" width="15" height="8">
+                <use xlink:href="img/sprite.svg#icon-arrow-down"></use>
+              </svg>
             </div>
             <div class="accordion__item-content">
-              Полная стоимость определяется организаторами в зависимости от направления. В большинетсве случаев грант
-              "Маса" не поркывает полную стоимость программы, и поэтому предусматривается определённая доля личного
-              участия.
+              Полная стоимость определяется организаторами в зависимости от направления. В большинстве случаев грант «Маса» не покрывает полную стоимость программы, и поэтому предусматривается определённая доля личного участия.
             </div>
           </div>
-          <div class="accordion__tem">
-            <div class="accordion__item-title">
-              Признавётся ли учёба в рамках проекта для дальнейшего обучения?
+          <div class="accordion__item">
+            <div class="accordion__item-trigger"><span>5</span>Признаётся ли учёба в рамках проекта для дальнейшего обучения?
+              <svg class="accordion__item-svg" width="15" height="8">
+                <use xlink:href="img/sprite.svg#icon-arrow-down"></use>
+              </svg>
             </div>
             <div class="accordion__item-content">
-              Полная стоимость определяется организаторами в зависимости от направления. В большинетсве случаев грант
-              "Маса" не поркывает полную стоимость программы, и поэтому предусматривается определённая доля личного
-              участия.
+              Полная стоимость определяется организаторами в зависимости от направления. В большинстве случаев грант «Маса» не покрывает полную стоимость программы, и поэтому предусматривается определённая доля личного участия.
+            </div>
+          </div>
+          <div class="accordion__item">
+            <div class="accordion__item-trigger"><span>6</span>Как выглядит полный процесс&nbsp;регистрации на&nbsp;программу «Маса»?
+              <svg class="accordion__item-svg" width="15" height="8">
+                <use xlink:href="img/sprite.svg#icon-arrow-down"></use>
+              </svg>
+            </div>
+            <div class="accordion__item-content">
+              Полная стоимость определяется организаторами в зависимости от направления. В большинстве случаев грант «Маса» не покрывает полную стоимость программы, и поэтому предусматривается определённая доля личного участия.
             </div>
           </div>
         </div>
       </section>
       <section class="review">
         <h2>Отзывы</h2>
-        <div class="review__item">
-          <h3 class="review__author">Ольга Михайлова</h3>
-          <p><span>Программа:</span>Арт-Тель, февраль-сентябрь 2017</p>
-          <p class="review__text">Долго выбирая программу</p>
-          <p class="review__text">С первой же встречи</p>
-          <a href="#">Читать подробнее</a>
+        <div class="review__container">
+          <div class="review__slider">
+            <div class="review__item">
+              <picture>
+                <!-- 1х: 240px; 2x: 480px -->
+                <source type="image/webp" media="(max-width: 1023px)" srcset="img/olga-mikhailova-mobile@1x.webp 1x, img/olga-mikhailova-mobile@2x.webp 2x">
+                <!-- 1х: 364px; 2x: 728px -->
+                <img data-src="img/olga-mikhailova-desktop@1x.png" src="img/olga-mikhailova-desktop@1x.png" srcset="img/olga-mikhailova-desktop@2x.png 2x" alt="Развитие лидерства" width="364" height="480">
+              </picture>
+              <div class="review__description">
+                <h3 class="review__author">Ольга Михайлова</h3>
+                <p><span>Программа:&nbsp;</span>Арт-Тель, февраль-сентябрь 2017</p>
+                <p class="review__text">Долго выбирая программу, на которую ехать - я определилась, взяла на 5 месяцев «иврит как культура». Мне очень повезло оказаться в надежных и заботливых руках Анны, Юлии и Олега.</p>
+                <p class="review__text">С первой же встречи тебе дают понять - что ты не один, у тебя есть практически круглосуточная поддержка по любым вопросам. Тебе предоставляют готовое удобное расписание, жилье, приятные встречи, языковой курс а еще и поездки всей программой в разные уголки страны.</p>
+                <a href="#">Читать подробнее</a>
+              </div>
+            </div>
+            <div class="review__item">
+              <picture>
+                <!-- 1х: 240px; 2x: 480px -->
+                <source type="image/webp" media="(max-width: 1023px)" srcset="img/olga-mikhailova-mobile@1x.webp 1x, img/olga-mikhailova-mobile@2x.webp 2x">
+                <!-- 1х: 364px; 2x: 728px -->
+                <img data-src="img/olga-mikhailova-desktop@1x.png" src="img/olga-mikhailova-desktop@1x.png" srcset="img/olga-mikhailova-desktop@2x.png 2x" alt="Развитие лидерства" width="364" height="480">
+              </picture>
+              <div class="review__description">
+                <h3 class="review__author">Ольга Михайлова</h3>
+                <p><span>Программа:&nbsp;</span>Арт-Тель, февраль-сентябрь 2017</p>
+                <p class="review__text">Долго выбирая программу, на которую ехать - я определилась, взяла на 5 месяцев «иврит как культура». Мне очень повезло оказаться в надежных и заботливых руках Анны, Юлии и Олега.</p>
+                <p class="review__text">С первой же встречи тебе дают понять - что ты не один, у тебя есть практически круглосуточная поддержка по любым вопросам. Тебе предоставляют готовое удобное расписание, жилье, приятные встречи, языковой курс а еще и поездки всей программой в разные уголки страны.</p>
+                <a href="#">Читать подробнее</a>
+              </div>
+            </div>
+            <div class="review__item review__item--active">
+              <picture>
+                <!-- 1х: 240px; 2x: 480px -->
+                <source type="image/webp" media="(max-width: 1023px)" srcset="img/olga-mikhailova-mobile@1x.webp 1x, img/olga-mikhailova-mobile@2x.webp 2x">
+                <!-- 1х: 364px; 2x: 728px -->
+                <img data-src="img/olga-mikhailova-desktop@1x.png" src="img/olga-mikhailova-desktop@1x.png" srcset="img/olga-mikhailova-desktop@2x.png 2x" alt="Развитие лидерства" width="364" height="480">
+              </picture>
+              <div class="review__description">
+                <h3 class="review__author">Ольга Михайлова</h3>
+                <p><span>Программа:&nbsp;</span>Арт-Тель, февраль-сентябрь 2017</p>
+                <p class="review__text">Долго выбирая программу, на которую ехать - я определилась, взяла на 5 месяцев «иврит как культура». Мне очень повезло оказаться в надежных и заботливых руках Анны, Юлии и Олега.</p>
+                <p class="review__text">С первой же встречи тебе дают понять - что ты не один, у тебя есть практически круглосуточная поддержка по любым вопросам. Тебе предоставляют готовое удобное расписание, жилье, приятные встречи, языковой курс а еще и поездки всей программой в разные уголки страны.</p>
+                <a href="#">Читать подробнее</a>
+              </div>
+            </div>
+            <div class="review__item">
+              <picture>
+                <!-- 1х: 240px; 2x: 480px -->
+                <source type="image/webp" media="(max-width: 1023px)" srcset="img/olga-mikhailova-mobile@1x.webp 1x, img/olga-mikhailova-mobile@2x.webp 2x">
+                <!-- 1х: 364px; 2x: 728px -->
+                <img data-src="img/olga-mikhailova-desktop@1x.png" src="img/olga-mikhailova-desktop@1x.png" srcset="img/olga-mikhailova-desktop@2x.png 2x" alt="Развитие лидерства" width="364" height="480">
+              </picture>
+              <div class="review__description">
+                <h3 class="review__author">Ольга Михайлова</h3>
+                <p><span>Программа:&nbsp;</span>Арт-Тель, февраль-сентябрь 2017</p>
+                <p class="review__text">Долго выбирая программу, на которую ехать - я определилась, взяла на 5 месяцев «иврит как культура». Мне очень повезло оказаться в надежных и заботливых руках Анны, Юлии и Олега.</p>
+                <p class="review__text">С первой же встречи тебе дают понять - что ты не один, у тебя есть практически круглосуточная поддержка по любым вопросам. Тебе предоставляют готовое удобное расписание, жилье, приятные встречи, языковой курс а еще и поездки всей программой в разные уголки страны.</p>
+                <a href="#">Читать подробнее</a>
+              </div>
+            </div>
+            <div class="review__item">
+              <picture>
+                <!-- 1х: 240px; 2x: 480px -->
+                <source type="image/webp" media="(max-width: 1023px)" srcset="img/olga-mikhailova-mobile@1x.webp 1x, img/olga-mikhailova-mobile@2x.webp 2x">
+                <!-- 1х: 364px; 2x: 728px -->
+                <img data-src="img/olga-mikhailova-desktop@1x.png" src="img/olga-mikhailova-desktop@1x.png" srcset="img/olga-mikhailova-desktop@2x.png 2x" alt="Развитие лидерства" width="364" height="480">
+              </picture>
+              <div class="review__description">
+                <h3 class="review__author">Ольга Михайлова</h3>
+                <p><span>Программа:&nbsp;</span>Арт-Тель, февраль-сентябрь 2017</p>
+                <p class="review__text">Долго выбирая программу, на которую ехать - я определилась, взяла на 5 месяцев «иврит как культура». Мне очень повезло оказаться в надежных и заботливых руках Анны, Юлии и Олега.</p>
+                <p class="review__text">С первой же встречи тебе дают понять - что ты не один, у тебя есть практически круглосуточная поддержка по любым вопросам. Тебе предоставляют готовое удобное расписание, жилье, приятные встречи, языковой курс а еще и поездки всей программой в разные уголки страны.</p>
+                <a href="#">Читать подробнее</a>
+              </div>
+            </div>
+            <div class="review__item">
+              <picture>
+                <!-- 1х: 240px; 2x: 480px -->
+                <source type="image/webp" media="(max-width: 1023px)" srcset="img/olga-mikhailova-mobile@1x.webp 1x, img/olga-mikhailova-mobile@2x.webp 2x">
+                <!-- 1х: 364px; 2x: 728px -->
+                <img data-src="img/olga-mikhailova-desktop@1x.png" src="img/olga-mikhailova-desktop@1x.png" srcset="img/olga-mikhailova-desktop@2x.png 2x" alt="Развитие лидерства" width="364" height="480">
+              </picture>
+              <div class="review__description">
+                <h3 class="review__author">Ольга Михайлова</h3>
+                <p><span>Программа:&nbsp;</span>Арт-Тель, февраль-сентябрь 2017</p>
+                <p class="review__text">Долго выбирая программу, на которую ехать - я определилась, взяла на 5 месяцев «иврит как культура». Мне очень повезло оказаться в надежных и заботливых руках Анны, Юлии и Олега.</p>
+                <p class="review__text">С первой же встречи тебе дают понять - что ты не один, у тебя есть практически круглосуточная поддержка по любым вопросам. Тебе предоставляют готовое удобное расписание, жилье, приятные встречи, языковой курс а еще и поездки всей программой в разные уголки страны.</p>
+                <a href="#">Читать подробнее</a>
+              </div>
+            </div>
+          </div>
         </div>
-        <ul class="review__social-list social-list">
-          <li>
-            <a href="https://facebook.com/" aria-label="facebook" class="social-list__link">
-              <svg width="10" height="20">
-                <use xlink:href="img/sprite.svg#icon-fb"></use>
-              </svg>
-            </a>
-          </li>
-          <li>
-            <a href="https://twitter.com/" aria-label="twitter" class="social-list__link">
-              <svg width="22" height="18">
-                <use xlink:href="img/sprite.svg#icon-twitter"></use>
-              </svg>
-            </a>
-          </li>
-          <li>
-            <a href="https://instagram.com/" aria-label="instagram" class="social-list__link">
-              <svg width="19" height="19">
-                <use xlink:href="img/sprite.svg#icon-instagram"></use>
-              </svg>
-            </a>
-          </li>
-        </ul>
+            <div class="review__pagination">
+              <div class="review__slider slider">
+                <div class="slider__slides">
+                  <span class="number" onclick="currentSlide(1)">1</span>&nbsp;/&nbsp;<span class="number" onclick="currentSlide(6)">6</span>
+                </div>
+                <div class="slider__buttons">
+                  <a href="#">
+                    <svg class="slider__button slider__button--previous" width="8" height="15">
+                      <use xlink:href="img/sprite.svg#icon-arrow-left"></use>
+                    </svg>
+                  </a>
+                  <a href="#">
+                    <svg class="slider__button slider__button--next" width="8" height="15">
+                      <use xlink:href="img/sprite.svg#icon-arrow-left"></use>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+              <ul class="review__social-list social-list">
+                <li>
+                  <a href="https://facebook.com/" aria-label="facebook" class="social-list__link">
+                    <svg width="10" height="20">
+                      <use xlink:href="img/sprite.svg#icon-fb"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://twitter.com/" aria-label="twitter" class="social-list__link">
+                    <svg width="22" height="18">
+                      <use xlink:href="img/sprite.svg#icon-twitter"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://instagram.com/" aria-label="instagram" class="social-list__link">
+                    <svg width="19" height="19">
+                      <use xlink:href="img/sprite.svg#icon-instagram"></use>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
       </section>
 
-      <section class="program">
-        <h2>#Masaisrael</h2>
-        <p>Познакомьтесь с программой</p>
-        <a href="#">Смотреть фото</a>
+      <section class="contacts">
+        <h2>Узнать подробности</h2>
+        <p>
+          <svg width="12" height="18">
+            <use xlink:href="img/sprite.svg#icon-pin"></use>
+          </svg>
+          Ваш город:<a href="#">Новосибирск</a>
+          <svg width="16" height="15">
+            <use xlink:href="img/sprite.svg#icon-gps"></use>
+          </svg>
+        </p>
+        <div class="contacts__contact-person">
+          <img src="img/anna-gorelik.png" alt="Анна Горелик" width="112" height="112">
+          <p><span>Ваш куратор:</span>Анна Горелик</p>
+          <p>Новосибирск, ул. Щетинкина 68, культурный центр «Бейт Менахем»</p>
+          <ul class="contacts__social-list social-list">
+            <li>
+              <a href="https://facebook.com/" aria-label="facebook" class="social-list__link">
+                <svg width="10" height="20">
+                  <use xlink:href="img/sprite.svg#icon-fb"></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="https://web.whatsapp.com/" aria-label="whatsapp" class="social-list__link">
+                <svg width="20" height="20">
+                  <use xlink:href="img/sprite.svg#icon-whatsapp"></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="https://web.telegram.org/" aria-label="telegram" class="social-list__link">
+                <svg width="22" height="18">
+                  <use xlink:href="img/sprite.svg#icon-telegram"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+          <p>Куратор является опытным специалистом агентства Сохнут и знает о проекте «Маса» всё! Свяжитесь с куратором,узнайте подробнее о программах и выберите свою !</p>
+        </div>
+        <picture>
+          <!-- 1х: 320px; 2x: 640px -->
+          <source type="image/webp" media="(max-width: 767px)" srcset="img/map-mobile@1x.webp 1x, img/map-mobile@2x.webp 2x">
+          <!-- 1х: 702px; 2x: 1404px -->
+          <img data-src="img/map-desktop@1x.png" src="img/map-desktop@1x.png" srcset="img/map-desktop@2x.png 2x" alt="Карта проезда" width="702" height="448">
+        </picture>
+        <div>
+          <p>Оставьте ваши контакты, если у ваc остались вопросы — мы на них ответим!</p>
+          <p>Мы не передаём данные третьим лицам. Ваши данные будут в безопасности и вам не придёт спам от нас!</p>
+          <form action="https://echo.htmlacademy.ru" method="post">
+            <label for="name"><input tabindex="0" class="callback-form__field" id="name" type="text" name="user-name" value="" placeholder="имя" required=""></label>
+            <label for="phone"><input tabindex="0" class="callback-form__field" id="phone" type="tel" name="user-phonenumber" value="" required="" placeholder="+7 (923) 41" pattern="[0-9]{11}"></label>
+            <button type="submit" class="button" aria-label="перезвоните мне">перезвоните мне</button>
+          </form>
+        </div>
       </section>
 
       <div class="overlay overlay__form">
@@ -286,7 +476,7 @@
           <p>
             Оставьте ваши контактные данные, мы&nbsp;свяжемся с&nbsp;вами в течение рабочего дня и обязательно поможем найти ответ на ваш вопрос!
           </p>
-          <form action="https://echo.htmlacademy.ru" class="popup__form callback-form">
+          <form action="https://echo.htmlacademy.ru" method="post" class="popup__form callback-form">
             <div>
               <label for="name">
                 <input tabindex="0" class="callback-form__field" id="name" type="text" name="user-name" value="" placeholder="имя" required=""></label>
@@ -353,6 +543,8 @@
   <script src="js/main.js"></script>
   <script src="js/tabs.js"></script>
   <script src="js/swipe.js"></script>
+  <script src="js/accordion.js"></script>
+  <!--<script src="js/review-slider.js"></script>-->
 </body>
 
 </html>

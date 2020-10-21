@@ -1,4 +1,120 @@
 .review {
   max-width: 1366px;
   margin: 0 auto;
+  padding: 128px 184px 109px 98px;
+  background-image: url("../img/review-sketch-desktop@1x.png");
+  background-repeat: no-repeat;
+  background-size: 50%;
+  background-position: center right;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/review-sketch-desktop@2x.png");
+  }
+
+  h2 {
+    @include reset;
+    font-family: "montserrat", "Arial", sans-serif;
+    font-size: 40px;
+    line-height: 49px;
+    font-weight: 700;
+    color: $blue;
+    letter-spacing: -2px;
+    text-transform: uppercase;
+    text-align: center;
+
+    @media (max-width: $max-mobile-width) {
+      text-align: center;
+      margin-bottom: 50px;
+      font-size: 32px;
+      line-height: 39px;
+    }
+  }
+
+  .review__item {
+    display: none;
+    //display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    &--active {
+      display: flex;
+    }
+  }
+
+  .review__description {
+    width: 680px;
+    margin-left: auto;
+    font-size: 17px;
+    line-height: 29px;
+
+    span {
+      color: $blue;
+      font-size: 15px;
+      line-height: 21px;
+    }
+
+    a {
+      text-decoration: underline;
+      color: $blue;
+      margin-bottom: 50px;
+      display: block;
+    }
+  }
+
+  .review__author {
+    font-size: 24px;
+    line-height: 36px;
+    font-weight: 500;
+  }
+
+  .review__pagination {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  ul {
+    @include list-reset;
+    display: flex;
+
+    svg {
+      fill: grey;
+    }
+  }
+}
+
+
+.slider {
+  display: flex;
+
+  .slider__slides {
+    margin-right: 10px;
+  }
+
+  .slider__buttons {
+    display: flex;
+    flex-direction: row;
+
+    svg {
+      margin-left: 10px;
+      margin-right: 10px;
+      fill: transparent;
+    }
+
+    .slider__button--next {
+      transform: rotate(180deg);
+    }
+  }
+}
+
+/*
+.review__container {
+  background-color: pink;
+}
+*/
+
+.review__slider {
+  //background-color: yellow;
+  display: flex;
+  transition: 0.2s;
 }

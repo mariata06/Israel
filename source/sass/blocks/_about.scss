@@ -76,6 +76,12 @@
   margin: 0 auto;
   position: relative;
 
+  @media (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
+    img {
+      height: 460px;
+    }
+  }
+
   button {
     border: none;
     outline: none;
