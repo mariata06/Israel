@@ -6,6 +6,7 @@
   background-repeat: no-repeat;
   background-size: 50%;
   background-position: center right;
+  position: relative;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     background-image: url("../img/review-sketch-desktop@2x.png");
@@ -30,6 +31,7 @@
     }
   }
 
+  /*
   .review__item {
     display: none;
     //display: flex;
@@ -40,12 +42,13 @@
       display: flex;
     }
   }
-
+  */
   .review__description {
     width: 680px;
     margin-left: auto;
     font-size: 17px;
     line-height: 29px;
+    text-align: left;
 
     span {
       color: $blue;
@@ -58,6 +61,8 @@
       color: $blue;
       margin-bottom: 50px;
       display: block;
+      padding-bottom: 5px;
+      width: 160px;
     }
   }
 
@@ -67,15 +72,19 @@
     font-weight: 500;
   }
 
+  /*
   .review__pagination {
     display: flex;
     width: 100%;
     justify-content: space-between;
   }
-
-  ul {
-    @include list-reset;
+  */
+  .review__social-list {
+    //@include list-reset;
     display: flex;
+    margin-left: auto;
+    align-self: flex-end;
+    list-style: none;
 
     svg {
       fill: grey;
@@ -83,7 +92,7 @@
   }
 }
 
-
+/*
 .slider {
   display: flex;
 
@@ -106,15 +115,124 @@
     }
   }
 }
-
+*/
 /*
 .review__container {
   background-color: pink;
 }
 */
 
+/*
 .review__slider {
   //background-color: yellow;
   display: flex;
   transition: 0.2s;
 }
+*/
+.swiper__slide {
+  display: flex;
+}
+
+.review__pagination-buttons {
+  display: flex;
+}
+
+.review__pagination {
+  width: 20px;
+  position: relative;
+  display: flex;
+}
+
+.review__buttons {
+  width: 100px;
+  height: 50px;
+}
+
+.review__button-prev {
+  position: relative;
+  display: block;
+  width: 50px;
+  height: 50px;
+  border: 1px solid black;
+
+  &::after {
+    display: none;
+  }
+
+  svg {
+    //z-index: 100;
+    //fill: transparent;
+    transform: scale(5);
+    //opacity: 0;
+  }
+}
+
+.review__button-next {
+  position: relative;
+  display: block;
+  width: 50px;
+  height: 50px;
+  border: 1px solid black;
+
+  &::after {
+    display: none;
+  }
+
+  svg {
+    //transform: scale(2);
+    //fill: transparent;
+    transform: scale(5), rotate(180deg);
+    //opacity: 0;
+  }
+}
+
+/*
+.swiper__container {
+  position: relative;
+}
+*/
+
+/*
+.swiper-pagination {
+  position: absolute;
+  top: 450px;
+  left: 0;
+}
+*/
+/*
+.swiper-buttons {
+  position: absolute;
+  top: 450px;
+  left: 20px;
+  display: flex;
+  width: 20px;
+  justify-content: space-between;
+
+  svg {
+    fill: transparent;
+  }
+}
+*/
+
+.swiper-container {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: white;
+
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*
+.review__pagination {
+  text-align: left;
+  margin-left: 250px;
+}
+*/

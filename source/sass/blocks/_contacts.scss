@@ -1,7 +1,81 @@
 .contacts {
   max-width: 1366px;
   margin: 0 auto;
-  padding: 90px 0 96px 110px;
+  padding: 0 106px 96px 118px;
+  //display: flex;
+  //flex-direction: row;
+  //flex-wrap: wrap;
+  background-image: url("../img/marker-map.png"), url("../img/map-desktop@1x.png"), url("../img/contacts-watercolor-bg-desktop@1x.png");
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-size: 1%, 50%, 100%;
+  background-position: 1200px 200px, top right, top right;
+  position: relative;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/marker-map.png"), url("../img/map-desktop@2x.png"), url("../img/contacts-watercolor-bg-desktop@2x.png");
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-size: 1%, 50%, 100%;
+    background-position: 1200px 200px, top right, top right;
+  }
+
+  @media (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
+    padding: 20px;
+    padding-top: 0;
+    background-image: url("../img/marker-map.png"), url("../img/map-desktop@1x.png");
+    background-repeat: no-repeat, no-repeat;
+    background-size: 1%, 60%;
+    background-position: 600px 200px, 300px 50px;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/marker-map.png"), url("../img/map-desktop@2x.png");
+    }
+  }
+
+  @media (max-width: $max-mobile-width) {
+    padding: 16px;
+    padding-bottom: 50px;
+    background-image: url("../img/marker-map.png"), url("../img/map-mobile@1x.png");
+    background-repeat: no-repeat, no-repeat;
+    background-size: 7%, 100%;
+    background-position: 250px 800px, center 550px;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/marker-map.png"), url("../img/map-mobile@2x.png");
+    }
+  }
+
+  /*
+  &::before {
+    content: url("../img/marker-map.png");
+    position: absolute;
+    top: 50%;
+    right: 100px;
+    transform: translateY(-50%);
+  }*/
+
+  h2 {
+    @include reset;
+    font-family: "montserrat", "Arial", sans-serif;
+    font-size: 40px;
+    line-height: 49px;
+    font-weight: 700;
+    color: $blue;
+    letter-spacing: -2px;
+    text-transform: uppercase;
+    text-align: left;
+    margin-bottom: 48px;
+
+    @media (max-width: $max-mobile-width) {
+      font-size: 32px;
+      line-height: 39px;
+      text-align: center;
+      margin-bottom: 24px;
+    }
+  }
+
+  p {
+    @include reset;
+  }
 
   ul {
     @include list-reset;
@@ -10,5 +84,162 @@
 
   svg {
     fill: red;
+  }
+
+  form {
+    display: flex;
+    margin-left: auto;
+
+    @media (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
+      width: 100%;
+      justify-content: space-between;
+    }
+
+    @media (max-width: $max-mobile-width) {
+      order: 3;
+      flex-wrap: wrap;
+      width: 100%;
+    }
+
+    label {
+      @media (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
+        width: 30%;
+      }
+
+      @media (max-width: $max-mobile-width) {
+        width: 100%;
+      }
+    }
+
+    input {
+      padding: 19px 0 20px 40px;
+      border-radius: 100px;
+      border: 1px solid $light-grey;
+      width: 250px;
+      font-family: "firasans", "Arial", sans-serif;
+      font-size: 16px;
+      line-height: 19px;
+      font-weight: 500;
+      text-transform: uppercase;
+      //margin-bottom: 8px;
+      margin-right: 24px;
+
+      @media (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
+        width: 100%;
+      }
+
+      @media (max-width: $max-mobile-width) {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 8px;
+      }
+
+      &::placeholder {
+        color: $black;
+      }
+    }
+
+    .contacts__form-button {
+      margin: 0;
+      width: 216px;
+      padding-top: 8px;
+      padding-bottom: 9px;
+
+      @media (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
+        width: 30%;
+      }
+
+      @media (max-width: $max-mobile-width) {
+        width: 264px;
+        padding-top: 16px;
+        padding-bottom: 16px;
+        margin: 0 auto;
+      }
+    }
+  }
+}
+
+.contacts__form {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+
+  p {
+    font-size: 17px;
+    line-height: 26px;
+    font-weight: 500;
+    width: 328px;
+  }
+
+  .contacts__note {
+    font-size: 13px;
+    line-height: 19px;
+    font-weight: 400;
+
+    @media (max-width: $max-mobile-width) {
+      order: 2;
+    }
+  }
+}
+
+.contacts__homecity {
+  display: block;
+  font-size: 15px;
+  line-height: 22px;
+
+  a {
+    text-transform: uppercase;
+    font-weight: 500;
+    border-bottom: 1px dashed $blue;
+    color: $black;
+  }
+}
+
+.contacts__info {
+  width: 480px;
+  //display: flex;
+  //flex-direction: row;
+  margin-right: auto;
+  margin-bottom: 50px;
+
+  @media (max-width: $max-mobile-width) {
+    width: 100%;
+    margin-bottom: 400px;
+  }
+}
+
+.contacts__contact-person {
+  font-size: 15px;
+  line-height: 22px;
+  display: flex;
+  //flex-wrap: wrap;
+  margin-top: 38.5px;
+  margin-bottom: 38.5px;
+
+  @media (max-width: $max-mobile-width) {
+    flex-wrap: wrap;
+  }
+
+  span {
+    color: $blue;
+    font-weight: 700;
+  }
+
+  .contacts__address {
+    font-size: 13px;
+    line-height: 19px;
+  }
+}
+
+.contacts__contact-person-details {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-left: 20px;
+
+  @media (max-width: $max-mobile-width) {
+    margin-left: 0;
+    width: 100%;
   }
 }

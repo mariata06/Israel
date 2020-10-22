@@ -13,6 +13,7 @@
   <link rel="preload" href="fonts/montserrat-bold.woff2" as="font" type="font/woff2" crossorigin="">
   <link rel="preload" href="fonts/raleway-extrabold.woff2" as="font" type="font/woff2" crossorigin="">
   <!--<link rel="preload" href="js/main.js" as="script">-->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
@@ -191,12 +192,11 @@
       <section class="masaisrael">
         <h2>#Masaisrael</h2>
         <p>Познакомьтесь с программой  от первого лица! Многие участники ведут блоги и фотодневникио жизни, учёбе и путешествиях в Израиле.</p>
-        <button class="masaisrael__button button">
-          <svg width="19" height="19">
-            <use xlink:href="img/sprite.svg#icon-instagram"></use>
-          </svg>
-          <a href="#">Смотреть фото</a>
-        </button>
+          <a class="masaisrael__button button">
+            <svg width="19" height="19">
+              <use xlink:href="img/sprite.svg#icon-instagram"></use>
+            </svg>Смотреть фото
+          </a>
       </section>
 
       <section class="faq">
@@ -272,9 +272,39 @@
       </section>
       <section class="review">
         <h2>Отзывы</h2>
-        <div class="review__container">
-          <div class="review__slider">
-            <div class="review__item">
+        <div class="review__container swiper-container">
+          <div class="review__wrapper swiper-wrapper">
+            <div class="review__item swiper-slide">
+              <picture>
+                <!-- 1х: 240px; 2x: 480px -->
+                <source type="image/webp" media="(max-width: 1023px)" srcset="img/olga-mikhailova-mobile@1x.webp 1x, img/olga-mikhailova-mobile@2x.webp 2x">
+                <!-- 1х: 364px; 2x: 728px -->
+                <img data-src="img/olga-mikhailova-desktop@1x.png" src="img/olga-mikhailova-desktop@1x.png" srcset="img/olga-mikhailova-desktop@2x.png 2x" alt="Развитие лидерства" width="364" height="480">
+              </picture>
+              <div class="review__description">
+                <h3 class="review__author">Ирина Петрова</h3>
+                <p><span>Программа:&nbsp;</span>Арт-Тель, февраль-сентябрь 2017</p>
+                <p class="review__text">Долго выбирая программу, на которую ехать - я определилась, взяла на 5 месяцев «иврит как культура». Мне очень повезло оказаться в надежных и заботливых руках Анны, Юлии и Олега.</p>
+                <p class="review__text">С первой же встречи тебе дают понять - что ты не один, у тебя есть практически круглосуточная поддержка по любым вопросам. Тебе предоставляют готовое удобное расписание, жилье, приятные встречи, языковой курс а еще и поездки всей программой в разные уголки страны.</p>
+                <a href="#">Читать подробнее</a>
+              </div>
+            </div>
+            <div class="review__item swiper-slide">
+              <picture>
+                <!-- 1х: 240px; 2x: 480px -->
+                <source type="image/webp" media="(max-width: 1023px)" srcset="img/olga-mikhailova-mobile@1x.webp 1x, img/olga-mikhailova-mobile@2x.webp 2x">
+                <!-- 1х: 364px; 2x: 728px -->
+                <img data-src="img/olga-mikhailova-desktop@1x.png" src="img/olga-mikhailova-desktop@1x.png" srcset="img/olga-mikhailova-desktop@2x.png 2x" alt="Развитие лидерства" width="364" height="480">
+              </picture>
+              <div class="review__description">
+                <h3 class="review__author">Татьяна Попова</h3>
+                <p><span>Программа:&nbsp;</span>Арт-Тель, февраль-сентябрь 2017</p>
+                <p class="review__text">Долго выбирая программу, на которую ехать - я определилась, взяла на 5 месяцев «иврит как культура». Мне очень повезло оказаться в надежных и заботливых руках Анны, Юлии и Олега.</p>
+                <p class="review__text">С первой же встречи тебе дают понять - что ты не один, у тебя есть практически круглосуточная поддержка по любым вопросам. Тебе предоставляют готовое удобное расписание, жилье, приятные встречи, языковой курс а еще и поездки всей программой в разные уголки страны.</p>
+                <a href="#">Читать подробнее</a>
+              </div>
+            </div>
+            <div class="review__item swiper-slide">
               <picture>
                 <!-- 1х: 240px; 2x: 480px -->
                 <source type="image/webp" media="(max-width: 1023px)" srcset="img/olga-mikhailova-mobile@1x.webp 1x, img/olga-mikhailova-mobile@2x.webp 2x">
@@ -289,7 +319,7 @@
                 <a href="#">Читать подробнее</a>
               </div>
             </div>
-            <div class="review__item">
+            <div class="review__item swiper-slide">
               <picture>
                 <!-- 1х: 240px; 2x: 480px -->
                 <source type="image/webp" media="(max-width: 1023px)" srcset="img/olga-mikhailova-mobile@1x.webp 1x, img/olga-mikhailova-mobile@2x.webp 2x">
@@ -297,14 +327,14 @@
                 <img data-src="img/olga-mikhailova-desktop@1x.png" src="img/olga-mikhailova-desktop@1x.png" srcset="img/olga-mikhailova-desktop@2x.png 2x" alt="Развитие лидерства" width="364" height="480">
               </picture>
               <div class="review__description">
-                <h3 class="review__author">Ольга Михайлова</h3>
+                <h3 class="review__author">Вера Иванова</h3>
                 <p><span>Программа:&nbsp;</span>Арт-Тель, февраль-сентябрь 2017</p>
                 <p class="review__text">Долго выбирая программу, на которую ехать - я определилась, взяла на 5 месяцев «иврит как культура». Мне очень повезло оказаться в надежных и заботливых руках Анны, Юлии и Олега.</p>
                 <p class="review__text">С первой же встречи тебе дают понять - что ты не один, у тебя есть практически круглосуточная поддержка по любым вопросам. Тебе предоставляют готовое удобное расписание, жилье, приятные встречи, языковой курс а еще и поездки всей программой в разные уголки страны.</p>
                 <a href="#">Читать подробнее</a>
               </div>
             </div>
-            <div class="review__item review__item--active">
+            <div class="review__item swiper-slide">
               <picture>
                 <!-- 1х: 240px; 2x: 480px -->
                 <source type="image/webp" media="(max-width: 1023px)" srcset="img/olga-mikhailova-mobile@1x.webp 1x, img/olga-mikhailova-mobile@2x.webp 2x">
@@ -312,14 +342,14 @@
                 <img data-src="img/olga-mikhailova-desktop@1x.png" src="img/olga-mikhailova-desktop@1x.png" srcset="img/olga-mikhailova-desktop@2x.png 2x" alt="Развитие лидерства" width="364" height="480">
               </picture>
               <div class="review__description">
-                <h3 class="review__author">Ольга Михайлова</h3>
+                <h3 class="review__author">Дарья Александрова</h3>
                 <p><span>Программа:&nbsp;</span>Арт-Тель, февраль-сентябрь 2017</p>
                 <p class="review__text">Долго выбирая программу, на которую ехать - я определилась, взяла на 5 месяцев «иврит как культура». Мне очень повезло оказаться в надежных и заботливых руках Анны, Юлии и Олега.</p>
                 <p class="review__text">С первой же встречи тебе дают понять - что ты не один, у тебя есть практически круглосуточная поддержка по любым вопросам. Тебе предоставляют готовое удобное расписание, жилье, приятные встречи, языковой курс а еще и поездки всей программой в разные уголки страны.</p>
                 <a href="#">Читать подробнее</a>
               </div>
             </div>
-            <div class="review__item">
+            <div class="review__item swiper-slide">
               <picture>
                 <!-- 1х: 240px; 2x: 480px -->
                 <source type="image/webp" media="(max-width: 1023px)" srcset="img/olga-mikhailova-mobile@1x.webp 1x, img/olga-mikhailova-mobile@2x.webp 2x">
@@ -327,37 +357,7 @@
                 <img data-src="img/olga-mikhailova-desktop@1x.png" src="img/olga-mikhailova-desktop@1x.png" srcset="img/olga-mikhailova-desktop@2x.png 2x" alt="Развитие лидерства" width="364" height="480">
               </picture>
               <div class="review__description">
-                <h3 class="review__author">Ольга Михайлова</h3>
-                <p><span>Программа:&nbsp;</span>Арт-Тель, февраль-сентябрь 2017</p>
-                <p class="review__text">Долго выбирая программу, на которую ехать - я определилась, взяла на 5 месяцев «иврит как культура». Мне очень повезло оказаться в надежных и заботливых руках Анны, Юлии и Олега.</p>
-                <p class="review__text">С первой же встречи тебе дают понять - что ты не один, у тебя есть практически круглосуточная поддержка по любым вопросам. Тебе предоставляют готовое удобное расписание, жилье, приятные встречи, языковой курс а еще и поездки всей программой в разные уголки страны.</p>
-                <a href="#">Читать подробнее</a>
-              </div>
-            </div>
-            <div class="review__item">
-              <picture>
-                <!-- 1х: 240px; 2x: 480px -->
-                <source type="image/webp" media="(max-width: 1023px)" srcset="img/olga-mikhailova-mobile@1x.webp 1x, img/olga-mikhailova-mobile@2x.webp 2x">
-                <!-- 1х: 364px; 2x: 728px -->
-                <img data-src="img/olga-mikhailova-desktop@1x.png" src="img/olga-mikhailova-desktop@1x.png" srcset="img/olga-mikhailova-desktop@2x.png 2x" alt="Развитие лидерства" width="364" height="480">
-              </picture>
-              <div class="review__description">
-                <h3 class="review__author">Ольга Михайлова</h3>
-                <p><span>Программа:&nbsp;</span>Арт-Тель, февраль-сентябрь 2017</p>
-                <p class="review__text">Долго выбирая программу, на которую ехать - я определилась, взяла на 5 месяцев «иврит как культура». Мне очень повезло оказаться в надежных и заботливых руках Анны, Юлии и Олега.</p>
-                <p class="review__text">С первой же встречи тебе дают понять - что ты не один, у тебя есть практически круглосуточная поддержка по любым вопросам. Тебе предоставляют готовое удобное расписание, жилье, приятные встречи, языковой курс а еще и поездки всей программой в разные уголки страны.</p>
-                <a href="#">Читать подробнее</a>
-              </div>
-            </div>
-            <div class="review__item">
-              <picture>
-                <!-- 1х: 240px; 2x: 480px -->
-                <source type="image/webp" media="(max-width: 1023px)" srcset="img/olga-mikhailova-mobile@1x.webp 1x, img/olga-mikhailova-mobile@2x.webp 2x">
-                <!-- 1х: 364px; 2x: 728px -->
-                <img data-src="img/olga-mikhailova-desktop@1x.png" src="img/olga-mikhailova-desktop@1x.png" srcset="img/olga-mikhailova-desktop@2x.png 2x" alt="Развитие лидерства" width="364" height="480">
-              </picture>
-              <div class="review__description">
-                <h3 class="review__author">Ольга Михайлова</h3>
+                <h3 class="review__author">Анна Фёдорова</h3>
                 <p><span>Программа:&nbsp;</span>Арт-Тель, февраль-сентябрь 2017</p>
                 <p class="review__text">Долго выбирая программу, на которую ехать - я определилась, взяла на 5 месяцев «иврит как культура». Мне очень повезло оказаться в надежных и заботливых руках Анны, Юлии и Олега.</p>
                 <p class="review__text">С первой же встречи тебе дают понять - что ты не один, у тебя есть практически круглосуточная поддержка по любым вопросам. Тебе предоставляют готовое удобное расписание, жилье, приятные встречи, языковой курс а еще и поездки всей программой в разные уголки страны.</p>
@@ -365,26 +365,69 @@
               </div>
             </div>
           </div>
-        </div>
-            <div class="review__pagination">
-              <div class="review__slider slider">
-                <div class="slider__slides">
-                  <span class="number" onclick="currentSlide(1)">1</span>&nbsp;/&nbsp;<span class="number" onclick="currentSlide(6)">6</span>
-                </div>
-                <div class="slider__buttons">
-                  <a href="#">
-                    <svg class="slider__button slider__button--previous" width="8" height="15">
-                      <use xlink:href="img/sprite.svg#icon-arrow-left"></use>
-                    </svg>
-                  </a>
-                  <a href="#">
-                    <svg class="slider__button slider__button--next" width="8" height="15">
-                      <use xlink:href="img/sprite.svg#icon-arrow-left"></use>
-                    </svg>
-                  </a>
-                </div>
+
+          <div class="review__pagination-buttons">
+            <!-- Add Pagination -->
+            <div class="review__pagination swiper-pagination"></div>
+            <!-- Add Arrows -->
+            <div class="review__buttons">
+              <div class="review__button-prev swiper-button-prev">
+                <svg width="8" height="15">
+                  <use xlink:href="img/sprite.svg#icon-arrow-left"></use>
+                </svg>
               </div>
-              <ul class="review__social-list social-list">
+              <div class="review__button-next swiper-button-next">
+                <svg width="8" height="15">
+                  <use xlink:href="img/sprite.svg#icon-arrow-left"></use>
+                </svg>
+              </div>
+            </div>
+          </div>
+
+            <ul class="review__social-list social-list">
+              <li>
+                <a href="https://facebook.com/" aria-label="facebook" class="social-list__link">
+                  <svg width="10" height="20">
+                    <use xlink:href="img/sprite.svg#icon-fb"></use>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="https://twitter.com/" aria-label="twitter" class="social-list__link">
+                  <svg width="22" height="18">
+                    <use xlink:href="img/sprite.svg#icon-twitter"></use>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="https://instagram.com/" aria-label="instagram" class="social-list__link">
+                  <svg width="19" height="19">
+                    <use xlink:href="img/sprite.svg#icon-instagram"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+        </div>
+      </section>
+
+      <section class="contacts">
+        <h2>Узнать подробности</h2>
+        <div class="contacts__info">
+          <p class="contacts__homecity">
+            <svg width="12" height="18">
+              <use xlink:href="img/sprite.svg#icon-marker"></use>
+            </svg>
+            Ваш город:<a href="#">Новосибирск</a>
+            <svg width="16" height="15">
+              <use xlink:href="img/sprite.svg#icon-gps"></use>
+            </svg>
+          </p>
+          <div class="contacts__contact-person">
+            <img src="img/anna-gorelik.png" alt="Анна Горелик" width="112" height="112">
+            <div class="contacts__contact-person-details">
+              <p><span>Ваш куратор:</span>Анна Горелик</p>
+              <p class="contacts__address">Новосибирск, ул. Щетинкина 68, культурный центр «Бейт Менахем»</p>
+              <ul class="contacts__social-list social-list">
                 <li>
                   <a href="https://facebook.com/" aria-label="facebook" class="social-list__link">
                     <svg width="10" height="20">
@@ -393,77 +436,32 @@
                   </a>
                 </li>
                 <li>
-                  <a href="https://twitter.com/" aria-label="twitter" class="social-list__link">
-                    <svg width="22" height="18">
-                      <use xlink:href="img/sprite.svg#icon-twitter"></use>
+                  <a href="https://web.whatsapp.com/" aria-label="whatsapp" class="social-list__link">
+                    <svg width="20" height="20">
+                      <use xlink:href="img/sprite.svg#icon-whatsapp"></use>
                     </svg>
                   </a>
                 </li>
                 <li>
-                  <a href="https://instagram.com/" aria-label="instagram" class="social-list__link">
-                    <svg width="19" height="19">
-                      <use xlink:href="img/sprite.svg#icon-instagram"></use>
+                  <a href="https://web.telegram.org/" aria-label="telegram" class="social-list__link">
+                    <svg width="22" height="18">
+                      <use xlink:href="img/sprite.svg#icon-telegram"></use>
                     </svg>
                   </a>
                 </li>
               </ul>
             </div>
-      </section>
-
-      <section class="contacts">
-        <h2>Узнать подробности</h2>
-        <p>
-          <svg width="12" height="18">
-            <use xlink:href="img/sprite.svg#icon-pin"></use>
-          </svg>
-          Ваш город:<a href="#">Новосибирск</a>
-          <svg width="16" height="15">
-            <use xlink:href="img/sprite.svg#icon-gps"></use>
-          </svg>
-        </p>
-        <div class="contacts__contact-person">
-          <img src="img/anna-gorelik.png" alt="Анна Горелик" width="112" height="112">
-          <p><span>Ваш куратор:</span>Анна Горелик</p>
-          <p>Новосибирск, ул. Щетинкина 68, культурный центр «Бейт Менахем»</p>
-          <ul class="contacts__social-list social-list">
-            <li>
-              <a href="https://facebook.com/" aria-label="facebook" class="social-list__link">
-                <svg width="10" height="20">
-                  <use xlink:href="img/sprite.svg#icon-fb"></use>
-                </svg>
-              </a>
-            </li>
-            <li>
-              <a href="https://web.whatsapp.com/" aria-label="whatsapp" class="social-list__link">
-                <svg width="20" height="20">
-                  <use xlink:href="img/sprite.svg#icon-whatsapp"></use>
-                </svg>
-              </a>
-            </li>
-            <li>
-              <a href="https://web.telegram.org/" aria-label="telegram" class="social-list__link">
-                <svg width="22" height="18">
-                  <use xlink:href="img/sprite.svg#icon-telegram"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
+          </div>
           <p>Куратор является опытным специалистом агентства Сохнут и знает о проекте «Маса» всё! Свяжитесь с куратором,узнайте подробнее о программах и выберите свою !</p>
         </div>
-        <picture>
-          <!-- 1х: 320px; 2x: 640px -->
-          <source type="image/webp" media="(max-width: 767px)" srcset="img/map-mobile@1x.webp 1x, img/map-mobile@2x.webp 2x">
-          <!-- 1х: 702px; 2x: 1404px -->
-          <img data-src="img/map-desktop@1x.png" src="img/map-desktop@1x.png" srcset="img/map-desktop@2x.png 2x" alt="Карта проезда" width="702" height="448">
-        </picture>
-        <div>
+        <div class="contacts__form">
           <p>Оставьте ваши контакты, если у ваc остались вопросы — мы на них ответим!</p>
-          <p>Мы не передаём данные третьим лицам. Ваши данные будут в безопасности и вам не придёт спам от нас!</p>
           <form action="https://echo.htmlacademy.ru" method="post">
-            <label for="name"><input tabindex="0" class="callback-form__field" id="name" type="text" name="user-name" value="" placeholder="имя" required=""></label>
-            <label for="phone"><input tabindex="0" class="callback-form__field" id="phone" type="tel" name="user-phonenumber" value="" required="" placeholder="+7 (923) 41" pattern="[0-9]{11}"></label>
-            <button type="submit" class="button" aria-label="перезвоните мне">перезвоните мне</button>
+            <label for="name"><input tabindex="0" id="name" type="text" name="user-name" value="" placeholder="имя" required=""></label>
+            <label for="phone"><input tabindex="0" id="phone" type="tel" name="user-phonenumber" value="" required="" placeholder="+7 (923) 41" pattern="[0-9]{11}"></label>
+            <button type="submit" class="contacts__form-button button" aria-label="перезвоните мне">перезвоните мне</button>
           </form>
+          <p class="contacts__note">Мы не передаём данные третьим лицам. Ваши данные будут в безопасности и вам не придёт спам от нас!</p>
         </div>
       </section>
 
@@ -511,10 +509,14 @@
     </main>
     <footer class="page-footer">
       <div class="page-footer__logo">
-        <img src="img/logo-footer.png" width="85" height="27" alt="Логотип сайта компания Израиль">
+        <picture>
+          <source srcset="img/logo-footer-mobile.png" media="(max-width: 767px)">
+          <source srcset="img/logo-footer-desktop.png" media="(max-width: 1023px)">
+          <img src="img/logo-footer-desktop.png" width="85" height="27" alt="Логотип сайта компания Израиль">
+        </picture>
       </div>
       <p>Copyright someDesignCompany &copy;2019</p>
-      <ul class="review__social-list social-list">
+      <ul class="page-footer__social social-list">
         <li>
           <a href="https://facebook.com/" aria-label="facebook" class="social-list__link">
             <svg width="10" height="20">
@@ -540,11 +542,14 @@
     </footer>
   </div>
 
+  <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
   <script src="js/main.js"></script>
   <script src="js/tabs.js"></script>
-  <script src="js/swipe.js"></script>
+  <!--<script src="js/swipe.js"></script>-->
   <script src="js/accordion.js"></script>
   <!--<script src="js/review-slider.js"></script>-->
+  <script src="js/swiper.js"></script>
+
 </body>
 
 </html>
