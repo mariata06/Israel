@@ -7,6 +7,8 @@
   background-size: 50%;
   background-position: center right;
   position: relative;
+  display: flex;
+  flex-wrap: wrap;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     background-image: url("../img/review-sketch-desktop@2x.png");
@@ -22,6 +24,7 @@
     letter-spacing: -2px;
     text-transform: uppercase;
     text-align: center;
+    width: 100%;
 
     @media (max-width: $max-mobile-width) {
       text-align: center;
@@ -49,6 +52,7 @@
     font-size: 17px;
     line-height: 29px;
     text-align: left;
+    background-color: transparent;
 
     span {
       color: $blue;
@@ -80,11 +84,18 @@
   }
   */
   .review__social-list {
-    //@include list-reset;
+    @include list-reset;
     display: flex;
     margin-left: auto;
     align-self: flex-end;
-    list-style: none;
+    //list-style: none;
+    position: absolute;
+    /* bottom: 60px; */
+    right: 150px;
+
+    li {
+      margin-right: 20px;
+    }
 
     svg {
       fill: grey;
@@ -129,31 +140,40 @@
   transition: 0.2s;
 }
 */
-.swiper__slide {
-  display: flex;
-}
 
 .review__pagination-buttons {
   display: flex;
+  align-items: center;
+  padding-left: 350px;
 }
 
 .review__pagination {
   width: 20px;
   position: relative;
   display: flex;
+  padding-left: 0;
+
+  span {
+    font-size: 17px;
+    line-height: 26px;
+  }
 }
 
 .review__buttons {
-  width: 100px;
+  width: 120px;
   height: 50px;
+  display: flex;
+  margin-left: 20px;
+  padding-left: 0;
 }
 
 .review__button-prev {
   position: relative;
   display: block;
-  width: 50px;
-  height: 50px;
-  border: 1px solid black;
+  margin-right: 30px;
+  //width: 50px;
+  //height: 50px;
+  //border: 1px solid black;
 
   &::after {
     display: none;
@@ -161,8 +181,8 @@
 
   svg {
     //z-index: 100;
-    //fill: transparent;
-    transform: scale(5);
+    fill: transparent;
+    transform: scale(3);
     //opacity: 0;
   }
 }
@@ -170,9 +190,9 @@
 .review__button-next {
   position: relative;
   display: block;
-  width: 50px;
-  height: 50px;
-  border: 1px solid black;
+  //width: 50px;
+  //height: 50px;
+  //border: 1px solid black;
 
   &::after {
     display: none;
@@ -180,8 +200,8 @@
 
   svg {
     //transform: scale(2);
-    //fill: transparent;
-    transform: scale(5), rotate(180deg);
+    fill: transparent;
+    transform: scale(3) rotate(180deg);
     //opacity: 0;
   }
 }
@@ -219,17 +239,24 @@
   height: 100%;
 }
 
-.swiper-slide {
+.review__item {
   text-align: center;
   font-size: 18px;
-  background: white;
+  //background: white;
 
   /* Center slide text vertically */
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
+/*
+.review__item {
+  display: flex;
+  //background-color: transparent;
+  //background: none;
+  background: transparent;
+}
+*/
 /*
 .review__pagination {
   text-align: left;

@@ -8,4 +8,9 @@ var swiper = new Swiper('.swiper-container', {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
   },
+  initialSlide: 2
 });
+
+//var slidesItems = document.querySelectorAll(".review__item");
+
+
