@@ -14,6 +14,15 @@
     background-image: url("../img/review-sketch-desktop@2x.png");
   }
 
+  @media (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  @media (max-width: $max-mobile-width) {
+    padding: 16px;
+  }
+
   h2 {
     @include reset;
     font-family: "montserrat", "Arial", sans-serif;
@@ -34,18 +43,6 @@
     }
   }
 
-  /*
-  .review__item {
-    display: none;
-    //display: flex;
-    justify-content: space-between;
-    width: 100%;
-
-    &--active {
-      display: flex;
-    }
-  }
-  */
   .review__description {
     width: 680px;
     margin-left: auto;
@@ -53,6 +50,21 @@
     line-height: 29px;
     text-align: left;
     background-color: transparent;
+
+    @media (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
+      margin: 0;
+    }
+
+    @media (max-width: $max-mobile-width) {
+      width: 100%;
+    }
+
+    p {
+      @media (max-width: $max-mobile-width) {
+        display: flex;
+        flex-wrap: wrap;
+      }
+    }
 
     span {
       color: $blue;
@@ -76,22 +88,17 @@
     font-weight: 500;
   }
 
-  /*
-  .review__pagination {
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-  }
-  */
   .review__social-list {
     @include list-reset;
     display: flex;
     margin-left: auto;
     align-self: flex-end;
-    //list-style: none;
     position: absolute;
-    /* bottom: 60px; */
     right: 150px;
+
+    @media (max-width: $max-mobile-width) {
+      right: unset;
+    }
 
     li {
       margin-right: 20px;
@@ -103,48 +110,19 @@
   }
 }
 
-/*
-.slider {
-  display: flex;
-
-  .slider__slides {
-    margin-right: 10px;
-  }
-
-  .slider__buttons {
-    display: flex;
-    flex-direction: row;
-
-    svg {
-      margin-left: 10px;
-      margin-right: 10px;
-      fill: transparent;
-    }
-
-    .slider__button--next {
-      transform: rotate(180deg);
-    }
-  }
-}
-*/
-/*
-.review__container {
-  background-color: pink;
-}
-*/
-
-/*
-.review__slider {
-  //background-color: yellow;
-  display: flex;
-  transition: 0.2s;
-}
-*/
-
 .review__pagination-buttons {
   display: flex;
   align-items: center;
   padding-left: 350px;
+
+  @media (max-width: $max-mobile-width) {
+    position: absolute;
+    padding-left: 0;
+    top: 320px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
 }
 
 .review__pagination {
@@ -165,101 +143,91 @@
   display: flex;
   margin-left: 20px;
   padding-left: 0;
+
+  @media (max-width: $max-mobile-width) {
+    width: 50px;
+    //margin-left: 50px;
+  }
 }
 
 .review__button-prev {
   position: relative;
   display: block;
   margin-right: 30px;
-  //width: 50px;
-  //height: 50px;
-  //border: 1px solid black;
+
+  @media (max-width: $max-mobile-width) {
+    //position: absolute;
+    margin-right: 50px;
+  }
 
   &::after {
     display: none;
   }
 
   svg {
-    //z-index: 100;
     fill: transparent;
     transform: scale(3);
-    //opacity: 0;
   }
 }
 
 .review__button-next {
   position: relative;
   display: block;
-  //width: 50px;
-  //height: 50px;
-  //border: 1px solid black;
+
+  @media (max-width: $max-mobile-width) {
+    //position: absolute;
+  }
 
   &::after {
     display: none;
   }
 
   svg {
-    //transform: scale(2);
     fill: transparent;
     transform: scale(3) rotate(180deg);
-    //opacity: 0;
   }
 }
 
-/*
-.swiper__container {
-  position: relative;
-}
-*/
-
-/*
-.swiper-pagination {
-  position: absolute;
-  top: 450px;
-  left: 0;
-}
-*/
-/*
-.swiper-buttons {
-  position: absolute;
-  top: 450px;
-  left: 20px;
-  display: flex;
-  width: 20px;
-  justify-content: space-between;
-
-  svg {
-    fill: transparent;
-  }
-}
-*/
-
-.swiper-container {
+.review__container {
   width: 100%;
   height: 100%;
+
+  @media (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
+    width: 100%;
+  }
+}
+
+.review__wrapper {
+  @media (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
+    width: 100%;
+  }
+
+  @media (max-width: $max-mobile-width) {
+    width: 100%;
+  }
 }
 
 .review__item {
   text-align: center;
   font-size: 18px;
-  //background: white;
-
-  /* Center slide text vertically */
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  @media (max-width: $max-mobile-width) {
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  img {
+    @media (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
+      height: 320px;
+      width: 240px;
+    }
+  }
 }
-/*
-.review__item {
-  display: flex;
-  //background-color: transparent;
-  //background: none;
-  background: transparent;
-}
-*/
-/*
-.review__pagination {
-  text-align: left;
-  margin-left: 250px;
-}
-*/
