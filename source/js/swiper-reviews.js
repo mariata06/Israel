@@ -1,5 +1,5 @@
 
-var swiper = new Swiper('.swiper-container', {
+var swiper = new Swiper('.swiper-container.swiper-container--reviews', {
   pagination: {
     el: '.swiper-pagination',
     type: 'fraction',
@@ -10,7 +10,3 @@ var swiper = new Swiper('.swiper-container', {
   },
   initialSlide: 2
 });
-
-//var slidesItems = document.querySelectorAll(".review__item");
-
-
