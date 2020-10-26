@@ -1,0 +1,33 @@
+input {
+  padding: 19px 0 20px 40px;
+  border-radius: 100px;
+  border: 1px solid $light-grey;
+  width: 360px;
+  font-family: "firasans", "Arial", sans-serif;
+  font-size: 17px;
+  line-height: 20px;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+  //border: none;
+
+  &:focus {
+    border: 1px solid $yellow;
+  }
+
+  &:invalid {
+    border-color: $red;
+  }
+  /*
+  &:valid {
+    border: 1px solid $black;
+  }*/
+
+  @media (max-width: $max-mobile-width) {
+    width: 100%;
+  }
+
+  &::placeholder {
+    color: $black;
+  }
+}

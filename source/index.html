@@ -56,13 +56,15 @@
         <h2>
           Программы
         </h2>
-        <div class="program__container">
-          <div class="program__choice" id="program__choice">
-            <button type="button" class="program__choice-item program__choice-item--general" data-tab-name="general">Общие</button>
-            <button type="button" class="program__choice-item program__choice-item--academic program__choice-item--active" data-tab-name="academic">Академические</button>
-            <button type="button" class="program__choice-item program__choice-item--internship" data-tab-name="internship">Стажировки</button>
-            <button type="button" class="program__choice-item program__choice-item--volunteering" data-tab-name="volunteering">Волонтёрство</button>
-            <button type="button" class="program__choice-item program__choice-item--religious" data-tab-name="religious">Религиозные</button>
+        <div class="program__content">
+          <div class="program__container swiper-container swiper-container--programmes">
+            <div class="program__choice swiper-wrapper" id="program__choice">
+              <button type="button" class="program__choice-item program__choice-item--general swiper-slide" data-tab-name="general">Общие</button>
+              <button type="button" class="program__choice-item program__choice-item--academic swiper-slide program__choice-item--active" data-tab-name="academic">Академические</button>
+              <button type="button" class="program__choice-item program__choice-item--internship swiper-slide" data-tab-name="internship">Стажировки</button>
+              <button type="button" class="program__choice-item program__choice-item--volunteering swiper-slide" data-tab-name="volunteering">Волонтёрство</button>
+              <button type="button" class="program__choice-item program__choice-item--religious swiper-slide" data-tab-name="religious">Религиозные</button>
+            </div>
           </div>
 
           <div class="program__item program__item--general">
@@ -111,11 +113,11 @@
       <section class="request">
         <h2>Хочу поехать!</h2>
         <p>Оставьте свой телефон и мы свяжемся с вами, подберём куратора и ответим на все вопросы!</p>
-        <form action="https://echo.htmlacademy.ru" method="post" class="request__form form">
-            <label for="tel">
-              <input tabindex="0" class="form__field" id="tel" type="tel" name="user-phonenumber" value="" required="" placeholder="телефон" pattern="[0-9]{11}">
+        <form id="request-form" action="https://echo.htmlacademy.ru" method="post" class="request__form form">
+            <label>
+              <input tabindex="0" class="form__field" type="tel" name="user_phonenumber" value="" placeholder="телефон" pattern="[0-9]{11}">
             </label>
-            <button class="form__button button">презвоните мне</button>
+            <button class="form__button request__form-button button">презвоните мне</button>
         </form>
       </section>
 
@@ -458,12 +460,16 @@
           </div>
           <p>Куратор является опытным специалистом агентства Сохнут и знает о проекте «Маса» всё! Свяжитесь с куратором,узнайте подробнее о программах и выберите свою !</p>
         </div>
-        <div class="contacts__form">
+        <div class="contacts__content">
           <p>Оставьте ваши контакты, если у ваc остались вопросы — мы на них ответим!</p>
-          <form action="https://echo.htmlacademy.ru" method="post">
-            <label for="name"><input tabindex="0" id="name" type="text" name="user-name" value="" placeholder="имя" required=""></label>
-            <label for="phone"><input tabindex="0" id="phone" type="tel" name="user-phonenumber" value="" required="" placeholder="+7 (923) 41" pattern="[0-9]{11}"></label>
-            <button type="submit" class="contacts__form-button button" aria-label="перезвоните мне">перезвоните мне</button>
+          <form id="contacts-form" action="https://echo.htmlacademy.ru" method="post" class="contacts__form">
+            <label>
+              <input tabindex="0" type="text" name="user_name" value="" placeholder="имя">
+            </label>
+            <label>
+              <input tabindex="0" type="tel" name="user_phonenumber" value="" placeholder="+7 (923) 41" pattern="[0-9]{11}">
+            </label>
+            <button type="submit" class="contacts__form-button form__button button" aria-label="перезвоните мне">перезвоните мне</button>
           </form>
           <p class="contacts__note">Мы не передаём данные третьим лицам. Ваши данные будут в безопасности и вам не придёт спам от нас!</p>
         </div>
@@ -478,14 +484,16 @@
           <p>
             Оставьте ваши контактные данные, мы&nbsp;свяжемся с&nbsp;вами в течение рабочего дня и обязательно поможем найти ответ на ваш вопрос!
           </p>
-          <form action="https://echo.htmlacademy.ru" method="post" class="popup__form callback-form">
+          <form id="popup-form" action="https://echo.htmlacademy.ru" method="post" class="popup__form callback-form">
             <div>
-              <label for="name">
-                <input tabindex="0" class="callback-form__field" id="name" type="text" name="user-name" value="" placeholder="имя" required=""></label>
+              <label>
+                <input tabindex="0" class="callback-form__field" type="text" name="user_name" value="" placeholder="имя">
+              </label>
             </div>
             <div>
-              <label for="phone">
-                <input tabindex="0" class="callback-form__field" id="phone" type="tel" name="user-phonenumber" value="" required="" placeholder="телефон" pattern="[0-9]{11}"></label>
+              <label>
+                <input tabindex="0" class="callback-form__field" type="tel" name="user_phonenumber" value="" placeholder="телефон" pattern="[0-9]{11}">
+              </label>
             </div>
             <button type="submit" class="callback-form__button button" aria-label="перезвоните мне">перезвоните мне</button>
             <div tabindex="0">
@@ -547,11 +555,10 @@
   </div>
 
   <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
-  <script src="js/main.js"></script>
+  <script src="js/main2.js"></script>
+  <!--<script src="js/main.js"></script>-->
   <script src="js/tabs.js"></script>
-  <!--<script src="js/swipe.js"></script>-->
   <script src="js/accordion.js"></script>
-  <!--<script src="js/review-slider.js"></script>-->
   <script src="js/swiper-reviews.js"></script>
   <script src="js/swiper-internship.js"></script>
 

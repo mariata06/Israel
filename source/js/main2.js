@@ -6,36 +6,34 @@ var overlayOk = document.querySelector(".overlay__ok");
 var popupSuccess = document.querySelector(".popup--success");
 var closePopupSuccess = popupSuccess.querySelector(".popup__close");
 var popupButton = popupSuccess.querySelector(".popup__button");
-var formCheckbox = document.querySelector(".callback-form__checkbox");
-var callbackForm = document.querySelector(".callback-form");
-var userName1 = callbackForm.querySelector("[name=user-name1]");
-var userPhone1 = callbackForm.querySelector("[name=user-phonenumber1]");
-var formButton = callbackForm.querySelector(".callback-form__button");
-
-var contactsFormButton = document.querySelector(".contacts__form-button");
-var contactsForm = document.querySelector(".contacts__form");
-var userName2 = contactsForm.querySelector("[name=user-name2]");
-var userPhone2 = contactsForm.querySelector("[name=user-phonenumber2]");
 
 var requestFormButton = document.querySelector(".request__form-button");
-var requestForm = document.querySelector(".request__form");
-var userPhone3 = requestForm.querySelector("[name=user-phonenumber3]");
+var requestForm = document.forms[0];
+//var userPhone = requestForm.querySelector("[name=user-phonenumber]");
+
+var userName = "";
+var userPhone = "";
+
+var contactsForm = document.forms[1];
+var contactsFormButton = document.querySelector(".contacts__form-button");
+//var userName = contactsForm.querySelector("[name=user-name]");
+//var userPhone = contactsForm.querySelector("[name=user-phonenumber]");
+
+var callbackForm = document.forms[2];
+var formCheckbox = document.querySelector(".callback-form__checkbox");
+//var userName = callbackForm.querySelector("[name=user-name]");
+//var userPhone = callbackForm.querySelector("[name=user-phonenumber]");
+var formButton = callbackForm.querySelector(".callback-form__button");
 
 var isStorageSupport = true;
-var currentName1 = "";
-var currentPhone1 = "";
-var currentName2 = "";
-var currentPhone2 = "";
-var currentPhone3 = "";
+var currentName = "";
+var currentPhone = "";
 
-console.log(localStorage.getItem("userName1"));
+//console.log(localStorage.getItem("userName"));
 
 try {
-  currentName1 = localStorage.getItem("userName1");
-  currentPhone1 = localStorage.getItem("userPhone1");
-  currentName2 = localStorage.getItem("userName2");
-  currentPhone2 = localStorage.getItem("userPhone2");
-  currentPhone3 = localStorage.getItem("userPhone3");
+  currentName = localStorage.getItem("userName");
+  currentPhone = localStorage.getItem("userPhone");
 
 } catch (err) {
   isStorageSupport = false;
@@ -45,19 +43,22 @@ callbackLink.addEventListener("click", function (evt) {
   evt.preventDefault();
   callbackPopup.classList.add("popup--callback--show");
   overlayForm.classList.add("overlay__form--show");
-  userName1.focus();
+  userName = callbackForm.elements.user_name;
+  //console.log(userName);
+  userPhone = callbackForm.elements.user_phonenumber;
+  userName.focus();
   //console.log(currentPhone);
-  if (currentName1) {
-    userName1.value = currentName1;
-    userPhone1.focus();
+  if (currentName) {
+    userName.value = currentName;
+    userPhone.focus();
   } else {
-    userName1.focus();
+    userName.focus();
   }
 
-  if (currentPhone1) {
-    userPhone1.value = currentPhone1;
+  if (currentPhone) {
+    userPhone.value = currentPhone;
   } else {
-    userPhone1.focus();
+    userPhone.focus();
   }
 });
 
@@ -85,8 +86,8 @@ popupButton.addEventListener("click", function (evt) {
 callbackForm.addEventListener("submit", function (evt) {
     evt.preventDefault();
     if (isStorageSupport) {
-      localStorage.setItem("userName1", userName1.value);
-      localStorage.setItem("userPhone1", userPhone1.value);
+      localStorage.setItem("userName", userName.value);
+      localStorage.setItem("userPhone", userPhone.value);
       popupSuccess.classList.add("popup--success--show");
     }
     callbackPopup.classList.remove("popup--callback--show");
@@ -125,33 +126,55 @@ formCheckbox.addEventListener("change", function () {
 
 requestFormButton.addEventListener("click", function (evt) {
   evt.preventDefault();
-  var idForm = requestForm.getAttribute("id");
-  console.log(idForm);
-  userName2.focus();
+  //var idForm = requestForm.getAttribute("id");
+  //console.log(idForm);
+  userPhone = requestForm.elements.user_phonenumber;
+  //userPhone.focus();
   //console.log(currentPhone);
-  if (currentName2) {
-    userName2.value = currentName2;
-    userPhone2.focus();
+  /*
+  if (currentPhone) {
+    userPhone.value = currentPhone;
   } else {
-    userName2.focus();
+    userPhone.focus();
+  }*/
+  if (isStorageSupport) {
+    localStorage.setItem("userPhone", userPhone.value);
+    popupSuccess.classList.add("popup--success--show");
   }
-
-  if (currentPhone2) {
-    userPhone2.value = currentPhone2;
-  } else {
-    userPhone2.focus();
-  }
+  overlayOk.classList.add("overlay__ok--show");
+  popupSuccess.classList.add("popup--success--show");
 });
 
 contactsFormButton.addEventListener("click", function (evt) {
   evt.preventDefault();
-  var idForm = contactsForm.getAttribute("id");
-  console.log(idForm);
-  userName1.focus();
-  //console.log(currentPhone);
-  if (currentPhone3) {
-    userPhone3.value = currentPhone3;
-  } else {
-    userPhone3.focus();
+  //var idForm = contactsForm.getAttribute("id");
+  //console.log(idForm);
+  userName = contactsForm.elements.user_name;
+  userPhone = contactsForm.elements.user_phonenumber;
+  if (isStorageSupport) {
+    localStorage.setItem("userName", userName.value);
+    localStorage.setItem("userPhone", userPhone.value);
+    popupSuccess.classList.add("popup--success--show");
   }
+
+  /*
+  //console.log(currentPhone);
+  userName.focus();
+  //console.log(currentPhone);
+  if (currentName) {
+    userName.value = currentName;
+    userPhone.focus();
+  } else {
+    userName.focus();
+  }
+
+  if (currentPhone) {
+    userPhone.value = currentPhone;
+  } else {
+    userPhone.focus();
+  }
+  */
+  overlayOk.classList.add("overlay__ok--show");
+  popupSuccess.classList.add("popup--success--show");
+  //console.log(userName.placeholder);
 });

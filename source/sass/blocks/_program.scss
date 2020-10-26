@@ -5,11 +5,8 @@
   padding-bottom: 104px;
   background-image: url("../img/sketch-bg-desktop@1x.png");
   background-repeat: no-repeat;
-  //background-size: cover;
   background-size: 60%;
   background-position: top right;
-  //padding-left: 248px;
-  //padding-right: 248px;
   max-width: 1366px;
   margin: 0 auto;
 
@@ -68,7 +65,7 @@
   }
 }
 
-.program__container {
+.program__content {
   display: flex;
 
   @media (max-width: $max-mobile-width) {
@@ -92,11 +89,21 @@
 .program__choice {
   display: flex;
   flex-direction: column;
-  width: 300px;
+  //width: 300px;
   margin-right: 50px;
 
   @media (max-width: $max-mobile-width) {
     flex-direction: row;
+    transform: unset;
+
+    /*
+    .swiper-slide {
+      flex-shrink:
+      //width: unset;
+      height: unset;
+      position: relative;
+      transition-property: transform;
+    }*/
   }
 }
 
@@ -104,33 +111,44 @@
   border: none;
   outline: none;
   cursor: pointer;
-  //background: linear-gradient(to right, white 0%, white 100%);
-  width: 210px;
-  height: 68px;
   position: relative;
   margin-right: 30px;
-  padding: 0;
   font-size: 15px;
   line-height: 25px;
-  //text-align: right;
-  padding-left: 50px;
+  padding: 21px 0 21px 60px;
+  background-color: transparent;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-image: url("../img/sprite.png");
+    background-repeat: no-repeat;
+  }
+
+  &:hover:not(.program__choice-item--active) {
+    color: $yellow;
+  }
 
   @media (max-width: $max-mobile-width) {
+    display: flex;
+    justify-content: flex-end;
     font-size: 15px;
     line-height: 18px;
     opacity: 0.5;
+    //width: 181px;
+    padding: 21px 20px 21px 20px;
+    margin: 0;
   }
 
   &--active {
     background: linear-gradient(to right, #ffc341 0%, #ffd701 100%);
     color: white;
 
-    @media (max-width: $max-mobile-width) {
-      border-radius: 100px;
-    }
-
-    &:hover {
-      color: white;
+    &::before {
+      background-position: 0 -1px;
     }
 
     &::after {
@@ -149,130 +167,69 @@
         display: none;
       }
     }
-  }
 
-  /*
-  &:hover {
-    background: linear-gradient(to right, #ffc341 0%, #ffd701 100%);
-    //background-repeat: no-repeat;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-  */
-  /*
-  &--general {
-    &::before {
-      content: url("../img/png-sprite.png");
-      //display: inline-block;
-      position: absolute;
-      width: 28px;
-      height: 33px;
-      top: -250px;
-      left: 20px;
-      //background: url("../img/png-sprite.png") no-repeat;
-      overflow: hidden;
-      //background-position: 0 -267px;
+    @media (max-width: $max-mobile-width) {
+      border-radius: 100px;
+      //width: 181px;
     }
-  }
-  */
-
-  &--general {
-    background: url("../img/sprite-black.png") 10px -164px;
-    background-repeat: no-repeat;
 
     &:hover {
-      background: url("../img/sprite-yellow.png") 10px -164px, linear-gradient(to right, #ffc341 0%, #ffd701 100%);
-      background-repeat: no-repeat;
-      background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-  }
-
-  &--academic {
-    background: url("../img/sprite-black.png") 10px -230px;
-    background-repeat: no-repeat;
-    background-color: transparent;
-
-    &:hover {
-      background: url("../img/sprite-yellow.png") 10px -230px, linear-gradient(to right, #ffc341 0%, #ffd701 100%);
-      background-repeat: no-repeat;
-      background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-  }
-
-  &--internship {
-    background: url("../img/sprite-black.png") 10px 5px;
-    background-repeat: no-repeat;
-    background-color: transparent;
-
-    &:hover {
-      background: url("../img/sprite-yellow.png") 10px 5px, linear-gradient(to right, #ffc341 0%, #ffd701 100%);
-      background-repeat: no-repeat;
-      background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-  }
-
-  &--volunteering {
-    background: url("../img/sprite-black.png") 10px -115px;
-    background-repeat: no-repeat;
-    background-color: transparent;
-
-    &:hover {
-      background: url("../img/sprite-yellow.png") 10px -115px, linear-gradient(to right, #ffc341 0%, #ffd701 100%);
-      background-repeat: no-repeat;
-      background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-  }
-
-  &--religious {
-    background: url("../img/sprite-black.png") 10px -50px;
-    background-repeat: no-repeat;
-    background-color: transparent;
-
-    &:hover {
-      background: url("../img/sprite-yellow.png") 10px -50px, linear-gradient(to right, #ffc341 0%, #ffd701 100%);
-      background-repeat: no-repeat;
-      background-clip: text;
-      -webkit-text-fill-color: transparent;
+      color: white;
     }
   }
 }
 
-.program__choice-item--general.program__choice-item--active {
-  background: url("../img/sprite-white.png") 15px -145px no-repeat, linear-gradient(to right, #ffc341 0%, #ffd701 100%);
-  text-transform: uppercase;
-  color: white;
-
-  &:hover {
-    color: white;
-  }
+.program__choice-item--general::before {
+  width: 28px;
+  height: 33px;
+  background-position: 0 -45px;
 }
 
-.program__choice-item--academic.program__choice-item--active {
-  background: url("../img/sprite-white.png") 10px -200px no-repeat, linear-gradient(to right, #ffc341 0%, #ffd701 100%);
-  text-transform: uppercase;
-  color: white;
+.program__choice-item--general:hover:not(.program__choice-item--active)::before {
+  background-position: 0 -88px;
 }
 
-.program__choice-item--internship.program__choice-item--active {
-  background: url("../img/sprite-white.png") 10px 10px no-repeat, linear-gradient(to right, #ffc341 0%, #ffd701 100%);
-  text-transform: uppercase;
-  color: white;
+.program__choice-item--academic::before {
+  width: 36px;
+  height: 35px;
+  background-position: -44px -43px;
 }
 
-.program__choice-item--volunteering.program__choice-item--active {
-  background: url("../img/sprite-white.png") 10px -95px no-repeat, linear-gradient(to right, #ffc341 0%, #ffd701 100%);
-  text-transform: uppercase;
-  color: white;
+.program__choice-item--academic:hover:not(.program__choice-item--active)::before {
+  background-position: -44px -86px;
 }
 
-.program__choice-item--religious.program__choice-item--active {
-  background: url("../img/sprite-white.png") 10px -37px no-repeat, linear-gradient(to right, #ffc341 0%, #ffd701 100%);
-  text-transform: uppercase;
-  color: white;
-  //overflow: hidden;
-  //background-size: 23px 25px, 100%;
+.program__choice-item--internship::before {
+  width: 32px;
+  height: 25px;
+  background-position: -96px -53px;
+}
+
+.program__choice-item--internship:hover:not(.program__choice-item--active)::before {
+  background-position: -96px -96px;
+}
+
+.program__choice-item--volunteering::before {
+  width: 32px;
+  height: 29px;
+  background-position: -144px -49px;
+}
+
+.program__choice-item--volunteering:hover:not(.program__choice-item--active)::before {
+  background-position: -144px -92px;
+}
+
+.program__choice-item--religious::before {
+  width: 23px;
+  height: 25px;
+  background-position: -192px -53px;
+}
+
+.program__choice-item--religious:hover:not(.program__choice-item--active)::before {
+  background-position: -192px -95px;
+}
+
+.swiper-container {
+  width: 100%;
+  height: 100%;
 }
