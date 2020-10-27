@@ -24,8 +24,6 @@ var isStorageSupport = true;
 var currentName = "";
 var currentPhone = "";
 
-//console.log(localStorage.getItem("userName"));
-
 try {
   currentName = localStorage.getItem("userName");
   currentPhone = localStorage.getItem("userPhone");
@@ -88,17 +86,6 @@ var checkLocalStorage = function () {
 
 callbackForm.addEventListener("submit", function (evt) {
     evt.preventDefault();
-    /*
-    if (isStorageSupport) {
-      localStorage.setItem("userName", userName.value);
-      localStorage.setItem("userPhone", userPhone.value);
-      popupSuccess.classList.add("popup--success--show");
-    }
-    callbackPopup.classList.remove("popup--callback--show");
-    overlayForm.classList.remove("overlay__form--show");
-    overlayOk.classList.add("overlay__ok--show");
-    popupSuccess.classList.add("popup--success--show");
-    */
     checkLocalStorage();
     callbackPopup.classList.remove("popup--callback--show");
     overlayForm.classList.remove("overlay__form--show");
@@ -135,14 +122,6 @@ formCheckbox.addEventListener("change", function () {
 requestFormButton.addEventListener("click", function (evt) {
   evt.preventDefault();
   userPhone = requestForm.elements.user_phonenumber;
-  /*
-  if (isStorageSupport) {
-    localStorage.setItem("userPhone", userPhone.value);
-    popupSuccess.classList.add("popup--success--show");
-  }
-  overlayOk.classList.add("overlay__ok--show");
-  popupSuccess.classList.add("popup--success--show");
-  */
   checkLocalStorage();
 });
 
@@ -150,16 +129,5 @@ contactsFormButton.addEventListener("click", function (evt) {
   evt.preventDefault();
   userName = contactsForm.elements.user_name;
   userPhone = contactsForm.elements.user_phonenumber;
-  /*
-  if (isStorageSupport) {
-    localStorage.setItem("userName", userName.value);
-    localStorage.setItem("userPhone", userPhone.value);
-    popupSuccess.classList.add("popup--success--show");
-  }
-  overlayOk.classList.add("overlay__ok--show");
-  popupSuccess.classList.add("popup--success--show");
-  */
   checkLocalStorage();
 });
-
-
