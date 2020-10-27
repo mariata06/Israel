@@ -37,6 +37,8 @@
 
     &::before {
       content: url("../img/icon-tick.svg");
+      fill: black;
+      //fill: transparent;
       position: absolute;
       top: 2px;
       left: 17px;

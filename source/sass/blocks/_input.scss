@@ -16,9 +16,15 @@ input {
     border: 1px solid $yellow;
   }
 
-  &:invalid {
+  /*
+  &--invalid {
     border-color: $red;
+  }*/
+
+  &:invalid {
+    border: 1px solid $red;
   }
+
   /*
   &:valid {
     border: 1px solid $black;
