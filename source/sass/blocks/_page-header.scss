@@ -3,7 +3,7 @@
   background-image: url("../img/intro-bg-desktop@1x.jpg");
   background-repeat: no-repeat;
   //background-size: cover;
-  background-size: 110%;
+  //background-size: 110%;
   background-position: top center;
   position: relative;
   height: 906px;
@@ -12,6 +12,7 @@
   padding-top: 32px;
   max-width: 1366px;
   margin: 0 auto;
+  background-size: cover;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     background-image: url("../img/intro-bg-desktop@2x.jpg");
@@ -36,6 +37,8 @@
     padding-right: 7px;
     //padding-top: 20px;
     background-size: 100%;
+    //background-size: cover;
+    //background-size: contain;
     background-position: top bottom;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
@@ -63,17 +66,54 @@
   }
 
   button {
+    width: 60px;
+    height: 60px;
+    padding: 15px 15px;
     cursor: pointer;
     outline: none;
     background-color: transparent;
     position: absolute;
-    bottom: 120px;
+    bottom: 200px;
     left: 50%;
     transform: translateX(-50%);
-    padding: 15px 20px;
     border-radius: 100px;
-    border: 1px dashed white;
-    box-shadow: inset 0 0 0 1px white;
+    border: 1px solid white;
+
+    &::before {
+      --d: 5deg;
+      /* distance between dashes */
+      --n: 30;
+      /* number of dashes */
+      --c: #ffffff;
+      /* color of dashes */
+      --b: 2px;
+      /* control the thickness of border*/
+
+      content: "";
+      z-index: 100;
+      height: 76px;
+      width: 76px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: inline-block;
+      position: absolute;
+      border-radius: 50%;
+      background: repeating-conic-gradient(var(--c) 0 calc(360deg / var(--n) - var(--d)), transparent 0 calc(360deg / var(--n)));
+      mask: radial-gradient(farthest-side, transparent calc(100% - var(--b)), #ffffff calc(100% - var(--b) + 1px));
+    }
+
+    &::after {
+      content: "";
+      z-index: 110;
+      height: 40px;
+      width: 1px;
+      top: 65px;
+      position: absolute;
+      left: 27px;
+      display: block;
+      background: linear-gradient(white, white) 4px 3px/1px 40px;
+    }
   }
 }
 
@@ -91,11 +131,6 @@
       transition: 0.5s ease;
     }
 
-    /*
-    &:active {
-      color: $sky;
-    }*/
-
     @media (max-width: $max-mobile-width) {
       margin-left: auto;
     }
@@ -108,9 +143,6 @@
 
   .page-header__callback-link {
     color: black;
-    //text-decoration: underline;
-    //text-decoration-style: dashed;
-    //text-decoration-color: black;
     border-bottom: 1px dashed black;
     display: inline;
 

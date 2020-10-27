@@ -11,6 +11,11 @@
     background-image: url("../img/bg-howto-desktop@2x.png"), url("../img/trip-watercolor-bg-desktop@2x.png"), url("../img/stamp-desktop@2x.png");
   }
 
+  @media (min-width: 1024px) and (max-width: 1250px) {
+    padding-left: 550px;
+    padding-right: 100px;
+  }
+
   @media (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
     padding: 20px;
     //padding-left: 300px;
@@ -75,6 +80,22 @@
   ul {
     @include list-reset;
     //padding-left: 60px;
+    position: relative;
+
+    &::before {
+      //background-image: linear-gradient(90deg, grey, grey 50%, transparent 50%, transparent 100%);
+      background: repeating-linear-gradient(to bottom, transparent 0 6px, $light-grey 6px 12px) 80%/2px 100% no-repeat;
+      //background-size: 20px 1px;
+      //background-repeat: no-repeat;
+      position: absolute;
+      width: 10px;
+      height: 350px;
+      content: "";
+      display: block;
+      left: 18px;
+      top: 20px;
+      z-index: 100;
+    }
 
     @media (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
       margin-left: auto;

@@ -75,6 +75,8 @@
 }
 
 .internship__picture-container {
+  width: 100%;
+
   @media (max-width: $max-mobile-width) {
     padding-bottom: 40px;
   }
@@ -83,7 +85,8 @@
 .internship__picture-wrapper {
   display: grid;
   //grid-gap: 5px;
-  grid-template-columns: 241px 241px 241px 241px 241px;
+  //grid-template-columns: 241px 241px 214px 200px 214px;
+  grid-template-columns: 241px 241px 223px 223px 223px;
   grid-template-rows: 366px 366px;
 
   @media (min-width: 1024px) and (max-width: 1200px) {
@@ -107,10 +110,16 @@
 
   figure {
     margin: 0;
-    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
+    //justify-content: end;
+    position: relative;
+
+    @media (max-width: $max-mobile-width) {
+      width: 288px;
+      margin: 0 auto;
+    }
 
     figcaption {
       font-family: "raleway", "Arial", sans-serif;
@@ -121,6 +130,20 @@
       line-height: 25px;
       font-weight: 900;
       color: white;
+
+      @media (max-width: $max-mobile-width) {
+        bottom: 20px;
+        left: 20px;
+        //transform: translateX(-50%);
+        width: 50%;
+        text-align: center;
+      }
+
+      @media (min-width: $min-mobile-width) {
+        left: 50%;
+        transform: translateX(-50%);
+        width: 50%;
+      }
     }
   }
 }
@@ -150,14 +173,12 @@
 .internship__picture-box {
   display: flex;
 
-  @media (min-width: 1024px) and (max-width: 1250px) {
-    img {
+  img {
+    @media (min-width: 1024px) and (max-width: 1250px) {
       transform: scale(0.9);
     }
-  }
 
-  @media (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
-    img {
+    @media (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
       width: 288px;
       height: 400px;
       transform: scale(0.8);
@@ -165,7 +186,11 @@
   }
 
   @media (max-width: $max-mobile-width) {
-    width: 100%;
+    width: 288px;
+    margin: 0 auto;
+    display: flex;
+    //justify-content: flex-end;
+    justify-content: center;
 
     img {
       max-width: none;

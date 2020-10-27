@@ -115,7 +115,7 @@
         <p>Оставьте свой телефон и мы свяжемся с вами, подберём куратора и ответим на все вопросы!</p>
         <form id="request-form" action="https://echo.htmlacademy.ru" method="post" class="request__form form">
             <label>
-              <input tabindex="0" class="form__field" type="tel" name="user_phonenumber" value="" placeholder="телефон" pattern="[0-9]{11}">
+              <input tabindex="0" class="request__input" type="tel" name="user_phonenumber" value="" placeholder="телефон" pattern="[0-9]{11}">
             </label>
             <button class="form__button request__form-button button">презвоните мне</button>
         </form>
@@ -409,7 +409,7 @@
           <li>
             <a href="https://instagram.com/" aria-label="instagram" class="social-list__link">
               <svg width="19" height="19">
-                <use xlink:href="img/sprite.svg#icon-instagram"></use>
+                <use xlink:href="img/sprite.svg#icon-003instagram"></use>
               </svg>
             </a>
           </li>
@@ -420,13 +420,19 @@
         <h2>Узнать подробности</h2>
         <div class="contacts__info">
           <p class="contacts__homecity">
+            <!--
             <svg width="12" height="18">
               <use xlink:href="img/sprite.svg#icon-marker"></use>
             </svg>
+            -->
+            <img src="img/marker.png" alt="gps" width="12" height="18">
             Ваш город:<a href="#">Новосибирск</a>
+            <!--
             <svg width="16" height="15">
               <use xlink:href="img/sprite.svg#icon-gps"></use>
             </svg>
+            -->
+            <img src="img/gps.png" alt="gps" width="16" height="15">
           </p>
           <div class="contacts__contact-person">
             <img src="img/anna-gorelik.png" alt="Анна Горелик" width="112" height="112">
@@ -546,7 +552,7 @@
         <li>
           <a href="https://instagram.com/" aria-label="instagram" class="social-list__link">
             <svg width="19" height="19">
-              <use xlink:href="img/sprite.svg#icon-instagram"></use>
+              <use xlink:href="img/sprite.svg#icon-003instagram"></use>
             </svg>
           </a>
         </li>
@@ -554,6 +560,7 @@
     </footer>
   </div>
 
+  <script src="js/vendor.js" defer=""></script>
   <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
   <script src="js/main2.js"></script>
   <!--<script src="js/main.js"></script>-->
@@ -561,7 +568,6 @@
   <script src="js/accordion.js"></script>
   <script src="js/swiper-reviews.js"></script>
   <script src="js/swiper-internship.js"></script>
-  <script src="js/vendor.js" defer=""></script>
 
 </body>
 

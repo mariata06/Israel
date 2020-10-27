@@ -6,14 +6,23 @@
   background-size: 100%;
   background-position: center center;
   padding: 120px 167px 220px 791px;
+  display: flex;
+  flex-wrap: wrap;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     background-image: url("../img/masaisrael-desktop@2x.png");
   }
 
+  @media (min-width: 1024px) and (max-width: 1250px) {
+    padding-left: 650px;
+    padding-right: 100px;
+  }
+
   @media (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
     padding: 20px;
-    padding-left: 384px;
+    padding-top: 200px;
+    padding-bottom: 200px;
+    padding-left: 500px;
   }
 
   @media (max-width: $max-mobile-width) {
@@ -60,6 +69,10 @@
 
   .button {
     margin: 0;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 40px;
+    padding-right: 40px;
 
     a {
       color: white;
@@ -71,6 +84,7 @@
 
     svg {
       fill: white;
+      margin-right: 20px;
     }
   }
 }

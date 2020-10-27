@@ -17,6 +17,11 @@
     background-image: url("../img/sketch-bg-desktop@2x.png");
   }
 
+  @media (min-width: 1024px) and (max-width: 1300px) {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+
   @media (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
     padding-left: 20px;
     padding-right: 20px;
@@ -36,6 +41,10 @@
     color: $blue;
     letter-spacing: -2px;
     text-transform: uppercase;
+
+    @media (min-width: 1024px) and (max-width: 1300px) {
+      text-align: center;
+    }
 
     @media (max-width: $max-mobile-width) {
       font-size: 32px;
@@ -75,6 +84,7 @@
 
 .program__item {
   display: none;
+  width: 560px;
 
   &--active {
     display: block;
@@ -83,6 +93,7 @@
   @media (max-width: $max-mobile-width) {
     padding-left: 16px;
     padding-right: 16px;
+    width: 100%;
   }
 }
 
@@ -108,15 +119,20 @@
 }
 
 .program__choice-item {
-  border: none;
-  outline: none;
+  border: 0;
+  outline: 0;
   cursor: pointer;
   position: relative;
   margin-right: 30px;
   font-size: 15px;
   line-height: 25px;
-  padding: 21px 0 21px 60px;
+  padding: 21px 0 21px 80px;
   background-color: transparent;
+  //width: 228px;
+  width: 210px;
+  text-align: left;
+  //padding-left: 80px;
+  //min-width: 210px;
 
   &::before {
     content: "";
@@ -185,6 +201,10 @@
   background-position: 0 -45px;
 }
 
+.program__choice-item--general.program__choice-item--active::before {
+  background-position: 0 -1px;
+}
+
 .program__choice-item--general:hover:not(.program__choice-item--active)::before {
   background-position: 0 -88px;
 }
@@ -193,6 +213,10 @@
   width: 36px;
   height: 35px;
   background-position: -44px -43px;
+}
+
+.program__choice-item--academic.program__choice-item--active::before {
+  background-position: -44px 0;
 }
 
 .program__choice-item--academic:hover:not(.program__choice-item--active)::before {
@@ -205,6 +229,10 @@
   background-position: -96px -53px;
 }
 
+.program__choice-item--internship.program__choice-item--active::before {
+  background-position: -96px -9px;
+}
+
 .program__choice-item--internship:hover:not(.program__choice-item--active)::before {
   background-position: -96px -96px;
 }
@@ -213,6 +241,10 @@
   width: 32px;
   height: 29px;
   background-position: -144px -49px;
+}
+
+.program__choice-item--volunteering.program__choice-item--active::before {
+  background-position: -144px -7px;
 }
 
 .program__choice-item--volunteering:hover:not(.program__choice-item--active)::before {
@@ -225,11 +257,29 @@
   background-position: -192px -53px;
 }
 
+.program__choice-item--religious.program__choice-item--active::before {
+  background-position: -192px -10px;
+}
+
 .program__choice-item--religious:hover:not(.program__choice-item--active)::before {
   background-position: -192px -95px;
 }
 
 .swiper-container {
+  //width: 228px;
+  //width: 100%;
+  height: 100%;
+  width: 400px;
+
+  @media (max-width: $max-mobile-width) {
+    width: 100%;
+  }
+}
+
+/*
+.program-container {
+  //min-width: 228px;
   width: 100%;
   height: 100%;
-}
+  margin-right: 100px;
+}*/

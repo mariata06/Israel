@@ -2,7 +2,7 @@ input {
   padding: 19px 0 20px 40px;
   border-radius: 100px;
   border: 1px solid $light-grey;
-  width: 360px;
+  //width: 360px;
   font-family: "firasans", "Arial", sans-serif;
   font-size: 17px;
   line-height: 20px;
@@ -10,6 +10,7 @@ input {
   text-transform: uppercase;
   margin-bottom: 8px;
   //border: none;
+  width: 100%;
 
   &:focus {
     border: 1px solid $yellow;
