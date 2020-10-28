@@ -21,6 +21,7 @@
 
   @media (max-width: $max-mobile-width) {
     padding: 16px;
+    padding-top: 40px;
   }
 
   h2 {
@@ -37,8 +38,9 @@
     padding-left: 485px;
 
     @media (max-width: $max-mobile-width) {
+      padding-left: 0;
       text-align: center;
-      margin-bottom: 50px;
+      margin-bottom: 25px;
       font-size: 32px;
       line-height: 39px;
     }
@@ -58,6 +60,7 @@
     }
 
     @media (max-width: $max-mobile-width) {
+      padding-top: 50px;
       width: 100%;
     }
 
@@ -68,11 +71,19 @@
       @media (max-width: $max-mobile-width) {
         display: flex;
         flex-wrap: wrap;
+        font-size: 14px;
+        line-height: 22px;
+        margin-bottom: 25px;
       }
     }
 
     .review__text {
       margin-bottom: 18px;
+
+      @media (max-width: $max-mobile-width) {
+        font-size: 16px;
+        line-height: 26px;
+      }
     }
 
     span {
@@ -97,6 +108,10 @@
     line-height: 36px;
     font-weight: 500;
     margin-bottom: 5px;
+
+    @media (max-width: $max-mobile-width) {
+      margin-bottom: 10px;
+    }
   }
 
   .review__social-list {
@@ -135,7 +150,7 @@
   @media (max-width: $max-mobile-width) {
     position: absolute;
     padding-left: 0;
-    top: 320px;
+    top: 356px;
     display: flex;
     justify-content: center;
     width: 100%;

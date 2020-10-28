@@ -18,12 +18,14 @@
 
   @media (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
     padding: 20px;
-    //padding-left: 300px;
   }
 
   @media (max-width: $max-mobile-width) {
     background-image: none;
     padding: 50px 16px;
+    padding-top: 85px;
+    padding-left: 8px;
+    padding-bottom: 80px;
   }
 
   h2 {
@@ -46,6 +48,8 @@
       font-size: 32px;
       line-height: 39px;
       text-align: center;
+      padding-left: 0;
+      margin-bottom: 26px;
     }
   }
 
@@ -65,6 +69,9 @@
       font-size: 14px;
       line-height: 22px;
       text-align: left;
+      padding: 0;
+      margin-bottom: 23px;
+      padding-left: 8px;
     }
   }
 
@@ -83,6 +90,7 @@
     @media (max-width: $max-mobile-width) {
       font-size: 16px;
       line-height: 26px;
+      margin-bottom: 18px;
     }
   }
 
@@ -92,10 +100,7 @@
     position: relative;
 
     &::before {
-      //background-image: linear-gradient(90deg, grey, grey 50%, transparent 50%, transparent 100%);
       background: repeating-linear-gradient(to bottom, transparent 0 6px, $light-grey 6px 12px) 80%/2px 100% no-repeat;
-      //background-size: 20px 1px;
-      //background-repeat: no-repeat;
       position: absolute;
       width: 10px;
       height: 270px;
@@ -112,11 +117,14 @@
       width: 400px;
     }
 
+    @media (max-width: $max-mobile-width) {
+      padding-right: 0;
+    }
+
     li {
       margin-bottom: 20px;
       font-size: 15px;
       line-height: 21px;
-      //position: relative;
       display: flex;
       align-items: center;
 
@@ -128,6 +136,25 @@
       @media (max-width: $max-mobile-width) {
         font-size: 14px;
         line-height: 22px;
+        margin-bottom: 48px;
+      }
+    }
+
+    .howto__list-item--second {
+      @media (max-width: $max-mobile-width) {
+        margin-bottom: 38px;
+      }
+    }
+
+    .howto__list-item--third {
+      @media (max-width: $max-mobile-width) {
+        margin-bottom: 25px;
+      }
+    }
+
+    .howto__list-item--fourth {
+      @media (max-width: $max-mobile-width) {
+        margin-bottom: 25px;
       }
     }
 
@@ -138,11 +165,15 @@
       line-height: 29px;
       font-weight: 700;
       z-index: 100;
-      //display: block;
       border-radius: 100px;
       padding: 14px 18px;
       background: white;
       box-shadow: 0 4px 4px rgba(00, 00, 00, 0.1);
+
+      @media (max-width: $max-mobile-width) {
+        padding: 8px 16px;
+        margin-right: 10px;
+      }
     }
   }
 
@@ -157,6 +188,11 @@
       text-align: left;
     }
 
+    @media (max-width: $max-mobile-width) {
+      @include reset;
+      padding-left: 15px;
+    }
+
     &::before {
       content: "";
       display: block;
@@ -169,6 +205,8 @@
 
       @media (max-width: $max-mobile-width) {
         height: 88px;
+        top: 0;
+        left: 0;
       }
     }
   }

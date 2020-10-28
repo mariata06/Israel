@@ -2,6 +2,11 @@
   padding-bottom: 47px;
   border-bottom: 1px solid grey;
 
+  @media (max-width: $max-mobile-width) {
+    padding-bottom: 16px;
+    margin-bottom: 22px;
+  }
+
   svg {
     width: 15px;
     height: 8px;
@@ -25,6 +30,10 @@
     background-clip: text;
     -webkit-text-fill-color: transparent;
     margin-right: 20px;
+
+    @media (max-width: $max-mobile-width) {
+      margin-right: 10px;
+    }
   }
 }
 
@@ -62,4 +71,10 @@
   display: none;
   padding-top: 20px;
   padding-right: 20px;
+
+  @media (max-width: $max-mobile-width) {
+    font-size: 14px;
+    line-height: 22px;
+    padding-top: 18px;
+  }
 }

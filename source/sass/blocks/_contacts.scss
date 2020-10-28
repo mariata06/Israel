@@ -33,11 +33,12 @@
 
   @media (max-width: $max-mobile-width) {
     padding: 16px;
-    padding-bottom: 50px;
+    padding-bottom: 65px;
+    padding-top: 52px;
     background-image: url("../img/marker-map.png"), url("../img/map-mobile@1x.png");
     background-repeat: no-repeat, no-repeat;
     background-size: 7%, 100%;
-    background-position: 250px 800px, center 550px;
+    background-position: 265px 890px, center 680px;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../img/marker-map.png"), url("../img/map-mobile@2x.png");
@@ -109,6 +110,7 @@
       order: 3;
       flex-wrap: wrap;
       width: 100%;
+      margin-top: 34px;
     }
 
     label {
@@ -134,6 +136,7 @@
         width: 100%;
         margin-right: 0;
         margin-bottom: 8px;
+        margin-left: 0;
       }
     }
 
@@ -151,9 +154,10 @@
 
       @media (max-width: $max-mobile-width) {
         width: 264px;
-        padding-top: 16px;
-        padding-bottom: 16px;
+        padding-top: 19px;
+        padding-bottom: 20px;
         margin: 0 auto;
+        margin-top: 12px;
       }
     }
   }
@@ -170,6 +174,11 @@
     line-height: 26px;
     font-weight: 500;
     width: 335px;
+
+    @media (max-width: $max-mobile-width) {
+      font-size: 16px;
+      line-height: 24px;
+    }
   }
 
   .contacts__note {
@@ -179,6 +188,7 @@
 
     @media (max-width: $max-mobile-width) {
       order: 2;
+      margin-top: 12px;
     }
   }
 }
@@ -206,7 +216,14 @@
 
   @media (max-width: $max-mobile-width) {
     width: 100%;
-    margin-bottom: 400px;
+    margin-bottom: 482px;
+  }
+
+  .contacts__manager {
+    @media (max-width: $max-mobile-width) {
+      font-size: 16px;
+      line-height: 26px;
+    }
   }
 }
 
@@ -220,6 +237,7 @@
 
   @media (max-width: $max-mobile-width) {
     flex-wrap: wrap;
+    margin-bottom: 32px;
   }
 
   span {
@@ -233,6 +251,11 @@
     line-height: 19px;
     padding-right: 130px;
     margin-bottom: 10px;
+
+    @media (max-width: $max-mobile-width) {
+      padding-right: 0;
+      margin-bottom: 15px;
+    }
   }
 }
 
@@ -249,5 +272,6 @@
   @media (max-width: $max-mobile-width) {
     margin-left: 0;
     width: 100%;
+    margin-top: 20px;
   }
 }

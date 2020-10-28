@@ -36,11 +36,12 @@
     height: 616px;
     padding-left: 16px;
     padding-right: 7px;
-    //padding-top: 20px;
+    padding-top: 20px;
     background-size: 100%;
     //background-size: cover;
     //background-size: contain;
-    background-position: top bottom;
+    background-position: center 20px;
+    background-color: unset;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../img/intro-bg-mobile@2x.jpg");
@@ -51,7 +52,7 @@
     text-align: center;
     color: white;
     font-size: 24px;
-    font-weight: bold;
+    font-weight: 700;
     width: 343px;
     margin: 0 auto;
     margin-top: 458px;
@@ -62,7 +63,9 @@
 
     @media (max-width: $max-mobile-width) {
       width: 100%;
-      margin-top: 300px;
+      margin-top: 267px;
+      font-size: 20px;
+      line-height: 24px;
     }
   }
 
@@ -79,6 +82,10 @@
     transform: translateX(-50%);
     border-radius: 100px;
     border: 1px solid white;
+
+    @media (max-width: $max-mobile-width) {
+      bottom: 133px;
+    }
 
     &::before {
       --d: 5deg;
@@ -169,7 +176,7 @@
 
   @media (max-width: $max-mobile-width) {
     flex-wrap: wrap;
-    align-items: end;
+    align-items: unset;
   }
 }
 

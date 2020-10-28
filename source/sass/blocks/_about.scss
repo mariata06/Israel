@@ -16,6 +16,8 @@
     background-repeat: no-repeat;
     background-size: 100%;
     background-position: center 170px;
+    padding-top: 18px;
+    padding-bottom: 75px;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../img/watercolor-bg-mobile@2x.png");
@@ -46,6 +48,7 @@
     @media (max-width: $max-mobile-width) {
       font-size: 32px;
       line-height: 39px;
+      letter-spacing: -1px;
     }
   }
 
@@ -95,7 +98,12 @@
     position: absolute;
     top: 230px;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translateX(-50%);
+
+    @media (max-width: $max-mobile-width) {
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
 
     &:hover,
     &:focus {

@@ -157,8 +157,10 @@ a {
       height: 616px;
       padding-left: 16px;
       padding-right: 7px;
+      padding-top: 20px;
       background-size: 100%;
-      background-position: top bottom; } }
+      background-position: center 20px;
+      background-color: unset; } }
   @media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 767px) and (min-resolution: 144dpi), (max-width: 767px) and (min-resolution: 1.5dppx) {
     .page-header {
       background-image: url("../img/intro-bg-mobile@2x.jpg"); } }
@@ -166,7 +168,7 @@ a {
     text-align: center;
     color: white;
     font-size: 24px;
-    font-weight: bold;
+    font-weight: 700;
     width: 343px;
     margin: 0 auto;
     margin-top: 458px; }
@@ -176,7 +178,9 @@ a {
     @media (max-width: 767px) {
       .page-header p {
         width: 100%;
-        margin-top: 300px; } }
+        margin-top: 267px;
+        font-size: 20px;
+        line-height: 24px; } }
   .page-header button {
     width: 60px;
     height: 60px;
@@ -191,6 +195,9 @@ a {
             transform: translateX(-50%);
     border-radius: 100px;
     border: 1px solid white; }
+    @media (max-width: 767px) {
+      .page-header button {
+        bottom: 133px; } }
     .page-header button::before {
       --d: 5deg;
       /* distance between dashes */
@@ -280,9 +287,9 @@ a {
     .page-header__site-nav {
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
-      -webkit-box-align: end;
-          -ms-flex-align: end;
-              align-items: end; } }
+      -webkit-box-align: unset;
+          -ms-flex-align: unset;
+              align-items: unset; } }
 
 .page-header__logo {
   margin: 0 auto;
@@ -536,7 +543,9 @@ input {
       background-image: url("../img/watercolor-bg-mobile@1x.png");
       background-repeat: no-repeat;
       background-size: 100%;
-      background-position: center 170px; } }
+      background-position: center 170px;
+      padding-top: 18px;
+      padding-bottom: 75px; } }
   @media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 767px) and (min-resolution: 144dpi), (max-width: 767px) and (min-resolution: 1.5dppx) {
     .about {
       background-image: url("../img/watercolor-bg-mobile@2x.png"); } }
@@ -560,7 +569,8 @@ input {
     @media (max-width: 767px) {
       .about h2 {
         font-size: 32px;
-        line-height: 39px; } }
+        line-height: 39px;
+        letter-spacing: -1px; } }
   .about p {
     font-size: 17px;
     line-height: 29px;
@@ -597,8 +607,13 @@ input {
     position: absolute;
     top: 230px;
     left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%); }
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%); }
+    @media (max-width: 767px) {
+      .about__video button {
+        top: 50%;
+        -webkit-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%); } }
     .about__video button:hover, .about__video button:focus {
       opacity: 0.7;
       -webkit-transition: 0.5s ease;
@@ -658,7 +673,8 @@ input {
       .program h2 {
         font-size: 32px;
         line-height: 39px;
-        text-align: center; } }
+        text-align: center;
+        margin-bottom: 14px; } }
   .program h3 {
     padding: 0;
     margin: 0;
@@ -671,10 +687,19 @@ input {
     @media (max-width: 767px) {
       .program h3 {
         font-size: 24px;
-        line-height: 29px; } }
+        line-height: 29px;
+        letter-spacing: -0.8px;
+        margin-bottom: 18px; } }
   .program p {
+    padding: 0;
+    margin: 0;
     font-size: 15px;
     line-height: 25px; }
+    @media (max-width: 767px) {
+      .program p {
+        font-size: 14px;
+        line-height: 22px;
+        margin-bottom: 15px; } }
 
 .program__content {
   display: -webkit-box;
@@ -715,6 +740,7 @@ input {
               flex-direction: row;
       -webkit-transform: unset;
               transform: unset;
+      margin-bottom: 20px;
       /*
     .swiper-slide {
       flex-shrink:
@@ -904,7 +930,7 @@ input {
       width: 100%;
       padding-left: 17px;
       padding-right: 16px;
-      padding-top: 50px;
+      padding-top: 65px;
       padding-bottom: 300px; } }
   @media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 767px) and (min-resolution: 144dpi), (max-width: 767px) and (min-resolution: 1.5dppx) {
     .request {
@@ -933,7 +959,10 @@ input {
     margin-top: 0; }
     @media (max-width: 767px) {
       .request p {
-        width: 100%; } }
+        font-size: 16px;
+        line-height: 26px;
+        width: 100%;
+        margin-bottom: 25px; } }
 
 .request__form {
   display: -webkit-box;
@@ -986,7 +1015,10 @@ input {
   @media (max-width: 767px) {
     .howto {
       background-image: none;
-      padding: 50px 16px; } }
+      padding: 50px 16px;
+      padding-top: 85px;
+      padding-left: 8px;
+      padding-bottom: 80px; } }
   .howto h2 {
     padding: 0;
     margin: 0;
@@ -1006,7 +1038,9 @@ input {
       .howto h2 {
         font-size: 32px;
         line-height: 39px;
-        text-align: center; } }
+        text-align: center;
+        padding-left: 0;
+        margin-bottom: 26px; } }
   .howto p {
     padding: 0;
     margin: 0;
@@ -1022,7 +1056,10 @@ input {
       .howto p {
         font-size: 14px;
         line-height: 22px;
-        text-align: left; } }
+        text-align: left;
+        padding: 0;
+        margin-bottom: 23px;
+        padding-left: 8px; } }
   .howto .howto__condition {
     font-size: 17px;
     line-height: 29px;
@@ -1036,7 +1073,8 @@ input {
     @media (max-width: 767px) {
       .howto .howto__condition {
         font-size: 16px;
-        line-height: 26px; } }
+        line-height: 26px;
+        margin-bottom: 18px; } }
   .howto ul {
     list-style: none;
     padding: 0;
@@ -1058,6 +1096,9 @@ input {
         margin-left: auto;
         text-align: right;
         width: 400px; } }
+    @media (max-width: 767px) {
+      .howto ul {
+        padding-right: 0; } }
     .howto ul li {
       margin-bottom: 20px;
       font-size: 15px;
@@ -1075,7 +1116,17 @@ input {
       @media (max-width: 767px) {
         .howto ul li {
           font-size: 14px;
-          line-height: 22px; } }
+          line-height: 22px;
+          margin-bottom: 48px; } }
+    @media (max-width: 767px) {
+      .howto ul .howto__list-item--second {
+        margin-bottom: 38px; } }
+    @media (max-width: 767px) {
+      .howto ul .howto__list-item--third {
+        margin-bottom: 25px; } }
+    @media (max-width: 767px) {
+      .howto ul .howto__list-item--fourth {
+        margin-bottom: 25px; } }
     .howto ul span {
       margin-right: 20px;
       color: #ffc341;
@@ -1088,6 +1139,10 @@ input {
       background: white;
       -webkit-box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
               box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1); }
+      @media (max-width: 767px) {
+        .howto ul span {
+          padding: 8px 16px;
+          margin-right: 10px; } }
   .howto .howto__note {
     opacity: 0.5;
     padding-left: 30px;
@@ -1097,6 +1152,11 @@ input {
     @media (min-width: 768px) and (max-width: 1023px) {
       .howto .howto__note {
         text-align: left; } }
+    @media (max-width: 767px) {
+      .howto .howto__note {
+        padding: 0;
+        margin: 0;
+        padding-left: 15px; } }
     .howto .howto__note::before {
       content: "";
       display: block;
@@ -1109,7 +1169,9 @@ input {
       top: 5px; }
       @media (max-width: 767px) {
         .howto .howto__note::before {
-          height: 88px; } }
+          height: 88px;
+          top: 0;
+          left: 0; } }
 
 .internship {
   max-width: 1366px;
@@ -1134,7 +1196,8 @@ input {
   @media (max-width: 767px) {
     .internship {
       padding-left: 16px;
-      padding-right: 16px; } }
+      padding-right: 16px;
+      padding-bottom: 45px; } }
   .internship h2 {
     padding: 0;
     margin: 0;
@@ -1153,7 +1216,8 @@ input {
         line-height: 39px;
         text-align: center;
         width: 200px;
-        margin: 0 auto; } }
+        margin: 0 auto;
+        margin-bottom: 22px; } }
   .internship p {
     padding: 0;
     margin: 0;
@@ -1177,7 +1241,8 @@ input {
         margin: 0 auto;
         text-align: left;
         font-size: 16px;
-        line-height: 26px; } }
+        line-height: 26px;
+        margin-bottom: 20px; } }
 
 .internship__picture-container {
   width: 100%; }
@@ -1229,19 +1294,24 @@ input {
       font-size: 21px;
       line-height: 25px;
       font-weight: 900;
-      color: white; }
-      @media (max-width: 767px) {
-        .internship__picture-wrapper figure figcaption {
-          bottom: 20px;
-          left: 20px;
-          width: 50%;
-          text-align: center; } }
+      color: white;
+      /*
+      @media (max-width: $max-mobile-width) {
+        bottom: 20px;
+        left: 20px;
+        //transform: translateX(-50%);
+        width: 50%;
+        text-align: center;
+      }*/ }
       @media (min-width: 320px) {
         .internship__picture-wrapper figure figcaption {
+          font-size: 18px;
+          line-height: 21px;
           left: 50%;
           -webkit-transform: translateX(-50%);
                   transform: translateX(-50%);
-          width: 50%; } }
+          width: 210px;
+          bottom: 10px; } }
 
 .internship__pagination {
   display: none; }
@@ -1295,6 +1365,9 @@ input {
   .internship__picture-box--excursion img {
     margin-bottom: 80px;
     z-index: 10; }
+    @media (max-width: 767px) {
+      .internship__picture-box--excursion img {
+        margin-bottom: 0; } }
   @media (min-width: 768px) and (max-width: 1023px) {
     .internship__picture-box--excursion {
       grid-column: 1;
@@ -1385,11 +1458,13 @@ input {
   @media (max-width: 767px) {
     .masaisrael {
       padding: 16px;
+      padding-left: 11px;
+      padding-right: 13px;
       background-image: url("../img/masaisrael-mobile@1x.png");
       background-repeat: no-repeat;
       background-size: 100%;
-      background-position: center center;
-      padding-bottom: 20px; } }
+      background-position: center 60px;
+      padding-bottom: 65px; } }
   .masaisrael h2 {
     padding: 0;
     margin: 0;
@@ -1405,7 +1480,7 @@ input {
     @media (max-width: 767px) {
       .masaisrael h2 {
         text-align: center;
-        margin-bottom: 100px; } }
+        margin-bottom: 70px; } }
   .masaisrael p {
     padding: 0;
     margin: 0;
@@ -1418,7 +1493,9 @@ input {
       .masaisrael p {
         font-size: 16px;
         line-height: 26px;
-        margin-bottom: 80px; } }
+        margin-bottom: 56px;
+        padding-left: 13px;
+        padding-right: 11px; } }
   .masaisrael .button {
     margin: 0;
     display: -webkit-box;
@@ -1429,15 +1506,23 @@ input {
             justify-content: space-between;
     padding-left: 40px;
     padding-right: 26px; }
+    @media (max-width: 767px) {
+      .masaisrael .button {
+        max-width: 264px;
+        margin: 0 auto;
+        padding-left: 60px; } }
     .masaisrael .button a {
       color: white;
       text-transform: uppercase;
-      font-size: 17px;
-      line-height: 20px;
+      font-size: 15px;
+      line-height: 18px;
       font-weight: 500; }
     .masaisrael .button svg {
       fill: white;
       margin-right: 20px; }
+      @media (max-width: 767px) {
+        .masaisrael .button svg {
+          margin-right: 10px; } }
 
 .faq {
   max-width: 1366px;
@@ -1576,6 +1661,7 @@ input {
     padding-left: 485px; }
     @media (max-width: 767px) {
       .review h2 {
+        padding-left: 0;
         text-align: center;
         margin-bottom: 50px;
         font-size: 32px;
@@ -1776,7 +1862,7 @@ input {
 .contacts {
   max-width: 1366px;
   margin: 0 auto;
-  padding: 0 106px 96px 118px;
+  padding: 0 106px 62px 118px;
   background-image: url("../img/marker-map.png"), url("../img/map-desktop@1x.png"), url("../img/contacts-watercolor-bg-desktop@1x.png");
   background-repeat: no-repeat, no-repeat, no-repeat;
   background-size: 2%, 48%, 100%;
@@ -1857,7 +1943,10 @@ input {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    margin-left: auto; }
+    margin-left: auto;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
     @media (min-width: 768px) and (max-width: 1023px) {
       .contacts form {
         width: 100%;
@@ -1878,19 +1967,24 @@ input {
     @media (max-width: 767px) {
       .contacts form label {
         width: 100%; } }
-    @media (min-width: 768px) and (max-width: 1023px) {
-      .contacts form input {
-        width: 100%; } }
-    @media (max-width: 767px) {
-      .contacts form input {
-        width: 100%;
-        margin-right: 0;
-        margin-bottom: 8px; } }
+    .contacts form input {
+      margin-left: 20px;
+      margin-bottom: 0;
+      width: 250px; }
+      @media (min-width: 768px) and (max-width: 1023px) {
+        .contacts form input {
+          width: 100%; } }
+      @media (max-width: 767px) {
+        .contacts form input {
+          width: 100%;
+          margin-right: 0;
+          margin-bottom: 8px; } }
     .contacts form .contacts__form-button {
       margin: 0;
-      width: 216px;
-      padding-top: 8px;
-      padding-bottom: 9px; }
+      padding-top: 5px;
+      padding-bottom: 5px;
+      margin-left: 25px;
+      font-size: 15px; }
       @media (min-width: 768px) and (max-width: 1023px) {
         .contacts form .contacts__form-button {
           width: 30%; } }
@@ -1916,7 +2010,7 @@ input {
     font-size: 17px;
     line-height: 26px;
     font-weight: 500;
-    width: 328px; }
+    width: 335px; }
   .contacts__content .contacts__note {
     font-size: 13px;
     line-height: 19px;
@@ -1941,7 +2035,7 @@ input {
 .contacts__info {
   width: 480px;
   margin-right: auto;
-  margin-bottom: 50px; }
+  margin-bottom: 140px; }
   @media (max-width: 767px) {
     .contacts__info {
       width: 100%;
@@ -2001,6 +2095,12 @@ input {
   padding-bottom: 24px;
   padding-left: 114px;
   padding-right: 114px; }
+  .page-footer p {
+    padding: 0;
+    margin: 0;
+    font-size: 12px;
+    line-height: 18px;
+    padding-left: 45px; }
   @media (min-width: 768px) and (max-width: 1023px) {
     .page-footer {
       padding-left: 20px;
@@ -2013,7 +2113,7 @@ input {
     display: -ms-flexbox;
     display: flex; }
     .page-footer ul li {
-      margin-right: 28px; }
+      margin-left: 28px; }
     .page-footer ul svg {
       fill: grey;
       opacity: 0.5; }

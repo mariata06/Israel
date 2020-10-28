@@ -27,11 +27,13 @@
 
   @media (max-width: $max-mobile-width) {
     padding: 16px;
+    padding-left: 11px;
+    padding-right: 13px;
     background-image: url("../img/masaisrael-mobile@1x.png");
     background-repeat: no-repeat;
     background-size: 100%;
-    background-position: center center;
-    padding-bottom: 20px;
+    background-position: center 60px;
+    padding-bottom: 65px;
   }
 
   h2 {
@@ -48,7 +50,7 @@
 
     @media (max-width: $max-mobile-width) {
       text-align: center;
-      margin-bottom: 100px;
+      margin-bottom: 96px;
       //width: 200px;
       //margin: 0 auto;
     }
@@ -66,7 +68,9 @@
       //margin-top: 200px;
       font-size: 16px;
       line-height: 26px;
-      margin-bottom: 80px;
+      margin-bottom: 56px;
+      padding-left: 13px;
+      padding-right: 11px;
     }
   }
 
@@ -77,17 +81,27 @@
     padding-left: 40px;
     padding-right: 26px;
 
+    @media (max-width: $max-mobile-width) {
+      max-width: 264px;
+      margin: 0 auto;
+      padding-left: 60px;
+    }
+
     a {
       color: white;
       text-transform: uppercase;
-      font-size: 17px;
-      line-height: 20px;
+      font-size: 15px;
+      line-height: 18px;
       font-weight: 500;
     }
 
     svg {
       fill: white;
       margin-right: 20px;
+
+      @media (max-width: $max-mobile-width) {
+        margin-right: 10px;
+      }
     }
   }
 }

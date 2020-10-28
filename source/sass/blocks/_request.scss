@@ -44,7 +44,7 @@
     width: 100%;
     padding-left: 17px;
     padding-right: 16px;
-    padding-top: 50px;
+    padding-top: 65px;
     padding-bottom: 300px;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
@@ -78,7 +78,10 @@
     margin-top: 0;
 
     @media (max-width: $max-mobile-width) {
+      font-size: 16px;
+      line-height: 26px;
       width: 100%;
+      margin-bottom: 25px;
     }
   }
 }

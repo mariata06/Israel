@@ -51,6 +51,7 @@
       font-size: 32px;
       line-height: 39px;
       text-align: center;
+      margin-bottom: 14px;
     }
   }
 
@@ -66,12 +67,21 @@
     @media (max-width: $max-mobile-width) {
       font-size: 24px;
       line-height: 29px;
+      letter-spacing: -0.8px;
+      margin-bottom: 18px;
     }
   }
 
   p {
+    @include reset;
     font-size: 15px;
     line-height: 25px;
+
+    @media (max-width: $max-mobile-width) {
+      font-size: 14px;
+      line-height: 22px;
+      margin-bottom: 15px;
+    }
   }
 }
 
@@ -107,6 +117,7 @@
   @media (max-width: $max-mobile-width) {
     flex-direction: row;
     transform: unset;
+    margin-bottom: 20px;
 
     /*
     .swiper-slide {
