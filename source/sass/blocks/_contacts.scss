@@ -1,14 +1,14 @@
 .contacts {
   max-width: 1366px;
   margin: 0 auto;
-  padding: 0 106px 96px 118px;
+  padding: 0 106px 62px 118px;
   //display: flex;
   //flex-direction: row;
   //flex-wrap: wrap;
   background-image: url("../img/marker-map.png"), url("../img/map-desktop@1x.png"), url("../img/contacts-watercolor-bg-desktop@1x.png");
   background-repeat: no-repeat, no-repeat, no-repeat;
-  background-size: 1%, 50%, 100%;
-  background-position: 1200px 200px, top right, top right;
+  background-size: 2%, 48%, 100%;
+  background-position: 1180px 220px, right 10px, top right;
   position: relative;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
@@ -60,7 +60,7 @@
     line-height: 49px;
     font-weight: 700;
     color: $blue;
-    letter-spacing: -2px;
+    letter-spacing: -1px;
     text-transform: uppercase;
     text-align: left;
     margin-bottom: 48px;
@@ -98,6 +98,7 @@
   form {
     display: flex;
     margin-left: auto;
+    justify-content: space-between;
 
     @media (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
       width: 100%;
@@ -121,6 +122,10 @@
     }
 
     input {
+      margin-left: 20px;
+      margin-bottom: 0;
+      width: 250px;
+
       @media (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
         width: 100%;
       }
@@ -134,9 +139,11 @@
 
     .contacts__form-button {
       margin: 0;
-      width: 216px;
-      padding-top: 8px;
-      padding-bottom: 9px;
+      //width: 216px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      margin-left: 25px;
+      font-size: 15px;
 
       @media (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
         width: 30%;
@@ -162,7 +169,7 @@
     font-size: 17px;
     line-height: 26px;
     font-weight: 500;
-    width: 328px;
+    width: 335px;
   }
 
   .contacts__note {
@@ -195,7 +202,7 @@
   //display: flex;
   //flex-direction: row;
   margin-right: auto;
-  margin-bottom: 50px;
+  margin-bottom: 140px;
 
   @media (max-width: $max-mobile-width) {
     width: 100%;
@@ -208,7 +215,7 @@
   line-height: 22px;
   display: flex;
   //flex-wrap: wrap;
-  margin-top: 38.5px;
+  margin-top: 36px;
   margin-bottom: 38.5px;
 
   @media (max-width: $max-mobile-width) {
@@ -224,6 +231,8 @@
   .contacts__address {
     font-size: 13px;
     line-height: 19px;
+    padding-right: 130px;
+    margin-bottom: 10px;
   }
 }
 
@@ -232,6 +241,10 @@
   flex-wrap: wrap;
   width: 100%;
   margin-left: 20px;
+
+  p {
+    margin-bottom: 12px;
+  }
 
   @media (max-width: $max-mobile-width) {
     margin-left: 0;

@@ -1,11 +1,11 @@
 .review {
   max-width: 1366px;
   margin: 0 auto;
-  padding: 128px 184px 109px 98px;
+  padding: 35px 184px 85px 98px;
   background-image: url("../img/review-sketch-desktop@1x.png");
   background-repeat: no-repeat;
-  background-size: 50%;
-  background-position: center right;
+  background-size: 43%;
+  background-position: right 70px;
   position: relative;
   display: flex;
   flex-wrap: wrap;
@@ -30,10 +30,11 @@
     line-height: 49px;
     font-weight: 700;
     color: $blue;
-    letter-spacing: -2px;
+    letter-spacing: -1px;
     text-transform: uppercase;
-    text-align: center;
+    //text-align: center;
     width: 100%;
+    padding-left: 485px;
 
     @media (max-width: $max-mobile-width) {
       text-align: center;
@@ -50,6 +51,7 @@
     line-height: 29px;
     text-align: left;
     background-color: transparent;
+    padding-top: 45px;
 
     @media (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
       margin: 0;
@@ -60,10 +62,17 @@
     }
 
     p {
+      @include reset;
+      margin-bottom: 28px;
+
       @media (max-width: $max-mobile-width) {
         display: flex;
         flex-wrap: wrap;
       }
+    }
+
+    .review__text {
+      margin-bottom: 18px;
     }
 
     span {
@@ -83,9 +92,11 @@
   }
 
   .review__author {
+    @include reset;
     font-size: 24px;
     line-height: 36px;
     font-weight: 500;
+    margin-bottom: 5px;
   }
 
   .review__social-list {
@@ -118,7 +129,8 @@
 .review__pagination-buttons {
   display: flex;
   align-items: center;
-  padding-left: 350px;
+  padding-left: 405px;
+  margin-top: -30px;
 
   @media (max-width: $max-mobile-width) {
     position: absolute;
@@ -178,7 +190,7 @@
   svg {
     fill: transparent;
     opacity: 0.5;
-    transform: scale(2);
+    transform: scale(1.5);
   }
 }
 
@@ -203,13 +215,14 @@
   svg {
     fill: transparent;
     opacity: 0.5;
-    transform: scale(2) rotate(180deg);
+    transform: scale(1.5) rotate(180deg);
   }
 }
 
 .review__container {
   width: 100%;
   height: 100%;
+  position: relative;
 
   @media (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
     width: 100%;
@@ -231,7 +244,7 @@
   font-size: 18px;
   display: flex;
   justify-content: center;
-  align-items: center;
+  //align-items: center;
 
   @media (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
     width: 100%;

@@ -6,10 +6,11 @@
   //background-size: 110%;
   background-position: top center;
   position: relative;
-  height: 906px;
+  //height: 906px;
+  height: 897px;
   padding-left: 110px;
   padding-right: 114px;
-  padding-top: 32px;
+  padding-top: 47px;
   max-width: 1366px;
   margin: 0 auto;
   background-size: cover;
@@ -121,6 +122,8 @@
   display: flex;
   justify-content: space-between;
   width: 100%;
+  font-size: 15px;
+  line-height: 18px;
 
   a {
     color: black;

@@ -2,8 +2,10 @@
   background-image: url("../img/watercolor-bg-desktop@1x.png");
   background-repeat: no-repeat;
   background-size: 100%;
+  background-position: center 158px;
   max-width: 1366px;
   margin: 0 auto;
+  padding-bottom: 90px;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     background-image: url("../img/watercolor-bg-desktop@2x.png");
@@ -38,7 +40,8 @@
     color: $blue;
     letter-spacing: -2px;
     text-transform: uppercase;
-    margin-top: 20px;
+    //margin-top: 5px;
+    margin-bottom: 22px;
 
     @media (max-width: $max-mobile-width) {
       font-size: 32px;
@@ -54,6 +57,7 @@
     width: 720px;
     margin: 0 auto;
     display: block;
+    margin-bottom: 47px;
 
     @media (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
       padding-left: 20px;
@@ -89,7 +93,7 @@
     background-color: transparent;
     cursor: pointer;
     position: absolute;
-    top: 50%;
+    top: 230px;
     left: 50%;
     transform: translate(-50%, -50%);
 

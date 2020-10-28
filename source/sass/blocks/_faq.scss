@@ -3,10 +3,12 @@
   margin: 0 auto;
   background-image: url("../img/faq-watercolor-bg-desktop@1x.png"), url("../img/faq-bg-desktop@1x.png"), url("../img/bag-desktop@1x.png");
   background-repeat: no-repeat;
-  background-size: 100%, 40%, 10%;
-  background-position: center center, center right, bottom left;
+  background-size: 100%, 47%, 10%;
+  background-position: center center, right 135px, bottom left;
   padding: 100px;
-  padding-right: 600px;
+  padding-right: 730px;
+  padding-top: 130px;
+  padding-left: 108px;
 
   @media (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
     background-image: url("../img/faq-watercolor-bg-desktop@1x.png"), url("../img/faq-bg-desktop@1x.png");
@@ -32,9 +34,10 @@
     line-height: 49px;
     font-weight: 700;
     color: $blue;
-    letter-spacing: -2px;
+    letter-spacing: -1px;
     text-transform: uppercase;
     text-align: left;
+    margin-bottom: 33px;
 
     @media (max-width: $max-mobile-width) {
       text-align: center;

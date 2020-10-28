@@ -1,14 +1,14 @@
 .request {
   max-width: 1366px;
   margin: 0 auto;
-  padding-top: 209px;
+  padding-top: 210px;
   padding-left: 210px;
   padding-right: 679px;
-  padding-bottom: 210px;
+  padding-bottom: 120px;
   background-image: url("../img/girl-flag-bg-desktop@1x.jpg"), url("../img/backpack-desktop@1x.png");
   background-repeat: no-repeat;
   background-size: 60%, 10%;
-  background-position: top right, center left;
+  background-position: right top, center left;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     background-image: url("../img/girl-flag-bg-desktop@2x.png"), url("../img/backpack-desktop@2x.png");
@@ -59,8 +59,9 @@
     line-height: 49px;
     font-weight: 700;
     color: $blue;
-    letter-spacing: -2px;
+    letter-spacing: -1px;
     text-transform: uppercase;
+    margin-bottom: 22px;
 
     @media (max-width: $max-mobile-width) {
       font-size: 32px;
@@ -70,10 +71,11 @@
   }
 
   p {
-    font-size: 15px;
-    line-height: 25px;
+    font-size: 17px;
+    line-height: 29px;
     width: 400px;
     margin-bottom: 64px;
+    margin-top: 0;
 
     @media (max-width: $max-mobile-width) {
       width: 100%;
@@ -102,8 +104,10 @@
     margin: 0;
     position: absolute;
     right: 0;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 36px;
+    padding-right: 37px;
+    font-size: 15px;
+    letter-spacing: 1px;
 
     @media (max-width: $max-mobile-width) {
       position: relative;

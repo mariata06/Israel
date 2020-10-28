@@ -2,7 +2,7 @@
   padding-top: 104px;
   padding-left: 210px;
   padding-right: 304px;
-  padding-bottom: 104px;
+  padding-bottom: 27px;
   background-image: url("../img/sketch-bg-desktop@1x.png");
   background-repeat: no-repeat;
   background-size: 60%;
@@ -39,8 +39,9 @@
     line-height: 49px;
     font-weight: 700;
     color: $blue;
-    letter-spacing: -2px;
+    letter-spacing: -1px;
     text-transform: uppercase;
+    margin-bottom: 70px;
 
     @media (min-width: 1024px) and (max-width: 1300px) {
       text-align: center;
@@ -124,15 +125,18 @@
   cursor: pointer;
   position: relative;
   margin-right: 30px;
+  font-family: "firasans", "Arial", sans-serif;
   font-size: 15px;
-  line-height: 25px;
-  padding: 21px 0 21px 80px;
+  line-height: 18px;
+  padding: 17px 0 26px 74px;
   background-color: transparent;
   //width: 228px;
   width: 210px;
   text-align: left;
   //padding-left: 80px;
   //min-width: 210px;
+  padding-top: 21px;
+  padding-bottom: 29px;
 
   &::before {
     content: "";
@@ -161,6 +165,11 @@
 
   &--active {
     background: linear-gradient(to right, #ffc341 0%, #ffd701 100%);
+    text-transform: uppercase;
+    font-size: 14px;
+    line-height: 19px;
+    //font-weight: 500;
+    letter-spacing: 0.5px;
     color: white;
 
     &::before {

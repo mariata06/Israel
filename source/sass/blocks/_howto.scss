@@ -3,9 +3,9 @@
   margin: 0 auto;
   background-image: url("../img/bg-howto-desktop@1x.png"), url("../img/trip-watercolor-bg-desktop@1x.png"), url("../img/stamp-desktop@1x.png");
   background-repeat: no-repeat, no-repeat, no-repeat;
-  background-size: 40%, 85%, 15%;
-  background-position: center left, center left, center right;
-  padding: 200px 131px 175px 683px;
+  background-size: 43%, 85%, 15%;
+  background-position: 11px 160px, center left, center right;
+  padding: 195px 131px 180px 680px;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     background-image: url("../img/bg-howto-desktop@2x.png"), url("../img/trip-watercolor-bg-desktop@2x.png"), url("../img/stamp-desktop@2x.png");
@@ -33,8 +33,10 @@
     line-height: 49px;
     font-weight: 700;
     color: $blue;
-    letter-spacing: -2px;
+    letter-spacing: -1px;
     text-transform: uppercase;
+    margin-bottom: 24px;
+    padding-left: 20px;
 
     @media (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
       text-align: center;
@@ -48,8 +50,12 @@
   }
 
   p {
+    @include reset;
+    padding-left: 20px;
     font-size: 15px;
     line-height: 25px;
+    margin-bottom: 32px;
+    padding-right: 46px;
 
     @media (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
       text-align: center;
@@ -63,7 +69,10 @@
   }
 
   .howto__condition {
+    font-size: 17px;
+    line-height: 29px;
     font-weight: 700;
+    margin-bottom: 16px;
 
     @media (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
       margin-left: auto;
@@ -79,7 +88,7 @@
 
   ul {
     @include list-reset;
-    //padding-left: 60px;
+    padding-right: 46px;
     position: relative;
 
     &::before {
@@ -89,10 +98,10 @@
       //background-repeat: no-repeat;
       position: absolute;
       width: 10px;
-      height: 350px;
+      height: 270px;
       content: "";
       display: block;
-      left: 18px;
+      left: 16px;
       top: 20px;
       z-index: 100;
     }
@@ -104,7 +113,7 @@
     }
 
     li {
-      margin-bottom: 48px;
+      margin-bottom: 20px;
       font-size: 15px;
       line-height: 21px;
       //position: relative;
@@ -139,8 +148,10 @@
 
   .howto__note {
     opacity: 0.5;
-    padding-left: 10px;
+    padding-left: 30px;
     position: relative;
+    padding-right: 0;
+    margin-top: 30px;
 
     @media (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
       text-align: left;
@@ -153,8 +164,8 @@
       height: 42px;
       background: linear-gradient(to right, #ffc341 0%, #ffd701 100%);
       position: absolute;
-      left: 0;
-      top: 0;
+      left: 20px;
+      top: 5px;
 
       @media (max-width: $max-mobile-width) {
         height: 88px;

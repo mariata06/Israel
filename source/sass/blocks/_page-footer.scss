@@ -10,6 +10,13 @@
   padding-left: 114px;
   padding-right: 114px;
 
+  p {
+    @include reset;
+    font-size: 12px;
+    line-height: 18px;
+    padding-left: 45px;
+  }
+
   @media (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
     padding-left: 20px;
     padding-right: 20px;
@@ -20,7 +27,7 @@
     display: flex;
 
     li {
-      margin-right: 28px;
+      margin-left: 28px;
     }
 
     svg {
