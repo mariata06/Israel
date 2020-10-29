@@ -2,7 +2,7 @@
   padding-top: 104px;
   padding-left: 210px;
   padding-right: 304px;
-  padding-bottom: 27px;
+  padding-bottom: 23px;
   background-image: url("../img/sketch-bg-desktop@1x.png");
   background-repeat: no-repeat;
   background-size: 60%;
@@ -62,7 +62,8 @@
     line-height: 34px;
     font-weight: 700;
     color: $blue;
-    letter-spacing: -2px;
+    letter-spacing: -1px;
+    margin-bottom: 24px;
 
     @media (max-width: $max-mobile-width) {
       font-size: 24px;
@@ -76,6 +77,7 @@
     @include reset;
     font-size: 15px;
     line-height: 25px;
+    margin-bottom: 20px;
 
     @media (max-width: $max-mobile-width) {
       font-size: 14px;
@@ -96,6 +98,7 @@
 .program__item {
   display: none;
   width: 560px;
+  padding-top: 15px;
 
   &--active {
     display: block;
@@ -105,6 +108,7 @@
     padding-left: 16px;
     padding-right: 16px;
     width: 100%;
+    padding-top: 12px;
   }
 }
 
@@ -112,7 +116,8 @@
   display: flex;
   flex-direction: column;
   //width: 300px;
-  margin-right: 50px;
+  //margin-right: 50px;
+  margin-right: 66px;
 
   @media (max-width: $max-mobile-width) {
     flex-direction: row;
@@ -142,12 +147,13 @@
   padding: 17px 0 26px 74px;
   background-color: transparent;
   //width: 228px;
-  width: 210px;
+  //width: 210px;
   text-align: left;
   //padding-left: 80px;
   //min-width: 210px;
-  padding-top: 21px;
-  padding-bottom: 29px;
+  padding-top: 26px;
+  padding-bottom: 25px;
+  width: 130px;
 
   &::before {
     content: "";
@@ -170,7 +176,7 @@
     line-height: 18px;
     opacity: 0.5;
     //width: 181px;
-    padding: 21px 20px 21px 20px;
+    padding: 15px 20px 15px 20px;
     margin: 0;
   }
 
@@ -289,7 +295,7 @@
   //width: 228px;
   //width: 100%;
   height: 100%;
-  width: 400px;
+  width: 296px;
 
   @media (max-width: $max-mobile-width) {
     width: 100%;

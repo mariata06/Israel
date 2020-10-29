@@ -101,6 +101,10 @@
 
   .request__input {
     width: 100%;
+
+    &--invalid {
+      border: 1px solid $red;
+    }
   }
 
   .button {
