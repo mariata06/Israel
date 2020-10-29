@@ -73,55 +73,19 @@ popupButton.addEventListener("click", function (evt) {
   evt.preventDefault();
   closePopup();
 });
-/*
-var isEmptyFields = function () {
-  var fields = document.querySelectorAll(???)
-  //var answer = true;
-  fields.forEach(element => {
-    if (element.value == ""){
-      return false;
-    }
-  });
-  return true;
-}*/
-/*
-var checkLocalStorage = function () {
-  if (isStorageSupport) {
-    localStorage.setItem("userName", userName.value);
-    localStorage.setItem("userPhone", userPhone.value);
-    popupSuccess.classList.add("popup--success--show");
-  }
-  overlayOk.classList.add("overlay__ok--show");
-  popupSuccess.classList.add("popup--success--show");
-}
-*/
 
 var checkLocalStorage = function () {
   if (isStorageSupport) {
     localStorage.setItem("userName", userName.value);
     localStorage.setItem("userPhone", userPhone.value);
-    //popupSuccess.classList.add("popup--success--show");
   }
   overlayOk.classList.add("overlay__ok--show");
   popupSuccess.classList.add("popup--success--show");
 }
-
-/*
-var checkEmptyFields = function () {
-  if (userName.value == null && userPhone.value == null) {
-    userName.classList.add("--invalid");
-    userPhone.classList.add("--invalid");
-  } else {
-    overlayOk.classList.add("overlay__ok--show");
-    popupSuccess.classList.add("popup--success--show");
-  }
-}
-*/
 
 callbackForm.addEventListener("submit", function (evt) {
   evt.preventDefault();
   checkLocalStorage();
-  //checkEmptyFields();
   callbackPopup.classList.remove("popup--callback--show");
   overlayForm.classList.remove("overlay__form--show");
 });
@@ -154,26 +118,15 @@ formCheckbox.addEventListener("change", function () {
   }
 });
 
-requestFormButton.addEventListener("click", function (evt) {
+requestForm.addEventListener("submit", function (evt) {
   evt.preventDefault();
   userPhone = requestForm.elements.user_phonenumber;
   checkLocalStorage();
-  //checkEmptyFields();
-  /*
-  if(userPhone.value !== ""){
-    checkLocalStorage();
-  }*/
 });
 
-contactsFormButton.addEventListener("click", function (evt) {
+contactsForm.addEventListener("submit", function (evt) {
   evt.preventDefault();
   userName = contactsForm.elements.user_name;
   userPhone = contactsForm.elements.user_phonenumber;
   checkLocalStorage();
-  //checkEmptyFields();
-  /*
-  if(userName.value !== "" && userPhone.value !== ""){
-    checkLocalStorage();
-  }
-  */
 });
