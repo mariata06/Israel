@@ -1,10 +1,12 @@
 .accordion__item {
-  padding-bottom: 47px;
-  border-bottom: 1px solid grey;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid $light-grey;
 
   @media (max-width: $max-mobile-width) {
     padding-bottom: 16px;
     margin-bottom: 22px;
+    padding-top: 0;
   }
 
   svg {
@@ -26,10 +28,10 @@
     font-size: 28px;
     line-height: 48px;
     font-weight: 700;
-    background: linear-gradient(to right, #ffc341 0%, #ffd701 100%);
+    background: linear-gradient(to right, $yellow 0%, $yellow-2 100%);
     background-clip: text;
     -webkit-text-fill-color: transparent;
-    margin-right: 20px;
+    margin-right: 17px;
 
     @media (max-width: $max-mobile-width) {
       margin-right: 10px;
@@ -44,7 +46,7 @@
   align-items: baseline;
   width: 100%;
   position: relative;
-  //margin-bottom: 10px;
+  //margin-bottom: 20px;
 
   @media (max-width: $max-mobile-width) {
     font-size: 16px;
@@ -52,11 +54,9 @@
 
   svg {
     margin-left: auto;
-    fill: white;
+    fill: $white;
     cursor: pointer;
     transform: scale(1.2);
-    //margin-left: 20px;
-    //align-self: flex-end;
 
     &:hover {
       opacity: 0.7;
@@ -69,8 +69,9 @@
   font-size: 15px;
   line-height: 21px;
   display: none;
-  padding-top: 20px;
+  padding-top: 15px;
   padding-right: 20px;
+  opacity: 0.74;
 
   @media (max-width: $max-mobile-width) {
     font-size: 14px;

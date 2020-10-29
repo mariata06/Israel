@@ -4,6 +4,7 @@
   label {
     font-size: 15px;
     line-height: 25px;
+    opacity: 0.74;
 
     @media (max-width: $max-mobile-width) {
       font-size: 13px;
@@ -25,8 +26,8 @@
       left: 15px;
       width: 16px;
       height: 16px;
-      border: 2px solid #ffc341;
-      border-image: linear-gradient(to right top, #ffd701, #ffc341, #ffd701);
+      border: 2px solid $yellow;
+      border-image: linear-gradient(to right top, $yellow-2, $yellow, $yellow-2);
       border-radius: 2px;
       border-image-slice: 1;
     }
@@ -37,8 +38,7 @@
 
     &::before {
       content: url("../img/icon-tick.svg");
-      fill: black;
-      //fill: transparent;
+      fill: $black;
       position: absolute;
       top: 2px;
       left: 17px;

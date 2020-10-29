@@ -2,8 +2,7 @@
   border: none;
   outline: none;
   cursor: pointer;
-  background: linear-gradient(to bottom right, #ffc341 0%, #ffd701 100%);
-  //width: 264px;
+  background: linear-gradient(to bottom right, $yellow 0%, $yellow-2 100%);
   padding-top: 19px;
   padding-bottom: 20px;
   padding-left: 40px;
@@ -15,7 +14,7 @@
   font-size: 17px;
   line-height: 20px;
   font-weight: 500;
-  color: white;
+  color: $white;
   text-transform: uppercase;
   text-shadow: 0 4px 4px rgba(00, 00, 00, 0.25);
   //box-shadow: 0 4px 4px rgba(00, 00, 00, 0.25);
@@ -27,7 +26,7 @@
   }
 
   &:active {
-    background: radial-gradient(#ffc341, #ffd701);
+    background: radial-gradient($yellow, $yellow-2);
   }
 
   &:disabled {

@@ -1,22 +1,22 @@
 .faq {
-  max-width: 1366px;
-  margin: 0 auto;
   background-image: url("../img/faq-watercolor-bg-desktop@1x.png"), url("../img/faq-bg-desktop@1x.png"), url("../img/bag-desktop@1x.png");
   background-repeat: no-repeat;
   background-size: 100%, 47%, 10%;
-  background-position: center center, right 135px, bottom left;
-  padding: 100px;
-  padding-right: 730px;
-  padding-top: 130px;
-  padding-left: 108px;
+  background-position: center center, right 134px, bottom left;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/faq-watercolor-bg-desktop@2x.png"), url("../img/faq-bg-desktop@2x.png"), url("../img/bag-desktop@2x.png");
+  }
 
   @media (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
     background-image: url("../img/faq-watercolor-bg-desktop@1x.png"), url("../img/faq-bg-desktop@1x.png");
     background-repeat: no-repeat;
     background-size: 100%, 45%;
     background-position: center center, center right;
-    padding: 20px;
-    padding-right: 50%;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/faq-watercolor-bg-desktop@2x.png"), url("../img/faq-bg-desktop@2x.png");
+    }
   }
 
   @media (max-width: $max-mobile-width) {
@@ -24,6 +24,26 @@
     background-repeat: no-repeat;
     background-size: 10%;
     background-position: bottom left;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/bag-mobile@2x.png");
+    }
+  }
+}
+
+.faq__container {
+  padding: 130px 730px 100px 108px;
+
+  @media (min-width: 1024px) and (max-width: 1200px) {
+    padding-right: 600px;
+  }
+
+  @media (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
+    padding: 20px;
+    padding-right: 50%;
+  }
+
+  @media (max-width: $max-mobile-width) {
     padding: 16px;
   }
 
@@ -37,7 +57,7 @@
     letter-spacing: -1px;
     text-transform: uppercase;
     text-align: left;
-    margin-bottom: 33px;
+    margin-bottom: 9px;
 
     @media (max-width: $max-mobile-width) {
       text-align: center;

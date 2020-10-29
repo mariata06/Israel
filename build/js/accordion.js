@@ -21,4 +21,3 @@ accordionItemTrigger.forEach(function (item) {
     }
   })
 });
-

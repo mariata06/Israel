@@ -1,18 +1,8 @@
 .page-header {
-  background-color: brown;
+  background-color: $brown;
   background-image: url("../img/intro-bg-desktop@1x.jpg");
   background-repeat: no-repeat;
-  //background-size: cover;
-  //background-size: 110%;
   background-position: top center;
-  position: relative;
-  //height: 906px;
-  height: 897px;
-  padding-left: 110px;
-  padding-right: 114px;
-  padding-top: 47px;
-  max-width: 1366px;
-  margin: 0 auto;
   background-size: cover;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
@@ -24,7 +14,6 @@
     background-image: url("../img/intro-bg-desktop@1x.jpg");
     background-position: center center;
     background-size: 120%;
-    //background-size: auto;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../img/intro-bg-desktop@2x.jpg");
@@ -33,13 +22,7 @@
 
   @media (max-width: $max-mobile-width) {
     background-image: url("../img/intro-bg-mobile@1x.jpg");
-    height: 616px;
-    padding-left: 16px;
-    padding-right: 7px;
-    padding-top: 20px;
     background-size: 100%;
-    //background-size: cover;
-    //background-size: contain;
     background-position: center 20px;
     background-color: unset;
 
@@ -47,10 +30,21 @@
       background-image: url("../img/intro-bg-mobile@2x.jpg");
     }
   }
+}
 
-  p {
+.page-header__container {
+  position: relative;
+  height: 897px;
+  padding: 47px 114px 0 110px;
+
+  @media (max-width: $max-mobile-width) {
+    height: 616px;
+    padding: 20px 7px 0 16px;
+  }
+
+  h1 {
     text-align: center;
-    color: white;
+    color: $white;
     font-size: 24px;
     font-weight: 700;
     width: 343px;
@@ -70,8 +64,8 @@
   }
 
   button {
-    width: 60px;
-    height: 60px;
+    width: 56px;
+    height: 56px;
     padding: 15px 15px;
     cursor: pointer;
     outline: none;
@@ -81,7 +75,7 @@
     left: 50%;
     transform: translateX(-50%);
     border-radius: 100px;
-    border: 1px solid white;
+    border: 1px solid $white;
 
     @media (max-width: $max-mobile-width) {
       bottom: 133px;
@@ -120,7 +114,7 @@
       position: absolute;
       left: 27px;
       display: block;
-      background: linear-gradient(white, white) 4px 3px/1px 40px;
+      background: linear-gradient($white, $white) 4px 3px/1px 40px;
     }
   }
 }
@@ -133,7 +127,7 @@
   line-height: 18px;
 
   a {
-    color: black;
+    color: $black;
 
     &:hover,
     &:focus {
@@ -152,8 +146,8 @@
   }
 
   .page-header__callback-link {
-    color: black;
-    border-bottom: 1px dashed black;
+    color: $black;
+    border-bottom: 1px dashed $black;
     display: inline;
 
     &:hover {
@@ -192,9 +186,12 @@
   }
 
   img {
+    margin-top: 8px;
+
     @media (max-width: $max-mobile-width) {
       width: 120px;
       height: 42px;
+      margin-top: 0;
     }
   }
 }

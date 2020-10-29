@@ -4,7 +4,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: white;
+  background-color: $white;
   padding: 32px 32px 40px 48px;
   border-radius: 8px;
   color: $black;
@@ -38,7 +38,7 @@
     }
 
     &::before {
-      content: url("../img/icon-close.png");
+      content: url("../img/icon-close.svg");
     }
   }
 
@@ -46,6 +46,7 @@
     margin-top: 0;
     font-size: 15px;
     line-height: 25px;
+    opacity: 0.87;
 
     @media (max-width: $max-mobile-width) {
       font-size: 14px;
@@ -67,64 +68,65 @@
       line-height: 29px;
     }
   }
+}
 
-  &--callback {
-    //display: block;
-    display: none;
-    z-index: 110;
+.popup--callback {
+  display: none;
+  z-index: 110;
 
-    &--show {
-      display: block;
+  &--show {
+    display: block;
+  }
+
+  p {
+    padding-right: 40px;
+  }
+
+  @media (max-width: $max-mobile-width) {
+    h3 {
+      margin-top: 128px;
     }
 
     p {
-      padding-right: 40px;
-    }
-
-    @media (max-width: $max-mobile-width) {
-      h3 {
-        margin-top: 128px;
-      }
-
-      p {
-        padding-right: 0;
-      }
-
-      h3,
-      p {
-        text-align: center;
-      }
-    }
-  }
-
-  &--success {
-    display: none;
-    //display: block;
-
-    &--show {
-      display: block;
-    }
-
-    img {
-      display: block;
-      margin: 0 auto;
-      margin-top: 100px;
-      margin-bottom: 20px;
+      padding-right: 0;
     }
 
     h3,
     p {
       text-align: center;
     }
+  }
+}
 
-    p {
-      display: block;
-      width: 360px;
-      margin: 0 auto;
+.popup--success {
+  display: none;
 
-      @media (max-width: $max-mobile-width) {
-        width: 100%;
-      }
+  &--show {
+    display: block;
+  }
+
+  img {
+    display: block;
+    margin: 100px auto 20px;
+  }
+
+  h3,
+  p {
+    text-align: center;
+  }
+
+  p {
+    display: block;
+    width: 360px;
+    margin: 0 auto;
+
+    @media (max-width: $max-mobile-width) {
+      width: 100%;
     }
+  }
+
+  button {
+    padding-left: 85px;
+    padding-right: 85px;
   }
 }

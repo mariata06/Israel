@@ -1,17 +1,25 @@
 .masaisrael {
-  max-width: 1366px;
-  margin: 0 auto;
   background-image: url("../img/masaisrael-desktop@1x.png");
   background-repeat: no-repeat;
   background-size: 100%;
-  background-position: center center;
-  padding: 115px 167px 200px 795px;
-  display: flex;
-  flex-wrap: wrap;
+  background-position: center top;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     background-image: url("../img/masaisrael-desktop@2x.png");
   }
+
+  @media (max-width: $max-mobile-width) {
+    background-image: url("../img/masaisrael-mobile@1x.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center 60px;
+  }
+}
+
+.masaisrael__container {
+  padding: 120px 167px 200px 795px;
+  display: flex;
+  flex-wrap: wrap;
 
   @media (min-width: 1024px) and (max-width: 1250px) {
     padding-left: 650px;
@@ -19,21 +27,11 @@
   }
 
   @media (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
-    padding: 20px;
-    padding-top: 200px;
-    padding-bottom: 200px;
-    padding-left: 500px;
+    padding: 200px 20px 200px 500px;
   }
 
   @media (max-width: $max-mobile-width) {
-    padding: 16px;
-    padding-left: 11px;
-    padding-right: 13px;
-    background-image: url("../img/masaisrael-mobile@1x.png");
-    background-repeat: no-repeat;
-    background-size: 100%;
-    background-position: center 60px;
-    padding-bottom: 65px;
+    padding: 16px 13px 65px 11px;
   }
 
   h2 {
@@ -46,13 +44,12 @@
     letter-spacing: -1px;
     text-transform: uppercase;
     text-align: left;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
+    padding-left: 3px;
 
     @media (max-width: $max-mobile-width) {
       text-align: center;
       margin-bottom: 96px;
-      //width: 200px;
-      //margin: 0 auto;
     }
   }
 
@@ -61,47 +58,43 @@
     font-size: 17px;
     line-height: 29px;
     text-align: left;
-    color: white;
-    margin-bottom: 50px;
+    color: $white;
+    margin-bottom: 48px;
+    padding-left: 3px;
 
     @media (max-width: $max-mobile-width) {
-      //margin-top: 200px;
       font-size: 16px;
       line-height: 26px;
       margin-bottom: 56px;
-      padding-left: 13px;
-      padding-right: 11px;
+      padding: 0 11px 0 13px;
     }
   }
+}
 
-  .button {
-    margin: 0;
-    display: flex;
-    justify-content: space-between;
-    padding-left: 40px;
-    padding-right: 26px;
+.masaisrael__button {
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 45px;
+  padding-right: 42px;
+  color: $white;
+  text-transform: uppercase;
+  font-size: 15px;
+  line-height: 21px;
+  //font-weight: 500;
+
+  @media (max-width: $max-mobile-width) {
+    max-width: 264px;
+    margin: 0 auto;
+    padding-left: 60px;
+  }
+
+  svg {
+    fill: $white;
+    margin-right: 10px;
 
     @media (max-width: $max-mobile-width) {
-      max-width: 264px;
-      margin: 0 auto;
-      padding-left: 60px;
-    }
-
-    a {
-      color: white;
-      text-transform: uppercase;
-      font-size: 15px;
-      line-height: 18px;
-      font-weight: 500;
-    }
-
-    svg {
-      fill: white;
-      margin-right: 20px;
-
-      @media (max-width: $max-mobile-width) {
-        margin-right: 10px;
-      }
+      margin-right: 10px;
     }
   }
 }

@@ -3,9 +3,6 @@
   background-repeat: no-repeat;
   background-size: 100%;
   background-position: center 158px;
-  max-width: 1366px;
-  margin: 0 auto;
-  padding-bottom: 90px;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     background-image: url("../img/watercolor-bg-desktop@2x.png");
@@ -15,9 +12,7 @@
     background-image: url("../img/watercolor-bg-mobile@1x.png");
     background-repeat: no-repeat;
     background-size: 100%;
-    background-position: center 170px;
-    padding-top: 18px;
-    padding-bottom: 75px;
+    background-position: center 215px;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../img/watercolor-bg-mobile@2x.png");
@@ -26,6 +21,15 @@
     img {
       height: 224px;
     }
+  }
+}
+
+.about__container {
+  padding-bottom: 90px;
+
+  @media (max-width: $max-mobile-width) {
+    padding-top: 18px;
+    padding-bottom: 75px;
   }
 
   h2,
@@ -42,7 +46,6 @@
     color: $blue;
     letter-spacing: -2px;
     text-transform: uppercase;
-    //margin-top: 5px;
     margin-bottom: 22px;
 
     @media (max-width: $max-mobile-width) {
@@ -55,8 +58,6 @@
   p {
     font-size: 17px;
     line-height: 29px;
-    //padding-left: 95px;
-    //padding-right: 95px;
     width: 720px;
     margin: 0 auto;
     display: block;
@@ -74,6 +75,7 @@
       text-align: left;
       padding-left: 16px;
       padding-right: 16px;
+      margin-bottom: 48px;
     }
   }
 }
@@ -88,6 +90,10 @@
     img {
       height: 460px;
     }
+  }
+
+  @media (max-width: $max-mobile-width) {
+    width: 320px;
   }
 
   button {
@@ -111,8 +117,8 @@
       transition: 0.5s ease;
     }
 
-    @media (max-width: $max-mobile-width) {
-      svg {
+    svg {
+      @media (max-width: $max-mobile-width) {
         transform: scale(0.8);
       }
     }
