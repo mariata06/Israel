@@ -163,7 +163,8 @@ a {
     font-weight: 700;
     width: 343px;
     margin: 0 auto;
-    margin-top: 458px; }
+    margin-top: 458px;
+    margin-bottom: 85px; }
     @media (min-width: 768px) and (max-width: 1023px) {
       .page-header__container h1 {
         margin-top: 300px; } }
@@ -180,13 +181,11 @@ a {
     cursor: pointer;
     outline: none;
     background-color: transparent;
-    position: absolute;
-    bottom: 200px;
-    left: 50%;
-    -webkit-transform: translateX(-50%);
-            transform: translateX(-50%);
     border-radius: 100px;
-    border: 1px solid #ffffff; }
+    border: 1px solid #ffffff;
+    margin: 0 auto;
+    display: block;
+    position: relative; }
     @media (max-width: 767px) {
       .page-header__container button {
         bottom: 133px; } }
@@ -195,7 +194,7 @@ a {
       /* distance between dashes */
       --n: 30;
       /* number of dashes */
-      --c: $white;
+      --c: #ffffff;
       /* color of dashes */
       --b: 2px;
       /* control the thickness of border*/
@@ -216,14 +215,14 @@ a {
     .page-header__container button::after {
       content: "";
       z-index: 110;
-      height: 40px;
+      height: 50px;
       width: 1px;
       top: 65px;
       position: absolute;
       left: 27px;
       display: block;
-      background: -webkit-gradient(linear, left top, left bottom, from(white), to(white)) 4px 3px/1px 40px;
-      background: linear-gradient(white, white) 4px 3px/1px 40px; }
+      background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#ffffff)) 4px 3px/1px 40px;
+      background: linear-gradient(#ffffff, #ffffff) 4px 3px/1px 40px; }
 
 .page-header__phone-links {
   display: -webkit-box;
@@ -261,7 +260,9 @@ a {
       transition: 0.5s ease; }
     @media (max-width: 767px) {
       .page-header__phone-links .page-header__callback-link {
-        width: auto; } }
+        width: auto;
+        -ms-flex-item-align: end;
+            align-self: end; } }
 
 .page-header__site-nav {
   display: -webkit-box;
@@ -1068,15 +1069,15 @@ input {
     padding-right: 46px;
     position: relative; }
     .howto__container ul::before {
-      background: repeating-linear-gradient(to bottom, transparent 0 6px, #e3e3e3 6px 12px) 80%/2px 100% no-repeat;
+      background: repeating-linear-gradient(to bottom, transparent 0 6px, #484848 6px 12px) 80%/2px 100% no-repeat;
       position: absolute;
+      opacity: 0.2;
       width: 10px;
       height: 270px;
       content: "";
       display: block;
       left: 16px;
-      top: 20px;
-      z-index: 100; }
+      top: 20px; }
     @media (min-width: 768px) and (max-width: 1023px) {
       .howto__container ul {
         margin-left: auto;
@@ -1094,7 +1095,7 @@ input {
     z-index: 100;
     border-radius: 100px;
     padding: 12px 18px;
-    background: white;
+    background: #ffffff;
     -webkit-box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
             box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1); }
     @media (max-width: 767px) {
@@ -1292,7 +1293,13 @@ input {
     @media (max-width: 767px) {
       .internship__picture-wrapper figure {
         width: 288px;
-        margin: 0 auto; } }
+        margin: 0 auto;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center; } }
   .internship__picture-wrapper figcaption {
     font-family: "raleway", "Arial", sans-serif;
     position: absolute;

@@ -143,6 +143,7 @@
 
   @media (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
     margin-bottom: 50px;
+    width: 400px;
   }
 
   @media (max-width: $max-mobile-width) {

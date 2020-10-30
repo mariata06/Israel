@@ -50,9 +50,11 @@
     width: 343px;
     margin: 0 auto;
     margin-top: 458px;
+    margin-bottom: 85px;
 
     @media (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
-      margin-top: 300px;
+      margin-top: 270px;
+      margin-bottom: 30px;
     }
 
     @media (max-width: $max-mobile-width) {
@@ -70,12 +72,15 @@
     cursor: pointer;
     outline: none;
     background-color: transparent;
-    position: absolute;
-    bottom: 200px;
-    left: 50%;
-    transform: translateX(-50%);
+    //position: absolute;
+    //bottom: 178px;
+    //left: 50%;
+    //transform: translateX(-50%);
     border-radius: 100px;
     border: 1px solid $white;
+    margin: 0 auto;
+    display: block;
+    position: relative;
 
     @media (max-width: $max-mobile-width) {
       bottom: 133px;
@@ -108,7 +113,7 @@
     &::after {
       content: "";
       z-index: 110;
-      height: 40px;
+      height: 50px;
       width: 1px;
       top: 65px;
       position: absolute;
@@ -158,6 +163,7 @@
 
     @media (max-width: $max-mobile-width) {
       width: auto;
+      align-self: end;
     }
   }
 }

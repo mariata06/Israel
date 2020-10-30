@@ -102,6 +102,13 @@
     grid-template-rows: 50% 50%;
   }
 
+  /*
+  @media (min-width: $min-tablet-width) {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+  }*/
+
   @media (max-width: $max-mobile-width) {
     display: flex;
     flex-direction: row;
@@ -117,6 +124,8 @@
     @media (max-width: $max-mobile-width) {
       width: 288px;
       margin: 0 auto;
+      display: flex;
+      justify-content: center;
     }
   }
 

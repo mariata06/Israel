@@ -157,6 +157,15 @@
   padding-left: 405px;
   margin-top: -30px;
 
+  @media (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
+    position: absolute;
+    padding-left: 0;
+    top: 356px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
   @media (max-width: $max-mobile-width) {
     position: absolute;
     padding-left: 0;
