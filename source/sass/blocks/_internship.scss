@@ -1,11 +1,11 @@
 .internship {
-  background-image: url("../img/life-watercolor-bg-desktop@1x.png"), url("../img/compass-desktop@1x.png");
+  background-image: url("../img/life-watercolor-bg-desktop@1x.jpg"), url("../img/compass-desktop@1x.png");
   background-repeat: no-repeat;
   background-size: 100%, 7%;
   background-position: 100px right, right 500px;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    background-image: url("../img/life-watercolor-bg-desktop@2x.png"), url("../img/compass-desktop@2x.png");
+    background-image: url("../img/life-watercolor-bg-desktop@2x.jpg"), url("../img/compass-desktop@2x.png");
   }
 }
 
@@ -22,24 +22,20 @@
   }
 
   @media (max-width: $max-mobile-width) {
-    padding: 0 16px 45px 16px;
+    padding: 0 16px 42px 16px;
   }
 
   h2 {
     @include reset;
+    @include title ($font-40, $height-49, $bold, $blue);
     font-family: "montserrat", "Arial", sans-serif;
-    font-size: 40px;
-    line-height: 49px;
-    font-weight: 700;
-    color: $blue;
     letter-spacing: -1px;
     text-transform: uppercase;
     text-align: center;
     margin-bottom: 25px;
 
     @media (max-width: $max-mobile-width) {
-      font-size: 32px;
-      line-height: 39px;
+      @include title ($font-32, $height-39, $bold, $blue);
       text-align: center;
       width: 200px;
       margin: 0 auto;
@@ -73,7 +69,7 @@
       text-align: left;
       font-size: 16px;
       line-height: 26px;
-      margin-bottom: 20px;
+      margin-bottom: 24px;
     }
   }
 }
@@ -102,13 +98,6 @@
     grid-template-rows: 50% 50%;
   }
 
-  /*
-  @media (min-width: $min-tablet-width) {
-    display: flex;
-    flex-direction: row;
-    position: relative;
-  }*/
-
   @media (max-width: $max-mobile-width) {
     display: flex;
     flex-direction: row;
@@ -117,7 +106,6 @@
 
   figure {
     margin: 0;
-    display: flex;
     align-items: center;
     position: relative;
 
@@ -130,31 +118,22 @@
   }
 
   figcaption {
+    @include text ($font-21, $height-25, $extra-bold);
     font-family: "raleway", "Arial", sans-serif;
     position: absolute;
-    left: 25px;
-    bottom: 75px;
-    font-size: 21px;
-    line-height: 25px;
-    font-weight: 900;
+    left: 40px;
+    bottom: 80px;
     color: $white;
-    width: 100%;
+    width: 80%;
 
-    /*
-      @media (max-width: $max-mobile-width) {
-        bottom: 20px;
-        left: 20px;
-        //transform: translateX(-50%);
-        width: 50%;
-        text-align: center;
-      }*/
+    @media (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
+      @include text ($font-16, $height-24, $medium);
+    }
 
-    @media (min-width: $min-mobile-width) {
-      font-size: 18px;
-      line-height: 21px;
+    @media (max-width: $max-mobile-width) {
+      @include text ($font-18, $height-21, $extra-bold);
       left: 50%;
       transform: translateX(-50%);
-      //width: 50%;
       width: 210px;
       bottom: 10px;
     }
@@ -166,6 +145,7 @@
 
   @media (max-width: $max-mobile-width) {
     display: block;
+    bottom: unset;
   }
 
   span {
@@ -203,15 +183,16 @@
     }
 
     @media (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
-      width: 288px;
-      height: 400px;
-      transform: scale(0.8);
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
     }
 
     @media (max-width: $max-mobile-width) {
       max-width: none;
       width: 288px;
       height: 400px;
+      object-fit: unset;
     }
   }
 }
@@ -234,6 +215,13 @@
     grid-row: 1 / 3;
     width: 242px;
   }
+
+  figcaption {
+    @media (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
+      bottom: 240px;
+      left: 30px;
+    }
+  }
 }
 
 .internship__picture-box--hebrew {
@@ -244,6 +232,16 @@
   @media (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
     grid-column: 2;
     grid-row: 1;
+  }
+
+  figcaption {
+    width: 70%;
+    bottom: 59px;
+
+    @media (max-width: $max-mobile-width) {
+      bottom: 15px;
+      left: 160px;
+    }
   }
 }
 
@@ -258,6 +256,17 @@
 
     img {
       width: 211px;
+    }
+  }
+
+  figcaption {
+    bottom: 59px;
+    left: 65px;
+
+    @media (max-width: $max-mobile-width) {
+      left: 150px;
+      width: 77%;
+      bottom: 30px;
     }
   }
 }
@@ -276,6 +285,23 @@
       width: 211px;
     }
   }
+
+  figcaption {
+    left: 45px;
+    bottom: 75px;
+
+    @media (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
+      left: 35px;
+      bottom: 50px;
+    }
+
+    @media (max-width: $max-mobile-width) {
+      left: 140px;
+      bottom: 30px;
+      width: 78%;
+      text-align: center;
+    }
+  }
 }
 
 .internship__picture {
@@ -291,4 +317,18 @@
     grid-column: 3;
     grid-row: 2;
   }
+
+  figcaption {
+    left: 35px;
+    bottom: 75px;
+
+    @media (max-width: $max-mobile-width) {
+      left: 160px;
+      bottom: 30px;
+    }
+  }
+}
+
+.swiper-pagination {
+  pointer-events: all;
 }

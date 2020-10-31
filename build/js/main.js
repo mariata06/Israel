@@ -34,22 +34,14 @@ try {
 
 callbackLink.addEventListener("click", function (evt) {
   evt.preventDefault();
-  callbackPopup.classList.add("popup--callback--show");
-  overlayForm.classList.add("overlay__form--show");
   userName = callbackForm.elements.user_name;
   userPhone = callbackForm.elements.user_phonenumber;
+  callbackPopup.classList.add("popup--callback--show");
+  overlayForm.classList.add("overlay__form--show");
   userName.focus();
-  if (currentName) {
+  if (currentName && currentPhone) {
     userName.value = currentName;
-    userPhone.focus();
-  } else {
-    userName.focus();
-  }
-
-  if (currentPhone) {
     userPhone.value = currentPhone;
-  } else {
-    userPhone.focus();
   }
 });
 
@@ -130,3 +122,40 @@ contactsForm.addEventListener("submit", function (evt) {
   userPhone = contactsForm.elements.user_phonenumber;
   checkLocalStorage();
 });
+
+var phoneMasks = document.querySelectorAll(".input--phone");
+//console.log(phoneMasks);
+phoneMasks.forEach(function (item) {
+  item.addEventListener("input", function (e) {
+    if(e.target.value.length == 1) {
+      var x = e.target.value.replace(/\D/g, "").match(/(\d{0,3})(\d{0,3})(\d{0,2})(\d{0,2})/);
+    } else {
+      var x = e.target.value.substring(2,e.target.value.length).replace(/\D/g, "").match(/(\d{0,3})(\d{0,3})(\d{0,2})(\d{0,2})/);
+    }
+    //var x = e.target.value.substring(2,e.target.value.length).replace(/\D/g, "").match(/(\d{0,3})(\d{0,3})(\d{0,2})(\d{0,2})/);
+    e.target.value = !x[2] ? "+7 (" + x[1] : "+7 (" + x[1] + ") " + (x[3] ? x[2]  + "-" : x[2]) + x[3] + (x[4] ? "-" + x[4] : "");
+  });
+});
+
+//var phoneInputs = document.querySelectorAll(".input--phone");
+
+phoneMasks.forEach(function (item) {
+
+  item.addEventListener("invalid", function () {
+    console.log(item.validity);
+    if (item.validity.patternMismatch) {
+      console.log('patternmismatch');
+      console.log(item.value);
+      item.setCustomValidity("Телефон должен состоять из 11 цифр");
+      item.classList.add("input--invalid");
+      console.log(item.classList);
+    } else if (item.validity.valueMissing) {
+      item.setCustomValidity("Обязательное поле");
+    } else {
+      item.setCustomValidity("");
+      console.log("test");
+    }
+  });
+})
+
+

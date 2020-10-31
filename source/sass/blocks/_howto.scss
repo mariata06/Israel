@@ -2,7 +2,7 @@
   background-image: url("../img/bg-howto-desktop@1x.png"), url("../img/trip-watercolor-bg-desktop@1x.png"), url("../img/stamp-desktop@1x.png");
   background-repeat: no-repeat, no-repeat, no-repeat;
   background-size: 42.5%, 85%, 15%;
-  background-position: 11px 160px, center left, center right;
+  background-position: 11px 164px, center left, center right;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     background-image: url("../img/bg-howto-desktop@2x.png"), url("../img/trip-watercolor-bg-desktop@2x.png"), url("../img/stamp-desktop@2x.png");
@@ -14,7 +14,7 @@
 }
 
 .howto__container {
-  padding: 188px 131px 180px 680px;
+  padding: 196px 131px 180px 680px;
 
   @media (min-width: 1024px) and (max-width: 1250px) {
     padding-left: 550px;
@@ -31,11 +31,8 @@
 
   h2 {
     @include reset;
+    @include title ($font-40, $height-49, $bold, $blue);
     font-family: "montserrat", "Arial", sans-serif;
-    font-size: 40px;
-    line-height: 49px;
-    font-weight: 700;
-    color: $blue;
     letter-spacing: -1px;
     text-transform: uppercase;
     margin-bottom: 26px;
@@ -46,8 +43,7 @@
     }
 
     @media (max-width: $max-mobile-width) {
-      font-size: 32px;
-      line-height: 39px;
+      @include title ($font-32, $height-39, $bold, $blue);
       text-align: center;
       padding-left: 0;
       margin-bottom: 26px;
@@ -105,14 +101,12 @@
   }
 
   span {
+    @include text ($font-17, $height-29, $bold);
     margin-right: 20px;
     color: $yellow;
-    font-size: 17px;
-    line-height: 29px;
-    font-weight: 700;
     z-index: 100;
     border-radius: 100px;
-    padding: 12px 18px;
+    padding: 10px 18px;
     background: $white;
     box-shadow: 0 4px 4px rgba(00, 00, 00, 0.1);
 
@@ -123,9 +117,7 @@
   }
 
   .howto__condition {
-    font-size: 17px;
-    line-height: 29px;
-    font-weight: 700;
+    @include text ($font-17, $height-29, $bold);
     margin-bottom: 16px;
 
     @media (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
@@ -135,8 +127,7 @@
     }
 
     @media (max-width: $max-mobile-width) {
-      font-size: 16px;
-      line-height: 26px;
+      @include text ($font-16, $height-26, $bold);
       margin-bottom: 18px;
     }
   }
@@ -177,7 +168,7 @@
 }
 
 .howto__list-item {
-  margin-bottom: 22px;
+  margin-bottom: 28px;
   font-size: 15px;
   line-height: 21px;
   display: flex;
@@ -197,7 +188,7 @@
 }
 
 .howto__list-item--second {
-  margin-bottom: 24px;
+  margin-bottom: 27px;
 
   @media (max-width: $max-mobile-width) {
     margin-bottom: 38px;
@@ -205,7 +196,7 @@
 }
 
 .howto__list-item--third {
-  margin-bottom: 27px;
+  margin-bottom: 31px;
 
   @media (max-width: $max-mobile-width) {
     margin-bottom: 25px;

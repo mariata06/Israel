@@ -55,17 +55,13 @@
   }
 
   h3 {
-    font-size: 28px;
-    line-height: 34px;
-    font-weight: 700;
-    color: $blue;
+    @include title ($font-28, $height-34, $bold, $blue);
     letter-spacing: -2%;
     margin: 0;
     margin-bottom: 16px;
 
     @media (max-width: $max-mobile-width) {
-      font-size: 24px;
-      line-height: 29px;
+      @include title ($font-24, $height-29, $bold, $blue);
     }
   }
 }

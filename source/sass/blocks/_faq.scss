@@ -32,7 +32,7 @@
 }
 
 .faq__container {
-  padding: 130px 730px 100px 108px;
+  padding: 133px 730px 100px 108px;
 
   @media (min-width: 1024px) and (max-width: 1200px) {
     padding-right: 600px;
@@ -49,21 +49,17 @@
 
   h2 {
     @include reset;
+    @include title ($font-40, $height-49, $bold, $blue);
     font-family: "montserrat", "Arial", sans-serif;
-    font-size: 40px;
-    line-height: 49px;
-    font-weight: 700;
-    color: $blue;
     letter-spacing: -1px;
     text-transform: uppercase;
     text-align: left;
-    margin-bottom: 9px;
+    margin-bottom: 8px;
 
     @media (max-width: $max-mobile-width) {
+      @include title ($font-32, $height-39, $bold, $blue);
       text-align: center;
-      margin-bottom: 24px;
-      font-size: 32px;
-      line-height: 39px;
+      margin-bottom: 23px;
     }
   }
 }

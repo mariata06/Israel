@@ -16,10 +16,11 @@ function swiperMode() {
       swiper = new Swiper(".swiper-container.swiper-container--internship", {
         pagination: {
           el: ".swiper-pagination",
+          clickable: true,
         },
       });
       swiper2 = new Swiper(".swiper-container.swiper-container--programmes", {
-        slidesPerView: 1.9,//window.innerWidth*3.1/568 + 5 - 3.1*768/568,//1.9,
+        slidesPerView: "auto", //1.9,//window.innerWidth*3.1/568 + 5 - 3.1*768/568,//1.9,
         //spaceBetween: 30,
         /*
         pagination: {

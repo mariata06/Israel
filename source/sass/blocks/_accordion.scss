@@ -1,6 +1,6 @@
 .accordion__item {
   padding-top: 24px;
-  padding-bottom: 24px;
+  padding-bottom: 23px;
   border-bottom: 1px solid $light-grey;
 
   @media (max-width: $max-mobile-width) {
@@ -9,12 +9,14 @@
     padding-top: 0;
   }
 
-  svg {
-    width: 15px;
-    height: 8px;
-  }
-
   &--active {
+    padding-bottom: 31px;
+
+
+    @media (max-width: $max-mobile-width) {
+      padding-bottom: 15px;
+    }
+
     .accordion__item-content {
       display: block;
     }
@@ -25,9 +27,7 @@
   }
 
   span {
-    font-size: 28px;
-    line-height: 48px;
-    font-weight: 700;
+    @include text ($font-28, $height-48, $bold);
     background: linear-gradient(to right, $yellow 0%, $yellow-2 100%);
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -53,10 +53,13 @@
   }
 
   svg {
+    width: 17px;
+    min-width: 17px;
+    height: 11px;
     margin-left: auto;
     fill: $white;
     cursor: pointer;
-    transform: scale(1.2);
+    //transform: scale(1.2);
 
     &:hover {
       opacity: 0.7;
@@ -69,7 +72,7 @@
   font-size: 15px;
   line-height: 21px;
   display: none;
-  padding-top: 15px;
+  padding-top: 16px;
   padding-right: 20px;
   opacity: 0.74;
 

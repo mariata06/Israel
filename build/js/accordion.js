@@ -2,6 +2,9 @@ var accordionItemTrigger = document.querySelectorAll(".accordion__item-trigger")
 var accordionItem = document.querySelectorAll(".accordion__item");
 var arrowItems = document.querySelectorAll(".accordion__item-svg");
 
+var activeArrow = document.querySelector(".accordion__item--active").querySelector(".accordion__item-svg");
+activeArrow.style.transform = "rotate(180deg)";
+
 accordionItemTrigger.forEach(function (item) {
   item.addEventListener("click", () => {
     arrowItems.forEach(function (item) {

@@ -5,7 +5,7 @@
   background-position: top right;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    background-image: url("../img/sketch-bg-desktop@2x.png");
+    background-image: url("../img/sketch-bg-desktop@2x.jpg");
   }
 }
 
@@ -29,22 +29,18 @@
 
   h2 {
     @include reset;
+    @include title ($font-40, $height-49, $bold, $blue);
     font-family: "montserrat", "Arial", sans-serif;
-    font-size: 40px;
-    line-height: 49px;
-    font-weight: 700;
-    color: $blue;
     letter-spacing: -1px;
     text-transform: uppercase;
-    margin-bottom: 70px;
+    margin-bottom: 66px;
 
     @media (min-width: 1024px) and (max-width: 1300px) {
       text-align: center;
     }
 
     @media (max-width: $max-mobile-width) {
-      font-size: 32px;
-      line-height: 39px;
+      @include title ($font-32, $height-39, $bold, $blue);
       text-align: center;
       margin-bottom: 14px;
     }
@@ -52,17 +48,13 @@
 
   h3 {
     @include reset;
-    font-size: 28px;
+    @include title ($font-28, $height-34, $bold, $blue);
     font-family: "montserrat", "Arial", sans-serif;
-    line-height: 34px;
-    font-weight: 700;
-    color: $blue;
     letter-spacing: -1px;
-    margin-bottom: 24px;
+    margin-bottom: 25px;
 
     @media (max-width: $max-mobile-width) {
-      font-size: 24px;
-      line-height: 29px;
+      @include title ($font-24, $height-29, $bold, $blue);
       letter-spacing: -0.8px;
       margin-bottom: 18px;
     }
@@ -94,7 +86,7 @@
 .program__item {
   display: none;
   width: 560px;
-  padding-top: 15px;
+  padding-top: 17px;
 
   &--active {
     display: block;
@@ -114,7 +106,7 @@
   @media (max-width: $max-mobile-width) {
     flex-direction: row;
     transform: unset;
-    margin-bottom: 20px;
+    margin-bottom: 6px;
   }
 }
 
@@ -127,7 +119,7 @@
   font-family: "firasans", "Arial", sans-serif;
   font-size: 15px;
   line-height: 18px;
-  padding: 26px 0 25px 74px;
+  padding: 25px 0 24px 73px;
   background-color: transparent;
   text-align: left;
   width: 130px;
@@ -158,23 +150,46 @@
   }
 
   &--general {
+    padding-bottom: 30px;
+
     @media (max-width: $max-mobile-width) {
-      width: unset;
+      padding-bottom: 24px;
       padding-left: 20px;
+      width: 100px;
+    }
+  }
+
+  &--academic {
+    @media (max-width: $max-mobile-width) {
+      padding-left: 20px;
+      width: 160px;
     }
   }
 
   &--internship {
+    padding-top: 29px;
+
     @media (max-width: $max-mobile-width) {
-      width: unset;
-      padding-left: 70px;
+      padding-left: 20px;
+      width: 150px;
+    }
+  }
+
+  &--volunteering {
+    padding-top: 30px;
+
+    @media (max-width: $max-mobile-width) {
+      padding-left: 20px;
+      width: 150px;
     }
   }
 
   &--religious {
+    padding-top: 30px;
+
     @media (max-width: $max-mobile-width) {
-      width: unset;
-      padding-left: 50px;
+      padding-left: 20px;
+      width: 150px;
     }
   }
 
@@ -197,7 +212,7 @@
       width: 0;
       position: absolute;
       top: 0;
-      right: -25px;
+      right: -26px;
       border-left: 26px solid $yellow-2;
       border-top: 34px solid transparent;
       border-bottom: 34px solid transparent;
@@ -218,17 +233,17 @@
 }
 
 .program__choice-item--general::before {
-  width: 28px;
-  height: 33px;
-  background-position: 0 -45px;
+  width: 32px;
+  height: 35px;
+  background-position: 3px -45px;
 }
 
 .program__choice-item--general.program__choice-item--active::before {
-  background-position: 0 -1px;
+  background-position: 3px -1px;
 }
 
 .program__choice-item--general:hover:not(.program__choice-item--active)::before {
-  background-position: 0 -88px;
+  background-position: 3px -88px;
 }
 
 .program__choice-item--academic::before {
@@ -246,65 +261,56 @@
 }
 
 .program__choice-item--internship::before {
-  width: 32px;
-  height: 25px;
-  background-position: -96px -53px;
+  width: 33px;
+  height: 26px;
+  background-position: -95px -52px;
 }
 
 .program__choice-item--internship.program__choice-item--active::before {
-  background-position: -96px -9px;
+  background-position: -95px -9px;
 }
 
 .program__choice-item--internship:hover:not(.program__choice-item--active)::before {
-  background-position: -96px -96px;
+  background-position: -95px -95px;
 }
 
 .program__choice-item--volunteering::before {
-  width: 32px;
-  height: 29px;
-  background-position: -144px -49px;
+  width: 33px;
+  height: 31px;
+  background-position: -143px -47px;
 }
 
 .program__choice-item--volunteering.program__choice-item--active::before {
-  background-position: -144px -7px;
+  background-position: -143px -7px;
 }
 
 .program__choice-item--volunteering:hover:not(.program__choice-item--active)::before {
-  background-position: -144px -92px;
+  background-position: -143px -90px;
 }
 
 .program__choice-item--religious::before {
-  width: 23px;
-  height: 25px;
-  background-position: -192px -53px;
+  width: 27px;
+  height: 27px;
+  background-position: -188px -50px;
 }
 
 .program__choice-item--religious.program__choice-item--active::before {
-  background-position: -192px -10px;
+  background-position: -188px -10px;
 }
 
 .program__choice-item--religious:hover:not(.program__choice-item--active)::before {
-  background-position: -192px -95px;
+  background-position: -188px -93px;
 }
 
 .swiper-container {
   height: 100%;
   width: 296px;
 
+  @media (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
+    width: 320px;
+  }
+
   @media (max-width: $max-mobile-width) {
     width: 100%;
-  }
-}
-
-.swiper-slide {
-  @media (max-width: $max-mobile-width) {
-    width: 150px;
-  }
-}
-
-.swiper-slide-next,
-.program__choice-item--active {
-  @media (max-width: $max-mobile-width) {
-    width: 150px;
   }
 }

@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="Description" content="Израиль">
   <title>Израиль</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="format-detection" content="telephone=no">
@@ -31,7 +32,7 @@
           </div>
         </nav>
         <h1>Учёба, путешествие и карьера для еврейской молодёжи</h1>
-        <button>
+        <button aria-label="прокрутить вниз">
           <img src="img/mouse-desktop@1x.png" alt="иконка мыши" width="17" height="26">
         </button>
       </div>
@@ -48,7 +49,7 @@
               <!-- 1х: 870px; 2x: 1740px -->
               <img data-src="img/program-desktop@1x.png" src="img/program-desktop@1x.png" srcset="img/program-desktop@2x.png 2x" alt="О программе" width="870" height="460">
             </picture>
-            <button>
+            <button aria-label="проиграть видео">
               <svg width="96" height="96">
                 <use xlink:href="img/sprite.svg#icon-play"></use>
               </svg>
@@ -64,11 +65,11 @@
           <div class="program__content">
             <div class="program__swiper-container swiper-container swiper-container--programmes">
               <div class="program__choice swiper-wrapper" id="program__choice">
-                <button type="button" class="program__choice-item program__choice-item--general swiper-slide" data-tab-name="general">Общие</button>
-                <button type="button" class="program__choice-item program__choice-item--academic swiper-slide program__choice-item--active" data-tab-name="academic">Академические</button>
-                <button type="button" class="program__choice-item program__choice-item--internship swiper-slide" data-tab-name="internship">Стажировки</button>
-                <button type="button" class="program__choice-item program__choice-item--volunteering swiper-slide" data-tab-name="volunteering">Волонтёрство</button>
-                <button type="button" class="program__choice-item program__choice-item--religious swiper-slide" data-tab-name="religious">Религиозные</button>
+                <button aria-label="выбрать категорию программы Общие" type="button" class="program__choice-item program__choice-item--general swiper-slide" data-tab-name="general">Общие</button>
+                <button aria-label="выбрать категорию программы Академические" type="button" class="program__choice-item program__choice-item--academic swiper-slide program__choice-item--active" data-tab-name="academic">Академические</button>
+                <button aria-label="выбрать категорию программы Стажировки" type="button" class="program__choice-item program__choice-item--internship swiper-slide" data-tab-name="internship">Стажировки</button>
+                <button aria-label="выбрать категорию программы Волонтёрство" type="button" class="program__choice-item program__choice-item--volunteering swiper-slide" data-tab-name="volunteering">Волонтёрство</button>
+                <button aria-label="выбрать категорию программы Религиозные" type="button" class="program__choice-item program__choice-item--religious swiper-slide" data-tab-name="religious">Религиозные</button>
               </div>
             </div>
 
@@ -120,9 +121,9 @@
           <p>Оставьте свой телефон и мы свяжемся с вами, подберём куратора и ответим на все вопросы!</p>
           <form id="request-form" action="https://echo.htmlacademy.ru" method="post" class="request__form form">
             <label>
-              <input tabindex="0" class="request__input input" type="tel" name="user_phonenumber" value="" placeholder="телефон" pattern="[0-9]{11}" required="" title="Введите телефон в формате +7(123)456-78-90">
+              <input tabindex="0" class="request__input input input--phone" type="tel" name="user_phonenumber" value="" pattern="\+7\s[\(]{0,1}[0-9]{3}[\)]{0,1}\s\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2}" placeholder="телефон" required="">
             </label>
-            <button class="form__button request__form-button button">презвоните мне</button>
+            <button ara-label="Перезвонить мне" class="form__button request__form-button button">перезвоните мне</button>
           </form>
         </div>
       </section>
@@ -153,9 +154,9 @@
                   <!-- 1х: 288px; 2x: 576px -->
                   <source type="image/webp" media="(max-width: 1023px)" srcset="img/excursion-mobile@1x.webp 1x, img/excursion-mobile@2x.webp 2x">
                   <!-- 1х: 482px; 2x: 964px -->
-                  <img data-src="img/excursion-desktop@1x.png" src="img/excursion-desktop@1x.png" srcset="img/excursion-desktop@2x.png 2x" alt="Экскурсии по Израилю" width="482" height="732">
+                  <img data-src="img/excursion-desktop@1x.png" src="img/excursion-desktop@1x.png" srcset="img/excursion-desktop@2x.png 2x" alt="Экскурсии по Израилю" width="482" height="732" loading="lazy" class="lazyload">
                 </picture>
-                <figcaption>Экскурсии по Израилю и знакомство с его историей</figcaption>
+                <figcaption>Экскурсии по Израилю и&nbsp;знакомство&nbsp;с&nbsp;его историей</figcaption>
               </figure>
 
               <figure class="internship__picture-box internship__picture-box--hebrew swiper-slide">
@@ -163,7 +164,7 @@
                   <!-- 1х: 288px; 2x: 576px -->
                   <source type="image/webp" media="(max-width: 1023px)" srcset="img/learning-hebrew-mobile@1x.webp 1x, img/learning-hebrew-mobile@2x.webp 2x">
                   <!-- 1х: 211px; 2x: 422px -->
-                  <img data-src="img/learning-hebrew-desktop@1x.png" src="img/learning-hebrew-desktop@1x.png" srcset="img/learning-hebrew-desktop@2x.png 2x" alt="Изучение иврита" width="211" height="318">
+                  <img data-src="img/learning-hebrew-desktop@1x.png" src="img/learning-hebrew-desktop@1x.png" srcset="img/learning-hebrew-desktop@2x.png 2x" alt="Изучение иврита" width="211" height="318" loading="lazy" class="lazyload">
                 </picture>
                 <figcaption>Изучение иврита</figcaption>
               </figure>
@@ -173,9 +174,9 @@
                   <!-- 1х: 288px; 2x: 576px -->
                   <source type="image/webp" media="(max-width: 1023px)" srcset="img/skills-mobile@1x.webp 1x, img/skills-mobile@2x.webp 2x">
                   <!-- 1х: 411px; 2x: 822px -->
-                  <img data-src="img/skills-desktop@1x.png" src="img/skills-desktop@1x.png" srcset="img/skills-desktop@2x.png 2x" alt="Современные навыки" width="411" height="318">
+                  <img data-src="img/skills-desktop@1x.png" src="img/skills-desktop@1x.png" srcset="img/skills-desktop@2x.png 2x" alt="Современные навыки" width="411" height="318" loading="lazy" class="lazyload">
                 </picture>
-                <figcaption>Обучение современным навыкам и профессиям</figcaption>
+                <figcaption>Обучение современным навыкам&nbsp;и профессиям</figcaption>
               </figure>
 
               <figure class="internship__picture-box internship__picture-box--creative swiper-slide">
@@ -184,10 +185,10 @@
                     <!-- 1х: 288px; 2x: 576px -->
                     <source type="image/webp" media="(max-width: 1023px)" srcset="img/creative-youth-mobile@1x.webp 1x, img/creative-youth-mobile@2x.webp 2x">
                     <!-- 1х: 411px; 2x: 822px -->
-                    <img data-src="img/creative-youth-desktop@1x.png" src="img/creative-youth-desktop@1x.png" srcset="img/creative-youth-desktop@2x.png 2x" alt="Креативная молодежь" width="411" height="318">
+                    <img data-src="img/creative-youth-desktop@1x.png" src="img/creative-youth-desktop@1x.png" srcset="img/creative-youth-desktop@2x.png 2x" alt="Креативная молодежь" width="411" height="318" loading="lazy" class="lazyload">
                   </picture>
                 </div>
-                <figcaption>Совместные творческие проекты с израильской молодёжью</figcaption>
+                <figcaption>Совместные творческие проекты с&nbsp;израильской молодёжью</figcaption>
               </figure>
 
               <figure class="internship__picture-box internship__picture-box--leadership swiper-slide">
@@ -196,7 +197,7 @@
                     <!-- 1х: 288px; 2x: 576px -->
                     <source type="image/webp" media="(max-width: 1023px)" srcset="img/leadership-mobile@1x.webp 1x, img/leadership-mobile@2x.webp 2x">
                     <!-- 1х: 211px; 2x: 422px -->
-                    <img data-src="img/leadership-desktop@1x.png" src="img/leadership-desktop@1x.png" srcset="img/leadership-desktop@2x.png 2x" alt="Развитие лидерства" width="211" height="318">
+                    <img data-src="img/leadership-desktop@1x.png" src="img/leadership-desktop@1x.png" srcset="img/leadership-desktop@2x.png 2x" alt="Развитие лидерства" width="211" height="318" loading="lazy" class="lazyload">
                   </picture>
                 </div>
                 <figcaption>Развитие лидерства</figcaption>
@@ -213,7 +214,7 @@
         <div class="masaisrael__container container">
           <h2>#Masaisrael</h2>
           <p>Познакомьтесь с программой  от&nbsp;первого лица! Многие участники ведут блоги и фотодневники о&nbsp;жизни, учёбе и путешествиях в&nbsp;Израиле.</p>
-          <a class="masaisrael__button button">
+          <a class="masaisrael__button button" ara-label="смотреть фото">
             <svg width="19" height="19">
               <use xlink:href="img/sprite.svg#icon-instagram"></use>
             </svg>Смотреть фото
@@ -272,7 +273,7 @@
               </div>
             </div>
             <div class="accordion__item">
-              <div class="accordion__item-trigger"><span>5</span>Признаётся ли учёба в рамках проекта для дальнейшего обучения?
+              <div class="accordion__item-trigger"><span>5</span>Признаётся ли учёба в рамках проекта?nbsp;для дальнейшего обучения?
                 <svg class="accordion__item-svg" width="15" height="8">
                   <use xlink:href="img/sprite.svg#icon-arrow-down"></use>
                 </svg>
@@ -305,7 +306,7 @@
                 <!-- 1х: 240px; 2x: 480px -->
                 <source type="image/webp" media="(max-width: 767px)" srcset="img/olga-mikhailova-mobile@1x.webp 1x, img/olga-mikhailova-mobile@2x.webp 2x">
                 <!-- 1х: 364px; 2x: 728px -->
-                <img data-src="img/olga-mikhailova-desktop@1x.png" src="img/olga-mikhailova-desktop@1x.png" srcset="img/olga-mikhailova-desktop@2x.png 2x" alt="Ольга Михайлова" width="364" height="480">
+                <img data-src="img/olga-mikhailova-desktop@1x.png" src="img/olga-mikhailova-desktop@1x.png" srcset="img/olga-mikhailova-desktop@2x.png 2x" alt="Ольга Михайлова" width="364" height="480" loading="lazy" class="lazyload">
               </picture>
               <div class="review__description">
                 <h3 class="review__author">Ирина Петрова</h3>
@@ -450,7 +451,7 @@
                 <!-- 1х: 112px; 2x: 224px -->
                 <source type="image/webp" media="(max-width: 767px)" srcset="img/anna-gorelik-desktop@1x.webp 1x, img/anna-gorelik-desktop@2x.webp 2x">
                 <!-- 1х: 112px; 2x: 224px -->
-                <img class="contacts__photo" data-src="img/anna-gorelik-desktop@1x.png" src="img/anna-gorelik-desktop@2x.png" srcset="img/anna-gorelik-desktop@2x.png 2x" alt="анна горелик" width="112" height="112">
+                <img class="contacts__photo" data-src="img/anna-gorelik-desktop@1x.png" src="img/anna-gorelik-desktop@2x.png" srcset="img/anna-gorelik-desktop@2x.png 2x" alt="анна горелик" width="112" height="112" loading="lazy">
               </picture>
               <div class="contacts__contact-person-details">
                 <p><span>Ваш куратор:</span>Анна Горелик</p>
@@ -489,9 +490,9 @@
                 <input class="contacts__input input" tabindex="0" type="text" name="user_name" value="" placeholder="имя" required="" title="Введите имя">
               </label>
               <label>
-                <input class="contacts__input input" tabindex="0" type="tel" name="user_phonenumber" value="" placeholder="+7 (923) 41" pattern="[0-9]{11}" required="" title="Введите телефон в формате +7(123)456-78-90">
+                <input class="contacts__input input input--phone" tabindex="0" type="tel" name="user_phonenumber" value="" pattern="\+7\s[\(]{0,1}[0-9]{3}[\)]{0,1}\s\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2}" placeholder="+7 (923) 41" required="">
               </label>
-              <button type="submit" class="contacts__form-button button" aria-label="перезвоните мне">перезвоните мне</button>
+              <button ara-label="Перезвонить мне" type="submit" class="contacts__form-button button" aria-label="перезвоните мне">перезвоните мне</button>
             </form>
             <p class="contacts__note">Мы не передаём данные третьим лицам. Ваши данные будут в безопасности и вам не придёт спам от нас!</p>
           </div>
@@ -500,7 +501,7 @@
 
       <div class="overlay overlay__form">
         <div class="overlay__popup popup popup--callback">
-          <button type="button" class="popup__close" aria-label="закрыть"><span class="visually-hidden">Закрыть</span></button>
+          <button ara-label="закрыть" type="button" class="popup__close" aria-label="закрыть"><span class="visually-hidden">Закрыть</span></button>
           <h3>
             Заказать звонок
           </h3>
@@ -515,7 +516,7 @@
             </div>
             <div>
               <label>
-                <input tabindex="0" class="callback-form__field input" type="tel" name="user_phonenumber" value="" placeholder="телефон" pattern="[0-9]{11}" required="" title="Введите телефон в формате +7(123)456-78-90">
+                <input tabindex="0" class="callback-form__field input input--phone" type="tel" name="user_phonenumber" value="" pattern="\+7\s[\(]{0,1}[0-9]{3}[\)]{0,1}\s\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2}" placeholder="телефон" required="">
               </label>
             </div>
             <button type="submit" class="callback-form__button button" aria-label="перезвоните мне">перезвоните мне</button>
@@ -530,24 +531,23 @@
       <div class="overlay overlay__ok">
         <div class="overlay__popup popup popup--success">
           <button type="button" class="popup__close" aria-label="закрыть"><span class="visually-hidden">Закрыть</span></button>
-          <img src="img/ok.png" alt="заявка принята" width="71" height="64">
+          <img src="img/ok.png" alt="заявка принята" width="71" height="64" loading="lazy" class="lazyload">
           <h3>
             Заявка принята
           </h3>
           <p>
             Мы приняли ваши данные и вскоре мы перезвоним вам для уточнения деталей!
           </p>
-          <button type="submit" class="popup__button button" aria-label="перезвоните мне">понятно</button>
+          <button type="submit" class="popup__button button" aria-label="понятно, закрыть окно">понятно</button>
         </div>
       </div>
-
     </main>
     <footer class="page-footer">
       <div class="page-footer__logo">
         <picture>
           <source srcset="img/logo-footer-mobile.png" media="(max-width: 767px)">
           <source srcset="img/logo-footer-desktop.png" media="(max-width: 1023px)">
-          <img src="img/logo-footer-desktop.png" width="85" height="27" alt="Логотип сайта компания Израиль">
+          <img src="img/logo-footer-desktop.png" width="85" height="27" alt="Логотип сайта компания Израиль" loading="lazy" class="lazyload">
         </picture>
       </div>
       <p>Copyright someDesignCompany &copy;2019</p>
