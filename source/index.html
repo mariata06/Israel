@@ -32,7 +32,7 @@
           </div>
         </nav>
         <h1>Учёба, путешествие и карьера для еврейской молодёжи</h1>
-        <button aria-label="прокрутить вниз">
+        <button class="page-header__button" aria-label="прокрутить вниз">
           <img src="img/mouse-desktop@1x.png" alt="иконка мыши" width="17" height="26">
         </button>
       </div>
@@ -49,9 +49,11 @@
               <!-- 1х: 870px; 2x: 1740px -->
               <img data-src="img/program-desktop@1x.png" src="img/program-desktop@1x.png" srcset="img/program-desktop@2x.png 2x" alt="О программе" width="870" height="460">
             </picture>
-            <button aria-label="проиграть видео">
-              <svg width="96" height="96">
-                <use xlink:href="img/sprite.svg#icon-play"></use>
+            <button class="about__video-button" aria-label="проиграть видео">
+              <svg class="about__video-button" width="96" height="96" viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle class="ring" opacity="0.32" cx="48" cy="48" r="48" fill="white"/>
+                <circle class="circle" cx="48" cy="48" r="32" fill="white"/>
+                <path class="triangle" d="M58 47.5L43 57V38L58 47.5Z" fill="#1FC0FC"/>
               </svg>
             </button>
           </div>
@@ -123,7 +125,8 @@
             <label>
               <input tabindex="0" class="request__input input input--phone" type="tel" name="user_phonenumber" value="" pattern="\+7\s[\(]{0,1}[0-9]{3}[\)]{0,1}\s\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2}" placeholder="телефон" required="">
             </label>
-            <button ara-label="Перезвонить мне" class="form__button request__form-button button">перезвоните мне</button>
+            <button aria-label="Перезвонить мне" class="form__button request__form-button button">перезвоните мне</button>
+            <p class="request__form-error-message error-message">Ошибка: неверный формат</p>
           </form>
         </div>
       </section>
@@ -214,7 +217,7 @@
         <div class="masaisrael__container container">
           <h2>#Masaisrael</h2>
           <p>Познакомьтесь с программой  от&nbsp;первого лица! Многие участники ведут блоги и фотодневники о&nbsp;жизни, учёбе и путешествиях в&nbsp;Израиле.</p>
-          <a class="masaisrael__button button" ara-label="смотреть фото">
+          <a class="masaisrael__button button" aria-label="смотреть фото">
             <svg width="19" height="19">
               <use xlink:href="img/sprite.svg#icon-instagram"></use>
             </svg>Смотреть фото
@@ -273,7 +276,7 @@
               </div>
             </div>
             <div class="accordion__item">
-              <div class="accordion__item-trigger"><span>5</span>Признаётся ли учёба в рамках проекта?nbsp;для дальнейшего обучения?
+              <div class="accordion__item-trigger"><span>5</span>Признаётся ли учёба в рамках проекта&nbsp;для дальнейшего обучения?
                 <svg class="accordion__item-svg" width="15" height="8">
                   <use xlink:href="img/sprite.svg#icon-arrow-down"></use>
                 </svg>
@@ -451,7 +454,7 @@
                 <!-- 1х: 112px; 2x: 224px -->
                 <source type="image/webp" media="(max-width: 767px)" srcset="img/anna-gorelik-desktop@1x.webp 1x, img/anna-gorelik-desktop@2x.webp 2x">
                 <!-- 1х: 112px; 2x: 224px -->
-                <img class="contacts__photo" data-src="img/anna-gorelik-desktop@1x.png" src="img/anna-gorelik-desktop@2x.png" srcset="img/anna-gorelik-desktop@2x.png 2x" alt="анна горелик" width="112" height="112" loading="lazy" class="lazyload">
+                <img class="contacts__photo lazyload" loading="lazy" data-src="img/anna-gorelik-desktop@1x.png" src="img/anna-gorelik-desktop@2x.png" srcset="img/anna-gorelik-desktop@2x.png 2x" alt="анна горелик" width="112" height="112">
               </picture>
               <div class="contacts__contact-person-details">
                 <p><span>Ваш куратор:</span>Анна Горелик</p>
@@ -484,24 +487,29 @@
             <p class="contacts__manager">Куратор является опытным специалистом агентства Сохнут и&nbsp;знает о проекте «Маса» всё! Свяжитесь с куратором, узнайте&nbsp;подробнее о программах и выберите свою !</p>
           </div>
           <div class="contacts__content">
-            <p>Оставьте ваши контакты, если у ваc остались вопросы — мы на них ответим!</p>
+            <div>
+              <p>Оставьте ваши контакты, если у ваc остались вопросы — мы на них ответим!</p>
+              <p class="contacts__note">Мы не передаём данные третьим лицам. Ваши данные будут в безопасности и вам не придёт спам от нас!</p>
+            </div>
             <form id="contacts-form" action="https://echo.htmlacademy.ru" method="post" class="contacts__form">
               <label>
                 <input class="contacts__input input" tabindex="0" type="text" name="user_name" value="" placeholder="имя" required="" title="Введите имя">
               </label>
-              <label>
-                <input class="contacts__input input input--phone" tabindex="0" type="tel" name="user_phonenumber" value="" pattern="\+7\s[\(]{0,1}[0-9]{3}[\)]{0,1}\s\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2}" placeholder="+7 (923) 41" required="">
-              </label>
-              <button ara-label="Перезвонить мне" type="submit" class="contacts__form-button button" aria-label="перезвоните мне">перезвоните мне</button>
+              <div class="contacts__phone-block">
+                <label>
+                  <input class="contacts__input input input--phone" tabindex="0" type="tel" name="user_phonenumber" value="" pattern="\+7\s[\(]{0,1}[0-9]{3}[\)]{0,1}\s\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2}" placeholder="+7 (923) 41" required="">
+                </label>
+                <p class="contacts__form-error-message error-message">Ошибка: неверный формат</p>
+              </div>
+              <button aria-label="Перезвонить мне" type="submit" class="contacts__form-button button">перезвоните мне</button>
             </form>
-            <p class="contacts__note">Мы не передаём данные третьим лицам. Ваши данные будут в безопасности и вам не придёт спам от нас!</p>
           </div>
         </div>
       </section>
 
       <div class="overlay overlay__form">
         <div class="overlay__popup popup popup--callback">
-          <button ara-label="закрыть" type="button" class="popup__close" aria-label="закрыть"><span class="visually-hidden">Закрыть</span></button>
+          <button aria-label="закрыть" type="button" class="popup__close"><span class="visually-hidden">Закрыть</span></button>
           <h3>
             Заказать звонок
           </h3>
@@ -511,13 +519,14 @@
           <form id="popup-form" action="https://echo.htmlacademy.ru" method="post" class="popup__form callback-form">
             <div>
               <label>
-                <input class="callback-form__field input" tabindex="0" class="callback-form__field" type="text" name="user_name" value="" placeholder="имя" required="" title="Введите имя">
+                <input class="callback-form__field input" tabindex="0" type="text" name="user_name" value="" placeholder="имя" required="" title="Введите имя">
               </label>
             </div>
             <div>
               <label>
                 <input tabindex="0" class="callback-form__field input input--phone" type="tel" name="user_phonenumber" value="" pattern="\+7\s[\(]{0,1}[0-9]{3}[\)]{0,1}\s\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2}" placeholder="телефон" required="">
               </label>
+              <p class="callback__form-error-message error-message">Ошибка: неверный формат</p>
             </div>
             <button type="submit" class="callback-form__button button" aria-label="перезвоните мне">перезвоните мне</button>
             <div tabindex="0">
@@ -579,11 +588,8 @@
 
   <script src="js/vendor.js" defer=""></script>
   <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
-  <script src="js/main.js"></script>
-  <script src="js/tabs.js"></script>
-  <script src="js/accordion.js"></script>
-  <script src="js/swiper-reviews.js"></script>
-  <script src="js/swiper-internship.js"></script>
+  <!--<script src="js/main.js"></script>-->
+  <script src="js/validation.js"></script>
 
 </body>
 

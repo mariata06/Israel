@@ -1,11 +1,11 @@
 .masaisrael {
-  background-image: url("../img/masaisrael-desktop@1x.png");
+  background-image: url("../img/masaisrael-desktop@1x.jpg");
   background-repeat: no-repeat;
   background-size: 100%;
   background-position: center top;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    background-image: url("../img/masaisrael-desktop@2x.png");
+    background-image: url("../img/masaisrael-desktop@2x.jpg");
   }
 
   @media (max-width: $max-mobile-width) {

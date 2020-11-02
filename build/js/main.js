@@ -1,3 +1,4 @@
+// Валидация форм в блоках Хочу поехать, Контакты, попап
 var callbackPopup = document.querySelector(".popup--callback");
 var callbackLink = document.querySelector(".page-header__callback-link");
 var closeCallbackPopup = callbackPopup.querySelector(".popup__close");
@@ -158,4 +159,134 @@ phoneMasks.forEach(function (item) {
   });
 })
 
+// Переключение вкладок - табов в блоке Программы
+var chooseProgramItem = function () {
+  var programChoiceItem = document.querySelectorAll(".program__choice-item");
+  var programItem = document.querySelectorAll(".program__item");
+  var programName;
+
+  programChoiceItem.forEach(function (item) {
+    item.addEventListener('click', toggleProgramChoiceItem)
+  });
+
+  function toggleProgramChoiceItem() {
+    programChoiceItem.forEach(function (item) {
+      item.classList.remove("program__choice-item--active")
+    });
+    this.classList.add("program__choice-item--active");
+    programName = this.getAttribute("data-tab-name");
+    selectProgramContent(programName);
+  }
+
+  function selectProgramContent(programName) {
+    programItem.forEach(function (item) {
+      if (item.classList.value.includes(programName)) {
+        item.classList.add("program__item--active")
+      } else {
+        item.classList.remove("program__item--active");
+      }
+    })
+  }
+};
+
+chooseProgramItem();
+
+// Переключение меню - аккордеона в блоке Частые вопросы
+var accordionItemTrigger = document.querySelectorAll(".accordion__item-trigger");
+var accordionItem = document.querySelectorAll(".accordion__item");
+var arrowItems = document.querySelectorAll(".accordion__item-svg");
+
+var activeArrow = document.querySelector(".accordion__item--active").querySelector(".accordion__item-svg");
+activeArrow.style.transform = "rotate(180deg)";
+
+accordionItemTrigger.forEach(function (item) {
+  item.addEventListener("click", () => {
+    arrowItems.forEach(function (item) {
+      item.style.transform = "none";
+    })
+
+    const parent = item.parentNode;
+    var arrowItem = item.querySelector(".accordion__item-svg");
+    arrowItem.style.transform = "rotate(360deg)";
+    if (parent.classList.contains("accordion__item--active")) {
+      parent.classList.remove("accordion__item--active");
+    } else {
+      accordionItem.forEach((child) => child.classList.remove("accordion__item--active"))
+
+      parent.classList.add("accordion__item--active");
+      arrowItem.style.transform = "rotate(180deg)";
+    }
+  })
+});
+
+
+// Инициализация свайпер-слайдера в блоке Отзывы
+var swiper = new Swiper(".swiper-container.swiper-container--reviews", {
+  pagination: {
+    el: ".swiper-pagination",
+    type: "fraction",
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  initialSlide: 2
+});
+
+// Инициализация свайпер-слайдеров в блоках: Жизнь в Израиле, Программы (когда в мобильной версии табы превращаются в свайпер-слайдер)
+var swiper = Swiper;
+var swiper2 = Swiper;
+var swiperExist = false;
+
+/* Which media query
+**************************************************************/
+function swiperMode() {
+  let mobile = window.matchMedia("(min-width: 0px) and (max-width: 767px)"); // было max-width: 768px
+  let tablet = window.matchMedia("(min-width: 768px) and (max-width: 1023px)"); // было (min-width: 769px) and (max-width: 1024px)
+  let desktop = window.matchMedia("(min-width: 1024px)"); // было (min-width: 1025px)
+
+  // Enable (for mobile)
+  if(mobile.matches) {
+    if (!swiperExist) {
+      swiperExist = true;
+      swiper = new Swiper(".swiper-container.swiper-container--internship", {
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+      });
+      swiper2 = new Swiper(".swiper-container.swiper-container--programmes", {
+        slidesPerView: "auto", //1.9,//window.innerWidth*3.1/568 + 5 - 3.1*768/568,//1.9,
+      });
+    }
+  }
+    // Disable (for tablet)
+  else if(tablet.matches) {
+    if (swiperExist) {
+      swiper.destroy();
+      swiper2.destroy();
+      swiperExist = false;
+    }
+  }
+    // Disable (for desktop)
+  else if(desktop.matches) {
+    if (swiperExist) {
+      swiper.destroy();
+      swiper2.destroy();
+      swiperExist = false;
+    }
+  }
+}
+
+/* On Load
+**************************************************************/
+window.addEventListener("load", function() {
+  swiperMode();
+});
+
+/* On Resize
+**************************************************************/
+window.addEventListener("resize", function() {
+  swiperMode();
+});
 

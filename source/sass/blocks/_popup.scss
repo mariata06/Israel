@@ -78,6 +78,14 @@
     padding-right: 40px;
   }
 
+  .button {
+    margin-top: 0;
+
+    @media (max-width: $max-mobile-width) {
+      width: 264px;
+    }
+  }
+
   @media (max-width: $max-mobile-width) {
     h3 {
       margin-top: 128px;

@@ -81,8 +81,12 @@
 .contacts__content {
   width: 100%;
   display: flex;
-  flex-wrap: wrap;
+  //flex-wrap: wrap;
   flex-direction: row;
+
+  @media (max-width: $max-mobile-width) {
+    flex-wrap: wrap;
+  }
 
   p {
     @include reset;
@@ -93,6 +97,7 @@
 
     @media (max-width: $max-mobile-width) {
       @include text ($font-16, $height-24, $medium);
+      width: 100%;
     }
   }
 
@@ -249,23 +254,49 @@
       margin: 0 auto 8px;
     }
   }
+}
 
-  .contacts__form-button {
-    margin: 0;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    margin-left: 25px;
-    font-size: 15px;
+.contacts__form-button {
+  margin: 0;
+  //padding-top: 5px;
+  //padding-bottom: 5px;
+  margin-left: 25px;
+  font-size: 15px;
+  align-self: baseline;
 
-    @media (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
-      width: 30%;
+  @media (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
+    width: 30%;
+  }
+
+  @media (max-width: $max-mobile-width) {
+    width: 264px;
+    padding-top: 19px;
+    padding-bottom: 20px;
+    margin: 0 auto;
+  }
+}
+
+.contacts__phone-block {
+  //width: auto;
+  width: unset;
+
+  @media (max-width: $max-mobile-width) {
+    width: 100%;
+  }
+
+  .input--phone {
+    @media (max-width: $max-mobile-width) {
+      margin-bottom: 0;
     }
+  }
+
+  .contacts__form-error-message {
+    width: auto;
+    margin-left: 20px;
 
     @media (max-width: $max-mobile-width) {
-      width: 264px;
-      padding-top: 19px;
-      padding-bottom: 20px;
-      margin: 16px auto 0;
+      margin-top: 0;
+      margin-left: 0;
     }
   }
 }

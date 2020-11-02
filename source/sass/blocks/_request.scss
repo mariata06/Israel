@@ -21,14 +21,14 @@
 }
 
 .request__container {
-  padding: 201px 679px 120px 210px;
+  padding: 201px 679px 28px 210px;
 
   @media (min-width: 1024px) and (max-width: 1250px) {
     padding: 100px 500px 100px 100px;
   }
 
   @media (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
-    padding: 0 300px 100px 100px;
+    padding: 0 270px 100px 100px;
   }
 
   @media (max-width: $max-mobile-width) {
@@ -70,6 +70,7 @@
 
 .request__form {
   display: flex;
+  flex-wrap: wrap;
   position: relative;
   width: 100%;
 
@@ -119,5 +120,18 @@
   @media (max-width: $max-mobile-width) {
     padding-top: 18px;
     padding-bottom: 13px;
+  }
+}
+
+.error-message {
+  margin-bottom: 0;
+  color: $red;
+  visibility: hidden;
+  //visibility: visible;
+  font-size: 13px;
+  line-height: 19px;
+
+  &--show {
+    visibility: visible;
   }
 }

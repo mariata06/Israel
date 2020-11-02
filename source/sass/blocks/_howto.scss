@@ -9,7 +9,13 @@
   }
 
   @media (max-width: $max-mobile-width) {
-    background-image: none;
+    background-image: url("../img/stamp-mobile@1x.png");
+    background-position: right center;
+    background-size: 60%;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/stamp-mobile@2x.png");
+    }
   }
 }
 
@@ -26,7 +32,7 @@
   }
 
   @media (max-width: $max-mobile-width) {
-    padding: 88px 16px 80px 8px;
+    padding: 37px 16px 80px 8px;
   }
 
   h2 {
