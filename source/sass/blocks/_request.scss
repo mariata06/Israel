@@ -2,7 +2,7 @@
   background-image: url("../img/girl-flag-bg-desktop@1x.jpg"), url("../img/backpack-desktop@1x.png");
   background-repeat: no-repeat;
   background-size: 60%, 10%;
-  background-position: right -8px, center left;
+  background-position: right 12px, center left;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     background-image: url("../img/girl-flag-bg-desktop@2x.png"), url("../img/backpack-desktop@2x.png");
@@ -21,7 +21,7 @@
 }
 
 .request__container {
-  padding: 201px 679px 28px 210px;
+  padding: 221px 679px 28px 210px;
 
   @media (min-width: 1024px) and (max-width: 1250px) {
     padding: 100px 500px 100px 100px;
@@ -120,18 +120,5 @@
   @media (max-width: $max-mobile-width) {
     padding-top: 18px;
     padding-bottom: 13px;
-  }
-}
-
-.error-message {
-  margin-bottom: 0;
-  color: $red;
-  visibility: hidden;
-  //visibility: visible;
-  font-size: 13px;
-  line-height: 19px;
-
-  &--show {
-    visibility: visible;
   }
 }

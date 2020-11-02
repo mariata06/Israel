@@ -124,40 +124,42 @@ contactsForm.addEventListener("submit", function (evt) {
   checkLocalStorage();
 });
 
-var phoneMasks = document.querySelectorAll(".input--phone");
-//console.log(phoneMasks);
-phoneMasks.forEach(function (item) {
+var phoneInputs = document.querySelectorAll(".input--phone");
+phoneInputs.forEach(function (item) {
   item.addEventListener("input", function (e) {
     if(e.target.value.length == 1) {
       var x = e.target.value.replace(/\D/g, "").match(/(\d{0,3})(\d{0,3})(\d{0,2})(\d{0,2})/);
     } else {
       var x = e.target.value.substring(2,e.target.value.length).replace(/\D/g, "").match(/(\d{0,3})(\d{0,3})(\d{0,2})(\d{0,2})/);
     }
-    //var x = e.target.value.substring(2,e.target.value.length).replace(/\D/g, "").match(/(\d{0,3})(\d{0,3})(\d{0,2})(\d{0,2})/);
     e.target.value = !x[2] ? "+7 (" + x[1] : "+7 (" + x[1] + ") " + (x[3] ? x[2]  + "-" : x[2]) + x[3] + (x[4] ? "-" + x[4] : "");
+
+    if (e.target.value.length == 18) {
+      item.style.borderColor = "#484848";
+      errorMessages.forEach(element => {
+        element.classList.remove("error-message--show");
+      });
+      console.log("ошибки нет?");
+      item.setCustomValidity("");
+    }
   });
 });
 
-//var phoneInputs = document.querySelectorAll(".input--phone");
-
-phoneMasks.forEach(function (item) {
-
+var errorMessages = document.querySelectorAll(".error-message");
+phoneInputs.forEach(function (item) {
   item.addEventListener("invalid", function () {
-    console.log(item.validity);
     if (item.validity.patternMismatch) {
-      console.log('patternmismatch');
-      console.log(item.value);
       item.setCustomValidity("Телефон должен состоять из 11 цифр");
-      item.classList.add("input--invalid");
-      console.log(item.classList);
-    } else if (item.validity.valueMissing) {
-      item.setCustomValidity("Обязательное поле");
+      item.style.borderColor = "#ff0000";
+      var currentErrorMessage = item.parentElement.parentElement.querySelector("p");
+      currentErrorMessage.classList.add("error-message--show");
     } else {
       item.setCustomValidity("");
-      console.log("test");
+      item.style.borderColor = "#484848";
+      console.log("ошибки нет?");
     }
   });
-})
+});
 
 // Переключение вкладок - табов в блоке Программы
 var chooseProgramItem = function () {

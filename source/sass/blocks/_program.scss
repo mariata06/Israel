@@ -63,7 +63,7 @@
   p {
     @include reset;
     font-size: 15px;
-    line-height: 25px;
+    line-height: 25.5px;
     margin-bottom: 20px;
     opacity: 0.87;
 
@@ -150,7 +150,7 @@
   }
 
   &--general {
-    padding-bottom: 30px;
+    //padding-bottom: 30px;
 
     @media (max-width: $max-mobile-width) {
       padding-bottom: 15px;
@@ -167,7 +167,7 @@
   }
 
   &--internship {
-    padding-top: 29px;
+    //padding-top: 29px;
 
     @media (max-width: $max-mobile-width) {
       padding-top: 15px;
@@ -177,7 +177,7 @@
   }
 
   &--volunteering {
-    padding-top: 30px;
+    //padding-top: 30px;
 
     @media (max-width: $max-mobile-width) {
       padding-top: 15px;
@@ -187,7 +187,7 @@
   }
 
   &--religious {
-    padding-top: 30px;
+    //padding-top: 30px;
 
     @media (max-width: $max-mobile-width) {
       padding-top: 15px;
@@ -199,7 +199,7 @@
   &--active {
     background: linear-gradient(to right, $yellow 0%, $yellow-2 100%);
     text-transform: uppercase;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 19px;
     letter-spacing: 0.5px;
     color: $white;
@@ -215,7 +215,7 @@
       width: 0;
       position: absolute;
       top: 0;
-      right: -26px;
+      right: -25px;
       border-left: 26px solid $yellow-2;
       border-top: 34px solid transparent;
       border-bottom: 34px solid transparent;

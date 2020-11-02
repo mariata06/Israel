@@ -81,8 +81,11 @@
 .contacts__content {
   width: 100%;
   display: flex;
-  //flex-wrap: wrap;
   flex-direction: row;
+
+  @media (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
+    flex-wrap: wrap;
+  }
 
   @media (max-width: $max-mobile-width) {
     flex-wrap: wrap;
@@ -258,8 +261,6 @@
 
 .contacts__form-button {
   margin: 0;
-  //padding-top: 5px;
-  //padding-bottom: 5px;
   margin-left: 25px;
   font-size: 15px;
   align-self: baseline;
@@ -277,14 +278,30 @@
 }
 
 .contacts__phone-block {
-  //width: auto;
   width: unset;
+
+  @media (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
+    width: 30%;
+    margin-left: 40px;
+  }
+
+  label {
+    @media (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
+      width: 100%;
+    }
+  }
 
   @media (max-width: $max-mobile-width) {
     width: 100%;
+    margin-left: 0;
   }
 
   .input--phone {
+    @media (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
+      width: 100%;
+      margin-left: 0;
+    }
+
     @media (max-width: $max-mobile-width) {
       margin-bottom: 0;
     }
@@ -293,6 +310,14 @@
   .contacts__form-error-message {
     width: auto;
     margin-left: 20px;
+
+    @media (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
+      width: 100%;
+      margin-left: 0;
+      font-size: 13px;
+      line-height: 19px;
+      font-weight: 400;
+    }
 
     @media (max-width: $max-mobile-width) {
       margin-top: 0;

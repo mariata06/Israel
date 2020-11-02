@@ -12,41 +12,6 @@ input {
 
   &:focus {
     border-color: $yellow;
-    //border: 1px solid linear-gradient($yellow, $yellow-2);
-    //border: 2px solid;
-    //border-image-source: linear-gradient(108.42deg, $yellow 20.46%, $yellow-2 65.31%);
-  }
-
-  /*
-  &:focus::after {
-    //background-image: linear-gradient($yellow, $yellow-2);
-    //border-width: 1px;
-    //border-image-slice: 1;
-    //border: 1px solid $yellow;
-    //color: $black;
-    content: "";
-    top: 0;
-    left: 0;
-    display: block;
-    position: absolute;
-    border: 1px solid;
-    padding: 18px 0 19px 40px;
-    width: 100%;
-    border-image-slice: 1;
-    border-width: 1px;
-    border-radius: 80px;
-    border-image-source: linear-gradient(to left, #743ad5, #d53a9d);
-  }*/
-
-
-  /*
-  &:invalid {
-    border-color: $red;
-  }*/
-
-  &--invalid {
-    border: 1px solid $red;
-    //border-color: $red;
   }
 
   &:valid {

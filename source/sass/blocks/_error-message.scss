@@ -1,0 +1,12 @@
+.error-message {
+  margin-bottom: 0;
+  color: $red;
+  visibility: hidden;
+  font-size: 13px;
+  line-height: 19px;
+  font-weight: 400;
+
+  &--show {
+    visibility: visible;
+  }
+}
