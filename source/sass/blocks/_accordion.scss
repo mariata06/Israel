@@ -2,6 +2,11 @@
   padding-top: 24px;
   padding-bottom: 23px;
   border-bottom: 1px solid $light-grey;
+  cursor: pointer;
+
+  &:focus {
+    background-color: $light-grey;
+  }
 
   @media (max-width: $max-mobile-width) {
     padding-bottom: 16px;

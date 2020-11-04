@@ -221,7 +221,8 @@
   margin-right: 30px;
   cursor: pointer;
 
-  &:hover {
+  &:hover,
+  &:focus {
     opacity: 0.7;
     transition: 0.3s ease;
   }
@@ -246,7 +247,8 @@
   display: block;
   cursor: pointer;
 
-  &:hover {
+  &:hover,
+  &:focus {
     opacity: 0.7;
     transition: 0.3s ease;
   }
@@ -308,5 +310,11 @@
       height: 320px;
       width: 240px;
     }
+  }
+}
+
+.swiper-slide-active {
+  &:focus {
+    outline: none;
   }
 }

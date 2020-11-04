@@ -75,7 +75,8 @@
   display: block;
   position: relative;
 
-  &:hover {
+  &:hover,
+  &:focus {
     box-shadow: 0 0 10px $white;
 
     img {

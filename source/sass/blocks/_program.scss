@@ -135,23 +135,21 @@
     background-repeat: no-repeat;
   }
 
-  &:hover:not(.program__choice-item--active) {
+  &:hover:not(.program__choice-item--active),
+  &:focus:not(.program__choice-item--active) {
     color: $yellow;
   }
 
   @media (max-width: $max-mobile-width) {
+    @include text ($font-15, $height-18, $medium);
     display: flex;
     justify-content: flex-end;
-    font-size: 15px;
-    line-height: 18px;
     opacity: 0.5;
     padding: 15px 20px 15px 20px;
     margin: 0;
   }
 
   &--general {
-    //padding-bottom: 30px;
-
     @media (max-width: $max-mobile-width) {
       padding-bottom: 15px;
       padding-left: 20px;
@@ -162,13 +160,11 @@
   &--academic {
     @media (max-width: $max-mobile-width) {
       padding-left: 20px;
-      width: 160px;
+      width: 180px;
     }
   }
 
   &--internship {
-    //padding-top: 29px;
-
     @media (max-width: $max-mobile-width) {
       padding-top: 15px;
       padding-left: 20px;
@@ -177,30 +173,25 @@
   }
 
   &--volunteering {
-    //padding-top: 30px;
-
     @media (max-width: $max-mobile-width) {
       padding-top: 15px;
       padding-left: 20px;
-      width: 150px;
+      width: 170px;
     }
   }
 
   &--religious {
-    //padding-top: 30px;
-
     @media (max-width: $max-mobile-width) {
       padding-top: 15px;
       padding-left: 20px;
-      width: 150px;
+      width: 160px;
     }
   }
 
   &--active {
-    background: linear-gradient(to right, $yellow 0%, $yellow-2 100%);
+    @include text ($font-16, $height-19, $medium);
+    background: linear-gradient(108.42deg, $yellow 20.46%, $yellow-2 65.31%);
     text-transform: uppercase;
-    font-size: 16px;
-    line-height: 19px;
     letter-spacing: 0.5px;
     color: $white;
 

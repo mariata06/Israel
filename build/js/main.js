@@ -39,6 +39,7 @@ callbackLink.addEventListener("click", function (evt) {
   userPhone = callbackForm.elements.user_phonenumber;
   callbackPopup.classList.add("popup--callback--show");
   overlayForm.classList.add("overlay__form--show");
+  //document.body.style.overflow ="hidden";
   userName.focus();
   if (currentName && currentPhone) {
     userName.value = currentName;

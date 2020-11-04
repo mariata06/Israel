@@ -141,7 +141,27 @@
     width: 400px;
   }
 
-  @media (max-width: $max-mobile-width) {
+  @media (min-width: 701px) and (max-width: $max-mobile-width) {
+    width: 100%;
+    margin-bottom: 1100px;
+  }
+
+  @media (min-width: 601px) and (max-width: 700px) {
+    width: 100%;
+    margin-bottom: 1000px;
+  }
+
+  @media (min-width: 481px) and (max-width: 600px) {
+    width: 100%;
+    margin-bottom: 800px;
+  }
+
+  @media (min-width: 431px) and (max-width: 480px) {
+    width: 100%;
+    margin-bottom: 600px;
+  }
+
+  @media (min-width: $min-mobile-width) and (max-width: 430px) {
     width: 100%;
     margin-bottom: 480px;
   }
