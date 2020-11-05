@@ -32,7 +32,7 @@
   }
 
   @media (max-width: $max-mobile-width) {
-    padding: 63px 16px 300px 17px;
+    padding: 64px 16px 300px 17px;
     width: 100%;
   }
 
@@ -91,10 +91,10 @@
     margin: 0;
     position: absolute;
     right: 0;
-    padding-left: 36px;
-    padding-right: 37px;
-    font-size: 15px;
+    padding-left: 35px;
+    padding-right: 30px;
     letter-spacing: 1px;
+    font-size: 15px;
 
     @media (max-width: $max-mobile-width) {
       position: relative;

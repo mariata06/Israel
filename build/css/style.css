@@ -121,7 +121,7 @@ a {
     color: #ffffff;
     text-align: center;
     width: 343px;
-    margin: 458px auto 80px; }
+    margin: 465px auto 45px; }
     @media (min-width: 768px) and (max-width: 1023px) {
       .page-header__container h1 {
         margin: 270px auto 30px; } }
@@ -515,7 +515,7 @@ input {
   @media (max-width: 767px) {
     .about__container {
       padding-top: 18px;
-      padding-bottom: 74px; } }
+      padding-bottom: 76px; } }
   .about__container h2,
   .about__container p {
     padding: 0;
@@ -563,12 +563,15 @@ input {
   display: block;
   margin: 0 auto;
   position: relative; }
+  @media (max-width: 767px) {
+    .about__video {
+      width: 320px; } }
   @media (min-width: 768px) and (max-width: 1023px) {
     .about__video img {
       height: 460px; } }
   @media (max-width: 767px) {
-    .about__video {
-      width: 320px; } }
+    .about__video img {
+      height: 221px; } }
   .about__video button {
     border: none;
     outline: none;
@@ -582,15 +585,11 @@ input {
     padding: 0; }
     @media (max-width: 767px) {
       .about__video button {
+        padding-top: 15px;
         top: 50%;
         left: 50%;
         -webkit-transform: translate(-50%, -50%);
                 transform: translate(-50%, -50%); } }
-
-@media (max-width: 767px) {
-  .about__video-button {
-    -webkit-transform: scale(0.9);
-            transform: scale(0.9); } }
 
 .about__video-button:hover .circle,
 .about__video-button:focus .circle {
@@ -922,7 +921,7 @@ input {
       padding: 0 270px 100px 100px; } }
   @media (max-width: 767px) {
     .request__container {
-      padding: 63px 16px 300px 17px;
+      padding: 64px 16px 300px 17px;
       width: 100%; } }
   .request__container h2 {
     padding: 0;
@@ -979,10 +978,10 @@ input {
     margin: 0;
     position: absolute;
     right: 0;
-    padding-left: 36px;
-    padding-right: 37px;
-    font-size: 15px;
-    letter-spacing: 1px; }
+    padding-left: 35px;
+    padding-right: 30px;
+    letter-spacing: 1px;
+    font-size: 15px; }
     @media (max-width: 767px) {
       .request__form .button {
         position: relative;
@@ -1026,7 +1025,7 @@ input {
       background-image: url("../img/stamp-mobile@2x.png"); } }
 
 .howto__container {
-  padding: 196px 131px 180px 680px; }
+  padding: 196px 131px 170px 680px; }
   @media (min-width: 1024px) and (max-width: 1250px) {
     .howto__container {
       padding-left: 550px;
@@ -1138,10 +1137,10 @@ input {
         margin-bottom: 18px; } }
   .howto__container .howto__note {
     opacity: 0.5;
-    padding-left: 30px;
+    padding-left: 37px;
     position: relative;
     padding-right: 0;
-    margin-top: 30px; }
+    margin-top: 40px; }
     @media (min-width: 768px) and (max-width: 1023px) {
       .howto__container .howto__note {
         text-align: left; } }
@@ -1654,7 +1653,7 @@ input {
       background-image: url("../img/bag-mobile@2x.png"); } }
 
 .faq__container {
-  padding: 133px 730px 100px 108px; }
+  padding: 136px 730px 100px 108px; }
   @media (min-width: 1024px) and (max-width: 1200px) {
     .faq__container {
       padding-right: 600px; } }
@@ -2449,8 +2448,3 @@ input {
   font-weight: 400; }
   .error-message--show {
     visibility: visible; }
-
-.page-wrapper {
-  width: 100vw;
-  height: 100vh;
-  overflow: auto; }

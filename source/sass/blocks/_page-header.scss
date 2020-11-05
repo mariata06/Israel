@@ -46,7 +46,7 @@
     @include title ($font-24, $height-29, $bold, $white);
     text-align: center;
     width: 343px;
-    margin: 458px auto 80px;
+    margin: 465px auto 45px;
 
     @media (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
       margin: 270px auto 30px;

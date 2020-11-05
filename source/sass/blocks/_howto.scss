@@ -20,7 +20,7 @@
 }
 
 .howto__container {
-  padding: 196px 131px 180px 680px;
+  padding: 196px 131px 170px 680px;
 
   @media (min-width: 1024px) and (max-width: 1250px) {
     padding-left: 550px;
@@ -140,10 +140,10 @@
 
   .howto__note {
     opacity: 0.5;
-    padding-left: 30px;
+    padding-left: 37px;
     position: relative;
     padding-right: 0;
-    margin-top: 30px;
+    margin-top: 40px;
 
     @media (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
       text-align: left;

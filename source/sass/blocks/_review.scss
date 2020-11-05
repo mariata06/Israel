@@ -99,6 +99,14 @@
     }
   }
 
+  .review__text:last-of-type {
+    margin-bottom: 18px;
+
+    @media (max-width: $max-mobile-width) {
+      margin-bottom: 22px;
+    }
+  }
+
   span {
     color: $blue;
     font-size: 15px;
@@ -112,6 +120,8 @@
     display: block;
     padding-bottom: 5px;
     width: 160px;
+    line-height: 26px;
+    letter-spacing: -0.6px;
   }
 }
 
