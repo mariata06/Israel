@@ -85,7 +85,9 @@
   }
 
   @media (max-width: $max-mobile-width) {
-    padding-right: 20px;
+    margin: 0;
+    margin-left: 117px;
+    //padding-right: 20px;
   }
 
   &::before {

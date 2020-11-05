@@ -83,6 +83,10 @@
   display: flex;
   flex-direction: row;
 
+  @media (min-width: 1024px) and (max-width: 1350px) {
+    flex-wrap: wrap;
+  }
+
   @media (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
     flex-wrap: wrap;
   }
@@ -238,6 +242,11 @@
   display: flex;
   margin-left: auto;
   justify-content: space-between;
+
+  @media (min-width: 1024px) and (max-width: 1350px) {
+    margin-left: 0;
+    margin-right: auto;
+  }
 
   @media (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
     width: 100%;

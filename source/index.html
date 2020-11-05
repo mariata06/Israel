@@ -16,6 +16,30 @@
   <link rel="preload" href="js/main.js" as="script">
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
   <link rel="stylesheet" href="css/style.min.css">
+
+  <!-- Pixel Glass -->
+  <style>
+    html {
+      background-repeat: no-repeat;
+      background-position: 50% 0;
+      /* Mobile layout by default */
+      background-image: url("img/Israel-mobile.png");
+      background-size: cover;
+    }
+
+    /* Desktop */
+    @media (min-width: 1366px) {
+      html {
+        /* Desktop layout */
+        background-image: url("img/Israel-desktop.jpg");
+      }
+    }
+  </style>
+  <!--<link rel="stylesheet" href="https://yoksel.github.io/pixel-glass-js/styles.css">
+  <script src="https://yoksel.github.io/pixel-glass-js/script.js"></script>-->
+  <!--<link href="../node_modules/pixel-glass/styles.css" rel="stylesheet">
+  <script src="../node_modules/pixel-glass/script.js"></script>-->
+  <!-- // Pixel Glass -->
 </head>
 
 <body>
@@ -588,9 +612,9 @@
     </div>
   </div>
 
-  <script src="js/vendor.js" defer=""></script>
+  <!--<script src="js/vendor.js" defer=""></script>
   <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
-  <script src="js/main.js"></script>
+  <script src="js/main.js"></script>-->
 
 </body>
 

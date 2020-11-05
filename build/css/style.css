@@ -153,7 +153,8 @@ a {
               box-shadow: 0 0 10px #ffffff; }
   @media (max-width: 767px) {
     .page-header__button {
-      padding-right: 20px; } }
+      margin: 0;
+      margin-left: 117px; } }
   .page-header__button::before {
     --d: 5deg;
     /* distance between dashes */
@@ -300,7 +301,7 @@ a {
     z-index: 10;
     margin-left: auto;
     display: block; }
-    .popup .popup__close:hover::before {
+    .popup .popup__close:hover::before, .popup .popup__close:focus::before {
       opacity: 0.7; }
     .popup .popup__close::before {
       content: url("../img/icon-close.svg"); }
@@ -441,7 +442,7 @@ a {
   text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   margin-bottom: 24px;
   margin-top: 16px; }
-  .button:hover {
+  .button:hover, .button:focus {
     background: linear-gradient(109.15deg, #ffd701 -50.3%, #ffd701 63.1%); }
   .button:active {
     background: radial-gradient(150% 119.49% at 50% 50.85%, rgba(0, 0, 0, 0) 30.67%, rgba(3, 3, 3, 0.24) 100%), linear-gradient(109.15deg, #ffc341 -50.3%, #ffd701 63.1%); }
@@ -963,11 +964,15 @@ input {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   position: relative;
-  width: 100%; }
+  width: 477px; }
+  @media (min-width: 768px) and (max-width: 1023px) {
+    .request__form {
+      width: 477px; } }
   @media (max-width: 767px) {
     .request__form {
       -ms-flex-wrap: wrap;
-          flex-wrap: wrap; } }
+          flex-wrap: wrap;
+      width: 100%; } }
   .request__form label {
     width: 100%; }
   .request__form .button {
@@ -1507,23 +1512,33 @@ input {
   background-color: #fabdc2;
   background-image: url("../img/masaisrael-desktop@1x.jpg");
   background-repeat: no-repeat;
-  background-size: 100%;
-  background-position: center top; }
+  background-size: cover;
+  background-position: center top;
+  height: 583px; }
   @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
     .masaisrael {
       background-image: url("../img/masaisrael-desktop@2x.jpg"); } }
-  @media (max-width: 767px) {
+  @media (min-width: 768px) and (max-width: 1023px) {
     .masaisrael {
+      background-size: cover; } }
+  @media (min-width: 321px) and (max-width: 767px) {
+    .masaisrael {
+      height: unset;
+      background-size: cover; } }
+  @media (max-width: 320px) {
+    .masaisrael {
+      background-color: unset;
+      height: unset;
       background-image: url("../img/masaisrael-mobile@1x.jpg");
       background-repeat: no-repeat;
-      background-size: 100%;
+      background-size: contain;
       background-position: center 60px; } }
-  @media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 767px) and (min-resolution: 144dpi), (max-width: 767px) and (min-resolution: 1.5dppx) {
+  @media (max-width: 320px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 320px) and (min-resolution: 144dpi), (max-width: 320px) and (min-resolution: 1.5dppx) {
     .masaisrael {
       background-image: url("../img/masaisrael-mobile@2x.png"); } }
 
 .masaisrael__container {
-  padding: 120px 167px 200px 795px;
+  padding: 120px 167px 195px 795px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1535,8 +1550,14 @@ input {
       padding-right: 100px; } }
   @media (min-width: 768px) and (max-width: 1023px) {
     .masaisrael__container {
-      padding: 100px 50px 100px 380px; } }
-  @media (max-width: 767px) {
+      padding: 150px 50px 100px 500px; } }
+  @media (min-width: 321px) and (max-width: 767px) {
+    .masaisrael__container {
+      padding-top: 20px;
+      padding-left: 50px;
+      padding-right: 100px;
+      padding-bottom: 20px; } }
+  @media (max-width: 320px) {
     .masaisrael__container {
       padding: 16px 13px 64px 11px; } }
   .masaisrael__container h2 {
@@ -1552,7 +1573,10 @@ input {
     text-align: left;
     margin-bottom: 25px;
     padding-left: 3px; }
-    @media (max-width: 767px) {
+    @media (min-width: 321px) and (max-width: 767px) {
+      .masaisrael__container h2 {
+        margin-bottom: 60px; } }
+    @media (max-width: 320px) {
       .masaisrael__container h2 {
         text-align: center;
         margin-bottom: 96px; } }
@@ -1565,7 +1589,10 @@ input {
     color: #ffffff;
     margin-bottom: 48px;
     padding-left: 3px; }
-    @media (max-width: 767px) {
+    @media (min-width: 321px) and (max-width: 767px) {
+      .masaisrael__container p {
+        margin-bottom: 20px; } }
+    @media (max-width: 320px) {
       .masaisrael__container p {
         font-size: 16px;
         line-height: 26px;
@@ -1953,7 +1980,7 @@ input {
   display: block;
   margin-right: 30px;
   cursor: pointer; }
-  .review__button-prev:hover {
+  .review__button-prev:hover, .review__button-prev:focus {
     opacity: 0.7;
     -webkit-transition: 0.3s ease;
     transition: 0.3s ease; }
@@ -1972,7 +1999,7 @@ input {
   position: relative;
   display: block;
   cursor: pointer; }
-  .review__button-next:hover {
+  .review__button-next:hover, .review__button-next:focus {
     opacity: 0.7;
     -webkit-transition: 0.3s ease;
     transition: 0.3s ease; }
@@ -2027,6 +2054,9 @@ input {
     .review__item img {
       height: 320px;
       width: 240px; } }
+
+.swiper-slide-active:focus {
+  outline: none; }
 
 .contacts {
   background-image: url("../img/marker-map.png"), url("../img/map-desktop@1x.png"), url("../img/contacts-watercolor-bg-desktop@1x.png");
@@ -2108,6 +2138,10 @@ input {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row; }
+  @media (min-width: 1024px) and (max-width: 1350px) {
+    .contacts__content {
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap; } }
   @media (min-width: 768px) and (max-width: 1023px) {
     .contacts__content {
       -ms-flex-wrap: wrap;
@@ -2164,7 +2198,23 @@ input {
     .contacts__info {
       margin-bottom: 50px;
       width: 400px; } }
-  @media (max-width: 767px) {
+  @media (min-width: 701px) and (max-width: 767px) {
+    .contacts__info {
+      width: 100%;
+      margin-bottom: 1100px; } }
+  @media (min-width: 601px) and (max-width: 700px) {
+    .contacts__info {
+      width: 100%;
+      margin-bottom: 1000px; } }
+  @media (min-width: 481px) and (max-width: 600px) {
+    .contacts__info {
+      width: 100%;
+      margin-bottom: 800px; } }
+  @media (min-width: 431px) and (max-width: 480px) {
+    .contacts__info {
+      width: 100%;
+      margin-bottom: 600px; } }
+  @media (min-width: 320px) and (max-width: 430px) {
     .contacts__info {
       width: 100%;
       margin-bottom: 480px; } }
@@ -2234,6 +2284,10 @@ input {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between; }
+  @media (min-width: 1024px) and (max-width: 1350px) {
+    .contacts__form {
+      margin-left: 0;
+      margin-right: auto; } }
   @media (min-width: 768px) and (max-width: 1023px) {
     .contacts__form {
       width: 100%;
@@ -2395,3 +2449,8 @@ input {
   font-weight: 400; }
   .error-message--show {
     visibility: visible; }
+
+.page-wrapper {
+  width: 100vw;
+  height: 100vh;
+  overflow: auto; }
