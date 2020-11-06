@@ -172,7 +172,11 @@
   padding-left: 405px;
   margin-top: -30px;
 
-  @media (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
+  @media (min-width: 950px) and (max-width: $max-tablet-width) {
+    top: 440px;
+  }
+
+  @media (min-width: $min-tablet-width) and (max-width: 949px) {
     position: absolute;
     padding-left: 0;
     top: 360px;

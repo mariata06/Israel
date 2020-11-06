@@ -7,6 +7,7 @@ var overlayOk = document.querySelector(".overlay__ok");
 var popupSuccess = document.querySelector(".popup--success");
 var closePopupSuccess = popupSuccess.querySelector(".popup__close");
 var popupButton = popupSuccess.querySelector(".popup__button");
+var htmlDoc = document.querySelector("html");
 
 var requestFormButton = document.querySelector(".request__form-button");
 var requestForm = document.forms[0];
@@ -39,7 +40,7 @@ callbackLink.addEventListener("click", function (evt) {
   userPhone = callbackForm.elements.user_phonenumber;
   callbackPopup.classList.add("popup--callback--show");
   overlayForm.classList.add("overlay__form--show");
-  //document.body.style.overflow ="hidden";
+  htmlDoc.classList.add("disable-scroll");
   userName.focus();
   if (currentName && currentPhone) {
     userName.value = currentName;
@@ -51,16 +52,19 @@ closeCallbackPopup.addEventListener("click", function (evt) {
   evt.preventDefault();
   callbackPopup.classList.remove("popup--callback--show");
   overlayForm.classList.remove("overlay__form--show");
+  htmlDoc.classList.toggle("disable-scroll");
 });
 
 function closePopup() {
   popupSuccess.classList.remove("popup--success--show");
   overlayOk.classList.remove("overlay__ok--show");
+  htmlDoc.classList.toggle("disable-scroll");
 }
 
 closePopupSuccess.addEventListener("click", function (evt) {
   evt.preventDefault();
   closePopup();
+  htmlDoc.classList.toggle("disable-scroll");
 });
 
 popupButton.addEventListener("click", function (evt) {
@@ -82,6 +86,7 @@ callbackForm.addEventListener("submit", function (evt) {
   checkLocalStorage();
   callbackPopup.classList.remove("popup--callback--show");
   overlayForm.classList.remove("overlay__form--show");
+  //htmlDoc.classList.toggle("disable-scroll");
 });
 
 window.addEventListener("keydown", function (evt) {
@@ -89,8 +94,10 @@ window.addEventListener("keydown", function (evt) {
     evt.preventDefault();
     if (overlayForm.classList.contains("overlay__form--show")) {
       overlayForm.classList.remove("overlay__form--show");
+      htmlDoc.classList.toggle("disable-scroll");
     } else if (overlayOk.classList.contains("overlay__ok--show")) {
         overlayOk.classList.remove("overlay__ok--show");
+        htmlDoc.classList.toggle("disable-scroll");
     }
   }
 });
@@ -99,6 +106,7 @@ document.onclick = function (evt) {
   if (evt.target.className.toString().includes("overlay")) {
     overlayForm.classList.remove("overlay__form--show");
     overlayOk.classList.remove("overlay__ok--show");
+    htmlDoc.classList.toggle("disable-scroll");
   };
 };
 

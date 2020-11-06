@@ -4,6 +4,10 @@ html {
   overflow-x: hidden;
 }
 
+.disable-scroll {
+  overflow: hidden;
+}
+
 *,
 *::before,
 *::after {

@@ -80,6 +80,12 @@
   @media (max-width: $max-mobile-width) {
     padding-bottom: 40px;
   }
+
+  .swiper-pagination-bullets {
+    @media (max-width: $max-mobile-width) {
+      bottom: unset;
+    }
+  }
 }
 
 .internship__picture-wrapper {
@@ -108,6 +114,13 @@
     margin: 0;
     align-items: center;
     position: relative;
+
+    @media (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+    }
 
     @media (max-width: $max-mobile-width) {
       width: 288px;
@@ -183,8 +196,10 @@
     }
 
     @media (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
-      height: 100%;
-      width: 100%;
+      //height: 100%;
+      //width: 100%;
+      width: 288px;
+      height: 400px;
       object-fit: cover;
     }
 
@@ -217,9 +232,19 @@
   }
 
   figcaption {
+    @media (min-width: 1024px) and (max-width: 1250px) {
+      bottom: 100px;
+    }
+
     @media (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
-      bottom: 240px;
-      left: 30px;
+      bottom: 280px;
+      left: 50px;
+    }
+
+    @media (max-width: $max-mobile-width) {
+      text-align: center;
+      //bottom: 250px;
+      bottom: 30px;
     }
   }
 }
@@ -235,12 +260,17 @@
   }
 
   figcaption {
-    width: 70%;
+    //width: 70%;
     bottom: 59px;
 
+    @media (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
+      left: 60px;
+    }
+
     @media (max-width: $max-mobile-width) {
+      text-align: center;
       bottom: 15px;
-      left: 160px;
+      //left: 160px;
     }
   }
 }
@@ -255,7 +285,7 @@
     grid-row: 1;
 
     img {
-      width: 211px;
+      width: 288px;
     }
   }
 
@@ -263,10 +293,17 @@
     bottom: 59px;
     left: 65px;
 
+    @media (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
+      left: 40px;
+    }
+
     @media (max-width: $max-mobile-width) {
-      left: 150px;
-      width: 77%;
+      //left: 150px;
+      //width: 77%;
+      left: 50%;
       bottom: 30px;
+      width: 220px;
+      text-align: center;
     }
   }
 }
@@ -282,7 +319,7 @@
     grid-row: 2;
 
     img {
-      width: 211px;
+      width: 288px;
     }
   }
 
@@ -296,10 +333,12 @@
     }
 
     @media (max-width: $max-mobile-width) {
-      left: 140px;
+      //left: 140px;
       bottom: 30px;
-      width: 78%;
+      //width: 78%;
       text-align: center;
+      left: 50%;
+      width: 230px;
     }
   }
 }
@@ -322,9 +361,14 @@
     left: 35px;
     bottom: 75px;
 
+    @media (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
+      left: 60px;
+    }
+
     @media (max-width: $max-mobile-width) {
-      left: 160px;
+      //left: 160px;
       bottom: 30px;
+      left: 50%;
     }
   }
 }
@@ -332,3 +376,13 @@
 .swiper-pagination {
   pointer-events: all;
 }
+
+/*
+.swiper-pagination-fraction,
+.swiper-pagination-custom,
+.swiper-container-horizontal > .swiper-pagination-bullets {
+  @media (max-width: $max-mobile-width) {
+    bottom: unset;
+  }
+}
+*/

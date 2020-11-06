@@ -128,13 +128,14 @@
 
 .page-header__phone-links {
   display: flex;
-  justify-content: space-between;
+  //justify-content: space-between;
   width: 100%;
   font-size: 15px;
   line-height: 18px;
 
   a {
     color: $black;
+    margin-right: 40px;
 
     &:hover,
     &:focus {
@@ -143,6 +144,17 @@
     }
 
     @media (max-width: $max-mobile-width) {
+      margin-left: auto;
+      margin-right: 0;
+    }
+  }
+
+  a:last-child {
+    margin-left: auto;
+    margin-right: 0;
+
+    @media (max-width: $max-mobile-width) {
+      margin-right: 0;
       margin-left: auto;
     }
   }
