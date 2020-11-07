@@ -9,8 +9,7 @@
 
   p {
     @include reset;
-    font-size: 12px;
-    line-height: 18px;
+    @include text-size-height ($font-12, $height-18);
     padding-left: 45px;
     opacity: 0.5;
 

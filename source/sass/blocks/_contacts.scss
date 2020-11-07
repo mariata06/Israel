@@ -121,9 +121,8 @@
 }
 
 .contacts__homecity {
+  @include text-size-height ($font-15, $height-22);
   display: block;
-  font-size: 15px;
-  line-height: 22px;
   opacity: 0.74;
 
   a {
@@ -171,20 +170,17 @@
   }
 
   .contacts__manager {
+    @include text-size-height ($font-17, $height-29);
     opacity: 0.87;
-    font-size: 17px;
-    line-height: 29px;
 
     @media (max-width: $max-mobile-width) {
-      font-size: 16px;
-      line-height: 26px;
+      @include text-size-height ($font-16, $height-26);
     }
   }
 }
 
 .contacts__contact-person {
-  font-size: 15px;
-  line-height: 22px;
+  @include text-size-height ($font-15, $height-22);
   display: flex;
   margin-top: 36px;
   margin-bottom: 28px;
@@ -202,8 +198,7 @@
   }
 
   .contacts__address {
-    font-size: 13px;
-    line-height: 19px;
+    @include text-size-height ($font-13, $height-19);
     padding-right: 120px;
     margin-bottom: 10px;
 
@@ -341,11 +336,9 @@
     margin-left: 20px;
 
     @media (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
+      @include text ($font-13, $height-19, $regular);
       width: 100%;
       margin-left: 0;
-      font-size: 13px;
-      line-height: 19px;
-      font-weight: 400;
     }
 
     @media (max-width: $max-mobile-width) {

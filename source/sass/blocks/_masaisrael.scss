@@ -2,8 +2,6 @@
   background-color: $pink;
   background-image: url("../img/masaisrael-desktop@1x.jpg");
   background-repeat: no-repeat;
-  //background-size: 100%;
-  //background-size: contain;
   background-size: cover;
   background-position: center top;
   height: 583px;
@@ -18,19 +16,14 @@
 
   @media (min-width: 321px) and (max-width: 767px) {
     height: unset;
-    //background-size: 100%;
     background-size: cover;
-    //height: 300px;
   }
 
   @media (max-width: $min-mobile-width) {
     background-color: unset;
-    //height: 391px;
     height: unset;
     background-image: url("../img/masaisrael-mobile@1x.jpg");
     background-repeat: no-repeat;
-    //background-size: 100%;
-    //background-size: cover;
     background-size: contain;
     background-position: center 60px;
 
@@ -46,7 +39,6 @@
   flex-wrap: wrap;
 
   @media (min-width: 1024px) and (max-width: 1250px) {
-    //padding-top: 200px;
     padding-left: 650px;
     padding-right: 100px;
   }
@@ -56,10 +48,7 @@
   }
 
   @media (min-width: 321px) and (max-width: 767px) {
-    padding-top: 20px;
-    padding-left: 50px;
-    padding-right: 100px;
-    padding-bottom: 20px;
+    padding: 20px 100px 20px 50px;
   }
 
   @media (max-width: $min-mobile-width) {
@@ -88,8 +77,7 @@
 
   p {
     @include reset;
-    font-size: 17px;
-    line-height: 29px;
+    @include text-size-height ($font-17, $height-29);
     text-align: left;
     color: $white;
     margin-bottom: 48px;
@@ -100,8 +88,7 @@
     }
 
     @media (max-width: $min-mobile-width) {
-      font-size: 16px;
-      line-height: 26px;
+      @include text-size-height ($font-16, $height-26);
       margin-bottom: 56px;
       padding: 0 11px 0 13px;
     }
@@ -109,6 +96,7 @@
 }
 
 .masaisrael__button {
+  @include text-size-height ($font-15, $height-21);
   margin: 0;
   display: flex;
   justify-content: space-between;
@@ -116,8 +104,6 @@
   padding-right: 42px;
   color: $white;
   text-transform: uppercase;
-  font-size: 15px;
-  line-height: 21px;
 
   @media (max-width: $max-mobile-width) {
     max-width: 264px;

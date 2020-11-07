@@ -21,3 +21,8 @@
   line-height: $height;
   font-weight: $weight;
 }
+
+@mixin text-size-height ($size, $height) {
+  font-size: $size;
+  line-height: $height;
+}

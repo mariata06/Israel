@@ -53,10 +53,9 @@
     }
 
     @media (max-width: $max-mobile-width) {
+      @include text-size-height ($font-20, $height-24);
       width: 100%;
       margin: 267px auto 42px;
-      font-size: 20px;
-      line-height: 24px;
       padding-right: 9px;
     }
   }
@@ -87,7 +86,6 @@
   @media (max-width: $max-mobile-width) {
     margin: 0;
     margin-left: 117px;
-    //padding-right: 20px;
   }
 
   &::before {
@@ -127,11 +125,9 @@
 }
 
 .page-header__phone-links {
+  @include text-size-height ($font-15, $height-18);
   display: flex;
-  //justify-content: space-between;
   width: 100%;
-  font-size: 15px;
-  line-height: 18px;
 
   a {
     color: $black;

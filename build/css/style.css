@@ -4,6 +4,9 @@ html {
   background-color: #e5e5e5;
   overflow-x: hidden; }
 
+.disable-scroll {
+  overflow: hidden; }
+
 *,
 *::before,
 *::after {
@@ -29,11 +32,6 @@ body {
   font-weight: 400;
   color: #484848;
   background-color: white; }
-  body .modal-open {
-    overflow-y: scroll;
-    position: fixed;
-    width: 100%;
-    z-index: -1; }
 
 img {
   max-width: 100%; }

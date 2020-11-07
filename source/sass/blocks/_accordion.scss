@@ -45,8 +45,7 @@
 }
 
 .accordion__item-trigger {
-  font-size: 17px;
-  line-height: 26px;
+  @include text-size-height ($font-17, $height-26);
   display: flex;
   align-items: baseline;
   width: 100%;
@@ -72,16 +71,14 @@
 }
 
 .accordion__item-content {
-  font-size: 15px;
-  line-height: 21px;
+  @include text-size-height ($font-15, $height-21);
   display: none;
   padding-top: 16px;
   padding-right: 20px;
   opacity: 0.74;
 
   @media (max-width: $max-mobile-width) {
-    font-size: 14px;
-    line-height: 22px;
+    @include text-size-height ($font-14, $height-22);
     padding-top: 18px;
   }
 }

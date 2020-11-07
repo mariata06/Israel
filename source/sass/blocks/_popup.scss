@@ -44,14 +44,12 @@
   }
 
   p {
+    @include text-size-height ($font-15, $height-25);
     margin-top: 0;
-    font-size: 15px;
-    line-height: 25px;
     opacity: 0.87;
 
     @media (max-width: $max-mobile-width) {
-      font-size: 14px;
-      line-height: 22px;
+      @include text-size-height ($font-14, $height-22);
     }
   }
 

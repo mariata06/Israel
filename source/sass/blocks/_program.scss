@@ -62,14 +62,12 @@
 
   p {
     @include reset;
-    font-size: 15px;
-    line-height: 25.5px;
+    @include text-size-height ($font-15, $height-26);
     margin-bottom: 20px;
     opacity: 0.87;
 
     @media (max-width: $max-mobile-width) {
-      font-size: 14px;
-      line-height: 22px;
+      @include text-size-height ($font-14, $height-22);
       margin-bottom: 15px;
     }
   }
@@ -111,14 +109,13 @@
 }
 
 .program__choice-item {
+  @include text-size-height ($font-15, $height-18);
   border: 0;
   outline: 0;
   cursor: pointer;
   position: relative;
   margin-right: 30px;
   font-family: "firasans", "Arial", sans-serif;
-  font-size: 15px;
-  line-height: 18px;
   padding: 25px 0 24px 73px;
   background-color: transparent;
   text-align: left;

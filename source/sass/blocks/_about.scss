@@ -52,8 +52,7 @@
   }
 
   p {
-    font-size: 17px;
-    line-height: 29px;
+    @include text-size-height ($font-17, $height-29);
     width: 720px;
     margin: 0 auto;
     display: block;
@@ -65,9 +64,8 @@
     }
 
     @media (max-width: $max-mobile-width) {
+      @include text-size-height ($font-16, $height-26);
       width: 100%;
-      font-size: 16px;
-      line-height: 26px;
       text-align: left;
       padding-left: 16px;
       padding-right: 16px;

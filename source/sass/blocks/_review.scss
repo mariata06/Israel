@@ -59,10 +59,9 @@
 }
 
 .review__description {
+  @include text-size-height ($font-17, $height-29);
   width: 680px;
   margin-left: auto;
-  font-size: 17px;
-  line-height: 29px;
   text-align: left;
   background-color: transparent;
   padding-top: 41px;
@@ -82,10 +81,9 @@
     opacity: 0.74;
 
     @media (max-width: $max-mobile-width) {
+      @include text-size-height ($font-14, $height-22);
       display: flex;
       flex-wrap: wrap;
-      font-size: 14px;
-      line-height: 22px;
       margin-bottom: 23px;
     }
   }
@@ -94,8 +92,7 @@
     margin-bottom: 18px;
 
     @media (max-width: $max-mobile-width) {
-      font-size: 16px;
-      line-height: 26px;
+      @include text-size-height ($font-16, $height-26);
     }
   }
 
@@ -108,9 +105,8 @@
   }
 
   span {
+    @include text-size-height ($font-15, $height-21);
     color: $blue;
-    font-size: 15px;
-    line-height: 21px;
   }
 
   a {
@@ -203,8 +199,7 @@
   padding-left: 0;
 
   span {
-    font-size: 17px;
-    line-height: 26px;
+    @include text-size-height ($font-17, $height-26);
     opacity: 0.5;
     padding-left: 5px;
     padding-right: 5px;

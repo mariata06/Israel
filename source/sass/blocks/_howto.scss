@@ -58,8 +58,7 @@
 
   p {
     @include reset;
-    font-size: 15px;
-    line-height: 25px;
+    @include text-size-height ($font-15, $height-25);
     margin-bottom: 34px;
     padding-left: 20px;
     padding-right: 46px;
@@ -70,8 +69,7 @@
     }
 
     @media (max-width: $max-mobile-width) {
-      font-size: 14px;
-      line-height: 22px;
+      @include text-size-height ($font-14, $height-22);
       text-align: left;
       padding: 0 0 0 8px;
       margin-bottom: 23px;
@@ -88,11 +86,11 @@
       position: absolute;
       opacity: 0.2;
       width: 10px;
-      height: 270px;
+      height: 268px;
       content: "";
       display: block;
       left: 16px;
-      top: 20px;
+      top: 18px;
     }
 
     @media (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
@@ -174,9 +172,8 @@
 }
 
 .howto__list-item {
+  @include text-size-height ($font-15, $height-21);
   margin-bottom: 28px;
-  font-size: 15px;
-  line-height: 21px;
   display: flex;
   align-items: center;
   opacity: 0.87;
@@ -187,8 +184,7 @@
   }
 
   @media (max-width: $max-mobile-width) {
-    font-size: 14px;
-    line-height: 22px;
+    @include text-size-height ($font-14, $height-22);
     margin-bottom: 48px;
   }
 }

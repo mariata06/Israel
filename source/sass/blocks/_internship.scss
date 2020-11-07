@@ -45,8 +45,7 @@
 
   p {
     @include reset;
-    font-size: 17px;
-    line-height: 29px;
+    @include text-size-height ($font-17, $height-29);
     margin-left: 207px;
     margin-right: 222px;
     text-align: right;
@@ -65,10 +64,9 @@
     }
 
     @media (max-width: $max-mobile-width) {
+      @include text-size-height ($font-16, $height-26);
       margin: 0 auto;
       text-align: left;
-      font-size: 16px;
-      line-height: 26px;
       margin-bottom: 24px;
     }
   }
@@ -117,7 +115,6 @@
 
     @media (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
       display: flex;
-      align-items: center;
       justify-content: center;
       width: 100%;
     }
@@ -125,8 +122,6 @@
     @media (max-width: $max-mobile-width) {
       width: 288px;
       margin: 0 auto;
-      display: flex;
-      justify-content: center;
     }
   }
 
@@ -196,8 +191,6 @@
     }
 
     @media (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
-      //height: 100%;
-      //width: 100%;
       width: 288px;
       height: 400px;
       object-fit: cover;
@@ -243,7 +236,6 @@
 
     @media (max-width: $max-mobile-width) {
       text-align: center;
-      //bottom: 250px;
       bottom: 30px;
     }
   }
@@ -260,7 +252,6 @@
   }
 
   figcaption {
-    //width: 70%;
     bottom: 59px;
 
     @media (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
@@ -270,7 +261,6 @@
     @media (max-width: $max-mobile-width) {
       text-align: center;
       bottom: 15px;
-      //left: 160px;
     }
   }
 }
@@ -298,8 +288,6 @@
     }
 
     @media (max-width: $max-mobile-width) {
-      //left: 150px;
-      //width: 77%;
       left: 50%;
       bottom: 30px;
       width: 220px;
@@ -333,9 +321,7 @@
     }
 
     @media (max-width: $max-mobile-width) {
-      //left: 140px;
       bottom: 30px;
-      //width: 78%;
       text-align: center;
       left: 50%;
       width: 230px;
@@ -366,7 +352,6 @@
     }
 
     @media (max-width: $max-mobile-width) {
-      //left: 160px;
       bottom: 30px;
       left: 50%;
     }
@@ -376,13 +361,3 @@
 .swiper-pagination {
   pointer-events: all;
 }
-
-/*
-.swiper-pagination-fraction,
-.swiper-pagination-custom,
-.swiper-container-horizontal > .swiper-pagination-bullets {
-  @media (max-width: $max-mobile-width) {
-    bottom: unset;
-  }
-}
-*/
