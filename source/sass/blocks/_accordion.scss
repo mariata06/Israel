@@ -5,7 +5,8 @@
   cursor: pointer;
 
   &:focus {
-    background-color: $light-grey;
+    //background-color: $light-grey;
+    outline: 1px solid $light-grey;
   }
 
   @media (max-width: $max-mobile-width) {

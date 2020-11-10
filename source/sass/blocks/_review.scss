@@ -322,8 +322,25 @@
   }
 }
 
+/*
 .swiper-slide-active {
   &:focus {
     outline: none;
   }
+}
+*/
+
+.review__read-more {
+  text-decoration: underline;
+  color: $blue;
+  margin-bottom: 50px;
+  display: block;
+  padding-bottom: 5px;
+  width: 160px;
+  font-size: 17px;
+  line-height: 26px;
+  //letter-spacing: -0.6px;
+  position: absolute;
+  bottom: 50px;
+  left: 402px;
 }

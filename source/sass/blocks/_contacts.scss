@@ -2,7 +2,7 @@
   background-image: url("../img/marker-map.png"), url("../img/map-desktop@1x.png"), url("../img/contacts-watercolor-bg-desktop@1x.png");
   background-repeat: no-repeat, no-repeat, no-repeat;
   background-size: 1.5%, 51%, 100%;
-  background-position: 1187px 230px, right 10px, top right;
+  background-position: 87% 34%, right 10px, top right;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     background-image: url("../img/marker-map.png"), url("../img/map-desktop@2x.png"), url("../img/contacts-watercolor-bg-desktop@2x.png");
@@ -11,8 +11,8 @@
   @media (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
     background-image: url("../img/marker-map.png"), url("../img/map-desktop@1x.png");
     background-repeat: no-repeat, no-repeat;
-    background-size: 1%, 60%;
-    background-position: 600px 200px, 300px 50px;
+    background-size: 1.5%, 60%;
+    background-position: 85% 28%, right 50px;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../img/marker-map.png"), url("../img/map-desktop@2x.png");
@@ -22,8 +22,8 @@
   @media (max-width: $max-mobile-width) {
     background-image: url("../img/marker-map.png"), url("../img/map-mobile@1x.png");
     background-repeat: no-repeat, no-repeat;
-    background-size: 7%, 100%;
-    background-position: 265px 890px, center 680px;
+    background-size: 8%, 100%;
+    background-position: 89% 58%, center 685px;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../img/marker-map.png"), url("../img/map-mobile@2x.jpg");
@@ -164,7 +164,13 @@
     margin-bottom: 600px;
   }
 
+  /*
   @media (min-width: $min-mobile-width) and (max-width: 430px) {
+    width: 100%;
+    margin-bottom: 480px;
+  }*/
+
+  @media (max-width: 430px) {
     width: 100%;
     margin-bottom: 480px;
   }

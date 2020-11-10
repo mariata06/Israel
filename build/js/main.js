@@ -64,7 +64,6 @@ function closePopup() {
 closePopupSuccess.addEventListener("click", function (evt) {
   evt.preventDefault();
   closePopup();
-  htmlDoc.classList.toggle("disable-scroll");
 });
 
 popupButton.addEventListener("click", function (evt) {
@@ -79,6 +78,7 @@ var checkLocalStorage = function () {
   }
   overlayOk.classList.add("overlay__ok--show");
   popupSuccess.classList.add("popup--success--show");
+  htmlDoc.classList.toggle("disable-scroll");
 }
 
 callbackForm.addEventListener("submit", function (evt) {
@@ -86,7 +86,7 @@ callbackForm.addEventListener("submit", function (evt) {
   checkLocalStorage();
   callbackPopup.classList.remove("popup--callback--show");
   overlayForm.classList.remove("overlay__form--show");
-  //htmlDoc.classList.toggle("disable-scroll");
+  htmlDoc.classList.toggle("disable-scroll");
 });
 
 window.addEventListener("keydown", function (evt) {
@@ -106,7 +106,7 @@ document.onclick = function (evt) {
   if (evt.target.className.toString().includes("overlay")) {
     overlayForm.classList.remove("overlay__form--show");
     overlayOk.classList.remove("overlay__ok--show");
-    htmlDoc.classList.toggle("disable-scroll");
+    htmlDoc.classList.remove("disable-scroll");
   };
 };
 

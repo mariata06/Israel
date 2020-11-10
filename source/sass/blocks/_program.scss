@@ -7,6 +7,16 @@
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     background-image: url("../img/sketch-bg-desktop@2x.jpg");
   }
+
+  @media (max-width: $max-mobile-width) {
+    background-image: url("../img/sketch-bg-mobile@1x.png");
+    background-size: 85%;
+    background-position: 30px 120px;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/sketch-bg-mobile@2x.png");
+    }
+  }
 }
 
 .program__container {
@@ -22,7 +32,12 @@
     padding: 104px 20px 23px 100px;
   }
 
-  @media (max-width: $max-mobile-width) {
+  @media (min-width: 321px) and (max-width: 767px) {
+    padding: 0;
+    padding-top: 50px;
+  }
+
+  @media (max-width: $min-mobile-width) {
     padding: 0;
     width: 100%;
   }
@@ -187,7 +202,8 @@
 
   &--active {
     @include text ($font-16, $height-19, $medium);
-    background: linear-gradient(108.42deg, $yellow 20.46%, $yellow-2 65.31%);
+    //background: linear-gradient(108.42deg, $yellow 20.46%, $yellow-2 65.31%);
+    background: linear-gradient(to right, $yellow, $yellow-2);
     text-transform: uppercase;
     letter-spacing: 0.5px;
     color: $white;

@@ -91,7 +91,7 @@
   grid-template-columns: 241px 241px 223px 223px 223px;
   grid-template-rows: 366px 366px;
 
-  @media (min-width: 1024px) and (max-width: 1200px) {
+  @media (min-width: 1024px) and (max-width: 1355px) {
     grid-template-columns: 20% 20% 20% 20% 20%;
     grid-gap: 0;
   }
@@ -225,7 +225,10 @@
   }
 
   figcaption {
+    width: 75%;
+
     @media (min-width: 1024px) and (max-width: 1250px) {
+      left: 60px;
       bottom: 100px;
     }
 
@@ -235,6 +238,7 @@
     }
 
     @media (max-width: $max-mobile-width) {
+      width: 210px;
       text-align: center;
       bottom: 30px;
     }
@@ -251,14 +255,25 @@
     grid-row: 1;
   }
 
+  @media (max-width: $max-mobile-width) {
+    justify-content: center;
+  }
+
   figcaption {
     bottom: 59px;
+    width: 120px;
+
+    @media (min-width: 1024px) and (max-width: 1250px) {
+      left: 70px;
+    }
 
     @media (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
+      width: unset;
       left: 60px;
     }
 
     @media (max-width: $max-mobile-width) {
+      width: 100%;
       text-align: center;
       bottom: 15px;
     }
@@ -279,9 +294,18 @@
     }
   }
 
+  @media (max-width: $max-mobile-width) {
+    justify-content: center;
+  }
+
   figcaption {
     bottom: 59px;
     left: 65px;
+
+    @media (min-width: 1024px) and (max-width: 1250px) {
+      left: 110px;
+      width: 70%;
+    }
 
     @media (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
       left: 40px;
@@ -315,6 +339,11 @@
     left: 45px;
     bottom: 75px;
 
+    @media (min-width: 1024px) and (max-width: 1250px) {
+      left: 90px;
+      width: 70%;
+    }
+
     @media (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
       left: 35px;
       bottom: 50px;
@@ -346,6 +375,11 @@
   figcaption {
     left: 35px;
     bottom: 75px;
+
+    @media (min-width: 1024px) and (max-width: 1250px) {
+      left: 60px;
+      width: 70%;
+    }
 
     @media (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
       left: 60px;

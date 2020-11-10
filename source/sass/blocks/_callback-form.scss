@@ -41,6 +41,18 @@
       top: 2px;
       left: 17px;
       z-index: 11;
+      cursor: pointer;
     }
+  }
+
+  .callback-form__checkbox:focus + label::after {
+    outline: 5px auto -webkit-focus-ring-color;
+    opacity: 1;
+  }
+
+  .callback-form__checkbox:checked:focus + label::after,
+  .callback-form__checkbox:checked:hover + label::after {
+    outline: 5px auto -webkit-focus-ring-color;
+    opacity: 1;
   }
 }
