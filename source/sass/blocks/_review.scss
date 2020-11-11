@@ -31,7 +31,7 @@
   }
 
   @media (max-width: $max-mobile-width) {
-    padding: 40px 16px 16px 16px;
+    padding: 40px 16px 50px 16px;
   }
 
   h2 {
@@ -68,11 +68,13 @@
 
   @media (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
     margin: 0;
+    margin-bottom: 50px;
   }
 
   @media (max-width: $max-mobile-width) {
     padding-top: 52px;
     width: 100%;
+    margin-bottom: 47px;
   }
 
   p {
@@ -343,4 +345,16 @@
   position: absolute;
   bottom: 50px;
   left: 402px;
+
+  @media (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
+    left: 100px;
+    bottom: -40px;
+  }
+
+  @media (max-width: $max-mobile-width) {
+    left: 0;
+    bottom: -32px;
+    font-size: 16px;
+    line-height: 24px;
+  }
 }

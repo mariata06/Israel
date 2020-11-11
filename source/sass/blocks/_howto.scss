@@ -89,7 +89,7 @@
       height: 268px;
       content: "";
       display: block;
-      left: 16px;
+      left: 12px;
       top: 18px;
     }
 
@@ -101,6 +101,7 @@
 
     @media (max-width: $max-mobile-width) {
       padding-right: 0;
+      //left: 14px;
     }
   }
 
@@ -145,6 +146,8 @@
 
     @media (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
       text-align: left;
+      width: 400px;
+      margin-left: auto;
     }
 
     @media (max-width: $max-mobile-width) {

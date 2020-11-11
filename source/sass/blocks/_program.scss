@@ -78,7 +78,7 @@
   p {
     @include reset;
     @include text-size-height ($font-15, $height-26);
-    margin-bottom: 20px;
+    margin-bottom: 16px;
     opacity: 0.87;
 
     @media (max-width: $max-mobile-width) {

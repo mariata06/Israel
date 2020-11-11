@@ -6,7 +6,9 @@
 
   &:focus {
     //background-color: $light-grey;
-    outline: 1px solid $light-grey;
+    //outline: 1px solid $light-grey;
+    outline: 5px auto -webkit-focus-ring-color;
+    opacity: 1;
   }
 
   @media (max-width: $max-mobile-width) {
@@ -51,6 +53,17 @@
   align-items: baseline;
   width: 100%;
   position: relative;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  color: $black;
+  text-align: left;
+  padding: 0;
+
+  &:focus {
+    outline: 5px auto -webkit-focus-ring-color;
+    opacity: 1;
+  }
 
   @media (max-width: $max-mobile-width) {
     font-size: 16px;
