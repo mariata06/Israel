@@ -91,10 +91,11 @@
   }
 
   .review__text {
-    margin-bottom: 18px;
+    margin-bottom: 16px;
 
     @media (max-width: $max-mobile-width) {
       @include text-size-height ($font-16, $height-26);
+      margin-bottom: 18px;
     }
   }
 
@@ -167,7 +168,7 @@
 .review__pagination-buttons {
   display: flex;
   align-items: center;
-  padding-left: 405px;
+  padding-left: 400px;
   margin-top: -30px;
 
   @media (min-width: 950px) and (max-width: $max-tablet-width) {
@@ -212,7 +213,7 @@
   width: 120px;
   height: 50px;
   display: flex;
-  margin-left: 20px;
+  margin-left: 25px;
   padding-left: 0;
 
   @media (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
@@ -222,7 +223,7 @@
   @media (max-width: $max-mobile-width) {
     width: 50px;
     height: unset;
-    margin-left: 33px;
+    margin-left: 29px;
   }
 }
 
@@ -231,15 +232,35 @@
   display: block;
   margin-right: 30px;
   cursor: pointer;
+  //width: 3px;
+  height: 28px;
+  padding: 0;
+  padding-left: 6px;
+  padding-right: 6px;
+  padding-top: 3px;
+  padding-bottom: 4px;
+  //background-color: green;
+  outline: none;
 
+  /*
   &:hover,
   &:focus {
     opacity: 0.7;
     transition: 0.3s ease;
+  }*/
+
+  &:hover {
+    opacity: 0.7;
+    transition: 0.3s ease;
+  }
+
+  &:focus {
+    outline: 5px auto -webkit-focus-ring-color;
+    opacity: 1;
   }
 
   @media (max-width: $max-mobile-width) {
-    margin-right: 50px;
+    //margin-right: 50px;
   }
 
   &::after {
@@ -257,11 +278,28 @@
   position: relative;
   display: block;
   cursor: pointer;
+  //width: 10px;
+  //height: 20px;
+  //width: 8px;
+  //height: 15px;
+  //padding: 0;
+  //padding-left: 8px;
+  //padding-right: 8px;
+  height: 28px;
+  padding: 0;
+  padding-left: 6px;
+  padding-right: 6px;
+  padding-top: 3px;
+  padding-bottom: 4px;
 
-  &:hover,
-  &:focus {
+  &:hover {
     opacity: 0.7;
     transition: 0.3s ease;
+  }
+
+  &:focus {
+    outline: 5px auto -webkit-focus-ring-color;
+    opacity: 1;
   }
 
   &::after {

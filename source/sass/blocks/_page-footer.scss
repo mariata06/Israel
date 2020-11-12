@@ -12,8 +12,10 @@
     @include text-size-height ($font-12, $height-18);
     padding-left: 45px;
     opacity: 0.5;
+    padding-bottom: 7px;
 
     @media (max-width: $max-mobile-width) {
+      padding-bottom: 0;
       padding-left: 0;
       margin-bottom: 35px;
     }

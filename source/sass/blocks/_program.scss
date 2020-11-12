@@ -150,6 +150,14 @@
   &:hover:not(.program__choice-item--active),
   &:focus:not(.program__choice-item--active) {
     color: $yellow;
+    //outline: 5px auto -webkit-focus-ring-color;
+    //opacity: 1;
+  }
+
+  &:focus {
+    //color: $yellow;
+    outline: 5px auto -webkit-focus-ring-color;
+    opacity: 1;
   }
 
   @media (max-width: $max-mobile-width) {

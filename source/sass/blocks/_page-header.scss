@@ -61,7 +61,7 @@
     @media (max-width: $max-mobile-width) {
       @include text-size-height ($font-20, $height-24);
       width: 100%;
-      margin: 267px auto 42px;
+      margin: 273px auto 42px;
       padding-right: 9px;
     }
   }
@@ -186,6 +186,7 @@
     //margin-right: 40px;
     font-size: 15px;
     line-height: 18px;
+    margin-bottom: 10px;
 
     &:hover,
     &:focus {
@@ -248,7 +249,7 @@
   }
 
   @media (max-width: $min-mobile-width) {
-    margin-top: -20px;
+    //margin-top: -20px;
     //margin-bottom: -20px;
     font-size: 13px;
     line-height: 15px;
@@ -261,6 +262,7 @@
   justify-content: space-between;
   //align-items: center;
   flex-wrap: wrap;
+  position: relative;
 
   @media (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
     justify-content: space-between;
@@ -268,29 +270,38 @@
   }
 
   @media (max-width: $max-mobile-width) {
+    flex-direction: column;
     flex-wrap: wrap;
     align-items: unset;
   }
 }
 
 .page-header__logo {
+  position: absolute;
   //margin: -17px auto 0;
   height: 48px;
   //margin-left: 352px;
-  margin-top: -16px;
-  margin-right: 20px;
+  //margin-top: -16px;
+  //margin-right: 20px;
+  top: -13px;
+  left: 50%;
+  transform: translateX(-50%);
 
   @media (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
     margin: 0;
-    margin-top: -16px;
+    top: -30px;
+    //margin-top: -16px;
   }
 
   @media (max-width: $max-mobile-width) {
-    order: -1;
+    //order: -1;
     //width: 50%;
     //margin-top: 0;
     height: 42px;
     margin: 0;
+    top: 0;
+    left: 0;
+    transform: unset;
   }
 
   img {

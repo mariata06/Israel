@@ -26,7 +26,6 @@
         <nav class="page-header__site-nav">
           <div class="page-header__phone-links">
             <a href="tel:+97226216581">+ (972) 2 - 621 - 6581</a>
-            <!--<a href="tel:+97226216581">+ (972) 2 - 621 - 6581</a>-->
           </div>
           <div class="page-header__logo">
             <img src="img/logo.png" width="137" height="48" alt="Логотип сайта компания Израиль">
@@ -547,45 +546,49 @@
 
   <div class="overlay overlay__form">
     <div class="overlay__popup popup popup--callback">
-      <button aria-label="закрыть" type="button" class="popup__close"><span class="visually-hidden">Закрыть</span></button>
-      <h3>
-        Заказать звонок
-      </h3>
-      <p>
-        Оставьте ваши контактные данные, мы&nbsp;свяжемся с&nbsp;вами в течение рабочего дня и обязательно поможем найти ответ на ваш вопрос!
-      </p>
-      <form id="popup-form" action="https://echo.htmlacademy.ru" method="post" class="popup__form callback-form">
-        <div>
-          <label>
-            <input class="callback-form__field input" tabindex="0" type="text" name="user_name" value="" placeholder="имя" required="" title="Введите имя">
-          </label>
-        </div>
-        <div>
-          <label>
-            <input tabindex="0" class="callback-form__field input input--phone" type="tel" name="user_phonenumber" value="" pattern="\+7\s[\(]{0,1}[0-9]{3}[\)]{0,1}\s\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2}" placeholder="телефон" required="">
-          </label>
-          <p class="callback-form__error-message error-message">Ошибка: неверный формат</p>
-        </div>
-        <button type="submit" class="callback-form__button button" aria-label="перезвоните мне">перезвоните мне</button>
-        <div tabindex="0">
-          <input class="callback-form__checkbox visually-hidden" type="checkbox" id="personal-data" name="personal-data">
-          <label class="callback-form__checkbox-label" for="personal-data">Нажимая на кнопку, вы даёте согласие на обработку персональных данных</label>
-        </div>
-      </form>
+      <div class="popup__content">
+        <button aria-label="закрыть" type="button" class="popup__close"><span class="visually-hidden">Закрыть</span></button>
+        <h3>
+          Заказать звонок
+        </h3>
+        <p>
+          Оставьте ваши контактные данные, мы&nbsp;свяжемся с&nbsp;вами в течение рабочего дня и обязательно поможем найти ответ на ваш вопрос!
+        </p>
+        <form id="popup-form" action="https://echo.htmlacademy.ru" method="post" class="popup__form callback-form">
+          <div>
+            <label>
+              <input class="callback-form__field input" tabindex="0" type="text" name="user_name" value="" placeholder="имя" required="" title="Введите имя">
+            </label>
+          </div>
+          <div>
+            <label>
+              <input tabindex="0" class="callback-form__field input input--phone" type="tel" name="user_phonenumber" value="" pattern="\+7\s[\(]{0,1}[0-9]{3}[\)]{0,1}\s\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2}" placeholder="телефон" required="">
+            </label>
+            <p class="callback-form__error-message error-message">Ошибка: неверный формат</p>
+          </div>
+          <button type="submit" class="callback-form__button button" aria-label="перезвоните мне">перезвоните мне</button>
+          <div>
+            <input class="callback-form__checkbox visually-hidden" type="checkbox" id="personal-data" name="personal-data">
+            <label class="callback-form__checkbox-label" for="personal-data">Нажимая на кнопку, вы даёте согласие на обработку персональных данных</label>
+          </div>
+        </form>
+      </div>
     </div>
   </div>
 
   <div class="overlay overlay__ok">
     <div class="overlay__popup popup popup--success">
-      <button type="button" class="popup__close" aria-label="закрыть"><span class="visually-hidden">Закрыть</span></button>
-      <img src="img/ok.png" alt="заявка принята" width="71" height="64" loading="lazy" class="lazyload">
-      <h3>
-        Заявка принята
-      </h3>
-      <p>
-        Мы приняли ваши данные и вскоре мы перезвоним вам для уточнения деталей!
-      </p>
-      <button type="submit" class="popup__button button" aria-label="понятно, закрыть окно">понятно</button>
+      <div class="popup__content">
+        <button type="button" class="popup__close" aria-label="закрыть"><span class="visually-hidden">Закрыть</span></button>
+        <img src="img/ok.png" alt="заявка принята" width="71" height="64" loading="lazy" class="lazyload">
+        <h3>
+          Заявка принята
+        </h3>
+        <p>
+          Мы приняли ваши данные и вскоре мы перезвоним вам для уточнения деталей!
+        </p>
+        <button type="submit" class="popup__button button" aria-label="понятно, закрыть окно">понятно</button>
+      </div>
     </div>
   </div>
 

@@ -2,7 +2,7 @@
   background-image: url("../img/faq-watercolor-bg-desktop@1x.png"), url("../img/faq-bg-desktop@1x.png"), url("../img/bag-desktop@1x.png");
   background-repeat: no-repeat;
   background-size: 100%, 47%, 10%;
-  background-position: center center, right 134px, bottom left;
+  background-position: center center, right 140px, bottom left;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     background-image: url("../img/faq-watercolor-bg-desktop@2x.png"), url("../img/faq-bg-desktop@2x.png"), url("../img/bag-desktop@2x.png");
@@ -32,7 +32,7 @@
 }
 
 .faq__container {
-  padding: 136px 730px 100px 108px;
+  padding: 138px 730px 100px 108px;
 
   @media (min-width: 1024px) and (max-width: 1200px) {
     padding-right: 600px;
