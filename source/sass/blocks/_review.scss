@@ -384,6 +384,11 @@
   bottom: 50px;
   left: 402px;
 
+  @media (min-width: 1024px) and (max-width: 1250px) {
+    left: 330px;
+    bottom: 10px;
+  }
+
   @media (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
     left: 100px;
     bottom: -40px;
