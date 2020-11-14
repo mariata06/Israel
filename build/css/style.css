@@ -132,8 +132,8 @@ a {
   background-color: brown;
   background-image: url("../img/girl1.png"), url("../img/israel-bg-desktop@1x.png"), url("../img/header-bg-desktop@1x.jpg");
   background-repeat: no-repeat, no-repeat, no-repeat;
-  background-position: center bottom -47px, center 250px, top center;
-  background-size: cover, 73%, cover; }
+  background-position: center bottom -57px, center 250px, top center;
+  background-size: cover, 73%, 100% 879px; }
   @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
     .page-header {
       background-image: url("../img/girl2.png"), url("../img/israel-bg-desktop@2x.png"), url("../img/header-bg-desktop@2x.jpg"); } }
@@ -167,8 +167,8 @@ a {
 
 .page-header__container {
   position: relative;
-  height: 860px;
-  padding: 47px 114px 0 110px; }
+  height: 847px;
+  padding: 49px 114px 0 110px; }
   @media (min-width: 768px) and (max-width: 1023px) {
     .page-header__container {
       height: 600px; } }
