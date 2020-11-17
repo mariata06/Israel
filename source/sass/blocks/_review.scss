@@ -24,7 +24,9 @@
   position: relative;
   display: flex;
   flex-wrap: wrap;
-  padding: 53px 184px 79px 98px;
+  padding: 53px 184px 82px 98px;
+  padding-left: 0;
+  padding-right: 0;
 
   @media (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
     padding: 35px 20px 85px;
@@ -41,8 +43,8 @@
     letter-spacing: -1px;
     text-transform: uppercase;
     width: 100%;
-    padding-left: 485px;
     margin-bottom: 7px;
+    text-align: center;
 
     @media (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
       text-align: center;
@@ -61,20 +63,26 @@
 .review__description {
   @include text-size-height ($font-17, $height-29);
   width: 680px;
-  margin-left: auto;
+  margin-left: 40px;
   text-align: left;
   background-color: transparent;
   padding-top: 41px;
 
+  @media (min-width: 1024px) and (max-width: 1200px) {
+    margin-right: 20px;
+  }
+
   @media (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
     margin: 0;
     margin-bottom: 50px;
+    width: 100%;
   }
 
   @media (max-width: $max-mobile-width) {
-    padding-top: 52px;
+    padding-top: 58px;
     width: 100%;
     margin-bottom: 47px;
+    margin-left: 0;
   }
 
   p {
@@ -143,7 +151,12 @@
   position: absolute;
   z-index: 100;
   right: 167px;
-  bottom: 102px;
+  bottom: 97px;
+
+  @media (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
+    bottom: 100px;
+    right: 10%;
+  }
 
   @media (max-width: $max-mobile-width) {
     right: unset;
@@ -168,26 +181,21 @@
 .review__pagination-buttons {
   display: flex;
   align-items: center;
-  padding-left: 400px;
-  margin-top: -30px;
+  padding-left: 500px;
+  margin-top: -28px;
 
-  @media (min-width: 950px) and (max-width: $max-tablet-width) {
-    top: 440px;
-  }
-
-  @media (min-width: $min-tablet-width) and (max-width: 949px) {
-    position: absolute;
+  @media (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
     padding-left: 0;
-    top: 360px;
-    display: flex;
-    justify-content: center;
     width: 100%;
+    position: absolute;
+    justify-content: center;
+    bottom: -5px;
   }
 
   @media (max-width: $max-mobile-width) {
     position: absolute;
     padding-left: 0;
-    top: 370px;
+    top: 365px;
     display: flex;
     justify-content: center;
     width: 100%;
@@ -232,22 +240,13 @@
   display: block;
   margin-right: 30px;
   cursor: pointer;
-  //width: 3px;
   height: 28px;
   padding: 0;
   padding-left: 6px;
   padding-right: 6px;
   padding-top: 3px;
   padding-bottom: 4px;
-  //background-color: green;
   outline: none;
-
-  /*
-  &:hover,
-  &:focus {
-    opacity: 0.7;
-    transition: 0.3s ease;
-  }*/
 
   &:hover {
     opacity: 0.7;
@@ -257,10 +256,6 @@
   &:focus {
     outline: 5px auto -webkit-focus-ring-color;
     opacity: 1;
-  }
-
-  @media (max-width: $max-mobile-width) {
-    //margin-right: 50px;
   }
 
   &::after {
@@ -278,13 +273,6 @@
   position: relative;
   display: block;
   cursor: pointer;
-  //width: 10px;
-  //height: 20px;
-  //width: 8px;
-  //height: 15px;
-  //padding: 0;
-  //padding-left: 8px;
-  //padding-right: 8px;
   height: 28px;
   padding: 0;
   padding-left: 6px;
@@ -337,7 +325,7 @@
   text-align: center;
   font-size: 18px;
   display: flex;
-  justify-content: center;
+  width: 100%;
 
   @media (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
     width: 100%;
@@ -350,6 +338,9 @@
   }
 
   img {
+    width: 364px;
+    height: 480px;
+
     @media (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
       height: 320px;
       width: 240px;
@@ -362,14 +353,6 @@
   }
 }
 
-/*
-.swiper-slide-active {
-  &:focus {
-    outline: none;
-  }
-}
-*/
-
 .review__read-more {
   text-decoration: underline;
   color: $blue;
@@ -379,19 +362,26 @@
   width: 160px;
   font-size: 17px;
   line-height: 26px;
-  //letter-spacing: -0.6px;
   position: absolute;
-  bottom: 50px;
-  left: 402px;
+  bottom: 9%;
+  margin-left: 500px;
 
-  @media (min-width: 1024px) and (max-width: 1250px) {
-    left: 330px;
-    bottom: 10px;
+  @media (min-width: 1120px) and (max-width: 1200px) {
+    margin-left: 425px;
+  }
+
+  @media (min-width: 1046px) and (max-width: 1119px) {
+    margin-left: 430px;
+  }
+
+  @media (min-width: 1024px) and (max-width: 1045px) {
+    margin-left: 430px;
+    bottom: 3%;
   }
 
   @media (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
-    left: 100px;
     bottom: -40px;
+    margin-left: 0;
   }
 
   @media (max-width: $max-mobile-width) {
@@ -399,5 +389,33 @@
     bottom: -32px;
     font-size: 16px;
     line-height: 24px;
+    margin-left: 0;
+  }
+}
+
+.review__photo-author {
+  width: 364px;
+  height: 480px;
+  margin-left: 98px;
+
+  @media (min-width: 1024px) and (max-width: 1200px) {
+    margin-left: 20px;
+    min-width: 364px;
+  }
+
+  @media (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
+    margin: 0 auto;
+  }
+
+  @media (max-width: $max-mobile-width) {
+    width: 240px;
+    height: 320px;
+    margin: 0 auto;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    box-sizing: content-box;
   }
 }
